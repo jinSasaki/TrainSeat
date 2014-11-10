@@ -1,0 +1,720 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4903ACCE1A04C10700A7612B /* CarInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4903ACCD1A04C10700A7612B /* CarInfoViewController.m */; };
+		492AAD561A112539007A6777 /* StationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 492AAD551A112539007A6777 /* StationButton.m */; };
+		495A116F1A10DE9E008D40B9 /* LineButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 495A116E1A10DE9E008D40B9 /* LineButton.m */; };
+		495E06861A04C57300DDA0B2 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 495E06851A04C57300DDA0B2 /* UserManager.m */; };
+		49A4EC2F1A0B1BB80064165E /* Timetable.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A4EC2E1A0B1BB80064165E /* Timetable.m */; };
+		49A4EC321A0B1F2F0064165E /* Connection+Database.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A4EC311A0B1F2F0064165E /* Connection+Database.m */; };
+		49A4EC351A0B39C20064165E /* network.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49A4EC341A0B39C20064165E /* network.jpg */; };
+		49A4EC381A0B3A470064165E /* TrainSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A4EC371A0B3A470064165E /* TrainSelectViewController.m */; };
+		49A4EC561A0B46A20064165E /* lineLogo_chiyoda.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A4EC4D1A0B46A20064165E /* lineLogo_chiyoda.png */; };
+		49A4EC571A0B46A20064165E /* lineLogo_fukutoshin.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A4EC4E1A0B46A20064165E /* lineLogo_fukutoshin.png */; };
+		49A4EC581A0B46A20064165E /* lineLogo_ginza.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A4EC4F1A0B46A20064165E /* lineLogo_ginza.png */; };
+		49A4EC591A0B46A20064165E /* lineLogo_hanzoumon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A4EC501A0B46A20064165E /* lineLogo_hanzoumon.png */; };
+		49A4EC5A1A0B46A20064165E /* lineLogo_hibiya.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A4EC511A0B46A20064165E /* lineLogo_hibiya.png */; };
+		49A4EC5B1A0B46A20064165E /* lineLogo_marunouchi.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A4EC521A0B46A20064165E /* lineLogo_marunouchi.png */; };
+		49A4EC5C1A0B46A20064165E /* lineLogo_nanboku.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A4EC531A0B46A20064165E /* lineLogo_nanboku.png */; };
+		49A4EC5D1A0B46A20064165E /* lineLogo_touzai.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A4EC541A0B46A20064165E /* lineLogo_touzai.png */; };
+		49A4EC5E1A0B46A20064165E /* lineLogo_yurakucho.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A4EC551A0B46A20064165E /* lineLogo_yurakucho.png */; };
+		49A4EC611A0C810E0064165E /* RailwayMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A4EC601A0C810E0064165E /* RailwayMapView.m */; };
+		49A4EC631A0C92AA0064165E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A4EC621A0C92AA0064165E /* CoreLocation.framework */; };
+		49C985E719FE7BA6006DCFE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C985E619FE7BA6006DCFE1 /* Foundation.framework */; };
+		49C985E919FE7BA6006DCFE1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C985E819FE7BA6006DCFE1 /* CoreGraphics.framework */; };
+		49C985EB19FE7BA6006DCFE1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C985EA19FE7BA6006DCFE1 /* UIKit.framework */; };
+		49C985F119FE7BA6006DCFE1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49C985EF19FE7BA6006DCFE1 /* InfoPlist.strings */; };
+		49C985F319FE7BA6006DCFE1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C985F219FE7BA6006DCFE1 /* main.m */; };
+		49C985F719FE7BA6006DCFE1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C985F619FE7BA6006DCFE1 /* AppDelegate.m */; };
+		49C985FA19FE7BA6006DCFE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49C985F819FE7BA6006DCFE1 /* Main.storyboard */; };
+		49C985FF19FE7BA6006DCFE1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49C985FE19FE7BA6006DCFE1 /* Images.xcassets */; };
+		49C9860619FE7BA6006DCFE1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C9860519FE7BA6006DCFE1 /* XCTest.framework */; };
+		49C9860719FE7BA6006DCFE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C985E619FE7BA6006DCFE1 /* Foundation.framework */; };
+		49C9860819FE7BA6006DCFE1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C985EA19FE7BA6006DCFE1 /* UIKit.framework */; };
+		49C9861019FE7BA6006DCFE1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49C9860E19FE7BA6006DCFE1 /* InfoPlist.strings */; };
+		49C9861219FE7BA6006DCFE1 /* TrainSeatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C9861119FE7BA6006DCFE1 /* TrainSeatTests.m */; };
+		49C9864019FF7F42006DCFE1 /* TrainMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49C9863219FF7F42006DCFE1 /* TrainMapView.xib */; };
+		49C9864119FF7F42006DCFE1 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C9863519FF7F42006DCFE1 /* BaseViewController.m */; };
+		49C9864219FF7F42006DCFE1 /* GetMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C9863719FF7F42006DCFE1 /* GetMenuViewController.m */; };
+		49C9864419FF7F42006DCFE1 /* TrainInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C9863B19FF7F42006DCFE1 /* TrainInfoViewController.m */; };
+		49C9864519FF7F42006DCFE1 /* TrainMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C9863D19FF7F42006DCFE1 /* TrainMapViewController.m */; };
+		49C9864619FF7F42006DCFE1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C9863F19FF7F42006DCFE1 /* ViewController.m */; };
+		49C9864919FF7F60006DCFE1 /* TrainMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C9864819FF7F60006DCFE1 /* TrainMapView.m */; };
+		49C9864C19FF7FA0006DCFE1 /* TrainInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C9864B19FF7FA0006DCFE1 /* TrainInfo.m */; };
+		49C9864F19FF7FD4006DCFE1 /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C9864E19FF7FD4006DCFE1 /* Connection.m */; };
+		49C9865219FF8083006DCFE1 /* Station.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C9865119FF8083006DCFE1 /* Station.m */; };
+		49C9865819FF977A006DCFE1 /* RailwayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C9865719FF977A006DCFE1 /* RailwayManager.m */; };
+		49C9865B19FF9808006DCFE1 /* Define.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C9865A19FF9808006DCFE1 /* Define.m */; };
+		49C9865E19FF9ABC006DCFE1 /* Connection+TokyoMetroAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C9865D19FF9ABC006DCFE1 /* Connection+TokyoMetroAPI.m */; };
+		49C9866119FFA249006DCFE1 /* Railway.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C9866019FFA249006DCFE1 /* Railway.m */; };
+		49C9866419FFA9B1006DCFE1 /* TopMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C9866319FFA9B1006DCFE1 /* TopMenuViewController.m */; };
+		49C9866719FFC1DC006DCFE1 /* BaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C9866619FFC1DC006DCFE1 /* BaseNavigationViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		49C9860919FE7BA6006DCFE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49C985DB19FE7BA6006DCFE1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49C985E219FE7BA6006DCFE1;
+			remoteInfo = TrainSeat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4903ACCC1A04C10700A7612B /* CarInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarInfoViewController.h; sourceTree = "<group>"; };
+		4903ACCD1A04C10700A7612B /* CarInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarInfoViewController.m; sourceTree = "<group>"; };
+		492AAD541A112539007A6777 /* StationButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationButton.h; sourceTree = "<group>"; };
+		492AAD551A112539007A6777 /* StationButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationButton.m; sourceTree = "<group>"; };
+		495A116D1A10DE9E008D40B9 /* LineButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LineButton.h; path = TrainSeat/Classes/View/LineButton.h; sourceTree = SOURCE_ROOT; };
+		495A116E1A10DE9E008D40B9 /* LineButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LineButton.m; path = TrainSeat/Classes/View/LineButton.m; sourceTree = SOURCE_ROOT; };
+		495E06841A04C57300DDA0B2 /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
+		495E06851A04C57300DDA0B2 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
+		49A4EC2D1A0B1BB80064165E /* Timetable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timetable.h; sourceTree = "<group>"; };
+		49A4EC2E1A0B1BB80064165E /* Timetable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timetable.m; sourceTree = "<group>"; };
+		49A4EC301A0B1F2F0064165E /* Connection+Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Connection+Database.h"; sourceTree = "<group>"; };
+		49A4EC311A0B1F2F0064165E /* Connection+Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Connection+Database.m"; sourceTree = "<group>"; };
+		49A4EC341A0B39C20064165E /* network.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = network.jpg; sourceTree = "<group>"; };
+		49A4EC361A0B3A470064165E /* TrainSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainSelectViewController.h; sourceTree = "<group>"; };
+		49A4EC371A0B3A470064165E /* TrainSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainSelectViewController.m; sourceTree = "<group>"; };
+		49A4EC4D1A0B46A20064165E /* lineLogo_chiyoda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lineLogo_chiyoda.png; sourceTree = "<group>"; };
+		49A4EC4E1A0B46A20064165E /* lineLogo_fukutoshin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lineLogo_fukutoshin.png; sourceTree = "<group>"; };
+		49A4EC4F1A0B46A20064165E /* lineLogo_ginza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lineLogo_ginza.png; sourceTree = "<group>"; };
+		49A4EC501A0B46A20064165E /* lineLogo_hanzoumon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lineLogo_hanzoumon.png; sourceTree = "<group>"; };
+		49A4EC511A0B46A20064165E /* lineLogo_hibiya.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lineLogo_hibiya.png; sourceTree = "<group>"; };
+		49A4EC521A0B46A20064165E /* lineLogo_marunouchi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lineLogo_marunouchi.png; sourceTree = "<group>"; };
+		49A4EC531A0B46A20064165E /* lineLogo_nanboku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lineLogo_nanboku.png; sourceTree = "<group>"; };
+		49A4EC541A0B46A20064165E /* lineLogo_touzai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lineLogo_touzai.png; sourceTree = "<group>"; };
+		49A4EC551A0B46A20064165E /* lineLogo_yurakucho.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lineLogo_yurakucho.png; sourceTree = "<group>"; };
+		49A4EC5F1A0C810E0064165E /* RailwayMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RailwayMapView.h; sourceTree = "<group>"; };
+		49A4EC601A0C810E0064165E /* RailwayMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RailwayMapView.m; sourceTree = "<group>"; };
+		49A4EC621A0C92AA0064165E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		49C985E319FE7BA6006DCFE1 /* TrainSeat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainSeat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49C985E619FE7BA6006DCFE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		49C985E819FE7BA6006DCFE1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		49C985EA19FE7BA6006DCFE1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		49C985EE19FE7BA6006DCFE1 /* TrainSeat-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TrainSeat-Info.plist"; sourceTree = "<group>"; };
+		49C985F019FE7BA6006DCFE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		49C985F219FE7BA6006DCFE1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		49C985F419FE7BA6006DCFE1 /* TrainSeat-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TrainSeat-Prefix.pch"; sourceTree = "<group>"; };
+		49C985F519FE7BA6006DCFE1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		49C985F619FE7BA6006DCFE1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		49C985F919FE7BA6006DCFE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		49C985FE19FE7BA6006DCFE1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		49C9860419FE7BA6006DCFE1 /* TrainSeatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrainSeatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		49C9860519FE7BA6006DCFE1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		49C9860D19FE7BA6006DCFE1 /* TrainSeatTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TrainSeatTests-Info.plist"; sourceTree = "<group>"; };
+		49C9860F19FE7BA6006DCFE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		49C9861119FE7BA6006DCFE1 /* TrainSeatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainSeatTests.m; sourceTree = "<group>"; };
+		49C9863219FF7F42006DCFE1 /* TrainMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrainMapView.xib; sourceTree = "<group>"; };
+		49C9863419FF7F42006DCFE1 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		49C9863519FF7F42006DCFE1 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		49C9863619FF7F42006DCFE1 /* GetMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetMenuViewController.h; sourceTree = "<group>"; };
+		49C9863719FF7F42006DCFE1 /* GetMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetMenuViewController.m; sourceTree = "<group>"; };
+		49C9863A19FF7F42006DCFE1 /* TrainInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainInfoViewController.h; sourceTree = "<group>"; };
+		49C9863B19FF7F42006DCFE1 /* TrainInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainInfoViewController.m; sourceTree = "<group>"; };
+		49C9863C19FF7F42006DCFE1 /* TrainMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainMapViewController.h; sourceTree = "<group>"; };
+		49C9863D19FF7F42006DCFE1 /* TrainMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainMapViewController.m; sourceTree = "<group>"; };
+		49C9863E19FF7F42006DCFE1 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		49C9863F19FF7F42006DCFE1 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		49C9864719FF7F60006DCFE1 /* TrainMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainMapView.h; sourceTree = "<group>"; };
+		49C9864819FF7F60006DCFE1 /* TrainMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainMapView.m; sourceTree = "<group>"; };
+		49C9864A19FF7FA0006DCFE1 /* TrainInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainInfo.h; sourceTree = "<group>"; };
+		49C9864B19FF7FA0006DCFE1 /* TrainInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainInfo.m; sourceTree = "<group>"; };
+		49C9864D19FF7FD3006DCFE1 /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connection.h; sourceTree = "<group>"; };
+		49C9864E19FF7FD4006DCFE1 /* Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Connection.m; sourceTree = "<group>"; };
+		49C9865019FF8083006DCFE1 /* Station.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Station.h; sourceTree = "<group>"; };
+		49C9865119FF8083006DCFE1 /* Station.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Station.m; sourceTree = "<group>"; };
+		49C9865619FF977A006DCFE1 /* RailwayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RailwayManager.h; sourceTree = "<group>"; };
+		49C9865719FF977A006DCFE1 /* RailwayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RailwayManager.m; sourceTree = "<group>"; };
+		49C9865919FF9808006DCFE1 /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
+		49C9865A19FF9808006DCFE1 /* Define.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Define.m; sourceTree = "<group>"; };
+		49C9865C19FF9ABC006DCFE1 /* Connection+TokyoMetroAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Connection+TokyoMetroAPI.h"; sourceTree = "<group>"; };
+		49C9865D19FF9ABC006DCFE1 /* Connection+TokyoMetroAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Connection+TokyoMetroAPI.m"; sourceTree = "<group>"; };
+		49C9865F19FFA249006DCFE1 /* Railway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Railway.h; sourceTree = "<group>"; };
+		49C9866019FFA249006DCFE1 /* Railway.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Railway.m; sourceTree = "<group>"; };
+		49C9866219FFA9B1006DCFE1 /* TopMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopMenuViewController.h; sourceTree = "<group>"; };
+		49C9866319FFA9B1006DCFE1 /* TopMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopMenuViewController.m; sourceTree = "<group>"; };
+		49C9866519FFC1DC006DCFE1 /* BaseNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationViewController.h; sourceTree = "<group>"; };
+		49C9866619FFC1DC006DCFE1 /* BaseNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		49C985E019FE7BA6006DCFE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49A4EC631A0C92AA0064165E /* CoreLocation.framework in Frameworks */,
+				49C985E919FE7BA6006DCFE1 /* CoreGraphics.framework in Frameworks */,
+				49C985EB19FE7BA6006DCFE1 /* UIKit.framework in Frameworks */,
+				49C985E719FE7BA6006DCFE1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49C9860119FE7BA6006DCFE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49C9860619FE7BA6006DCFE1 /* XCTest.framework in Frameworks */,
+				49C9860819FE7BA6006DCFE1 /* UIKit.framework in Frameworks */,
+				49C9860719FE7BA6006DCFE1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		495E06871A04C5E400DDA0B2 /* BaseViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				49C9863419FF7F42006DCFE1 /* BaseViewController.h */,
+				49C9863519FF7F42006DCFE1 /* BaseViewController.m */,
+				49C9866519FFC1DC006DCFE1 /* BaseNavigationViewController.h */,
+				49C9866619FFC1DC006DCFE1 /* BaseNavigationViewController.m */,
+				49C9863E19FF7F42006DCFE1 /* ViewController.h */,
+				49C9863F19FF7F42006DCFE1 /* ViewController.m */,
+			);
+			name = BaseViewControllers;
+			sourceTree = "<group>";
+		};
+		495E06881A04C5F300DDA0B2 /* InputViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				49A4EC361A0B3A470064165E /* TrainSelectViewController.h */,
+				49A4EC371A0B3A470064165E /* TrainSelectViewController.m */,
+				4903ACCC1A04C10700A7612B /* CarInfoViewController.h */,
+				4903ACCD1A04C10700A7612B /* CarInfoViewController.m */,
+				49C9863A19FF7F42006DCFE1 /* TrainInfoViewController.h */,
+				49C9863B19FF7F42006DCFE1 /* TrainInfoViewController.m */,
+				49C9863C19FF7F42006DCFE1 /* TrainMapViewController.h */,
+				49C9863D19FF7F42006DCFE1 /* TrainMapViewController.m */,
+			);
+			name = InputViewControllers;
+			sourceTree = "<group>";
+		};
+		49A4EC331A0B39AD0064165E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				49A4EC4C1A0B46A20064165E /* line_logos */,
+				49A4EC341A0B39C20064165E /* network.jpg */,
+			);
+			name = Resources;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		49A4EC4C1A0B46A20064165E /* line_logos */ = {
+			isa = PBXGroup;
+			children = (
+				49A4EC4D1A0B46A20064165E /* lineLogo_chiyoda.png */,
+				49A4EC4E1A0B46A20064165E /* lineLogo_fukutoshin.png */,
+				49A4EC4F1A0B46A20064165E /* lineLogo_ginza.png */,
+				49A4EC501A0B46A20064165E /* lineLogo_hanzoumon.png */,
+				49A4EC511A0B46A20064165E /* lineLogo_hibiya.png */,
+				49A4EC521A0B46A20064165E /* lineLogo_marunouchi.png */,
+				49A4EC531A0B46A20064165E /* lineLogo_nanboku.png */,
+				49A4EC541A0B46A20064165E /* lineLogo_touzai.png */,
+				49A4EC551A0B46A20064165E /* lineLogo_yurakucho.png */,
+			);
+			path = line_logos;
+			sourceTree = "<group>";
+		};
+		49C985DA19FE7BA6006DCFE1 = {
+			isa = PBXGroup;
+			children = (
+				49C985EC19FE7BA6006DCFE1 /* TrainSeat */,
+				49C9860B19FE7BA6006DCFE1 /* TrainSeatTests */,
+				49C985E519FE7BA6006DCFE1 /* Frameworks */,
+				49C985E419FE7BA6006DCFE1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		49C985E419FE7BA6006DCFE1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49C985E319FE7BA6006DCFE1 /* TrainSeat.app */,
+				49C9860419FE7BA6006DCFE1 /* TrainSeatTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		49C985E519FE7BA6006DCFE1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49A4EC621A0C92AA0064165E /* CoreLocation.framework */,
+				49C985E619FE7BA6006DCFE1 /* Foundation.framework */,
+				49C985E819FE7BA6006DCFE1 /* CoreGraphics.framework */,
+				49C985EA19FE7BA6006DCFE1 /* UIKit.framework */,
+				49C9860519FE7BA6006DCFE1 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		49C985EC19FE7BA6006DCFE1 /* TrainSeat */ = {
+			isa = PBXGroup;
+			children = (
+				49C985F519FE7BA6006DCFE1 /* AppDelegate.h */,
+				49C985F619FE7BA6006DCFE1 /* AppDelegate.m */,
+				49C985F819FE7BA6006DCFE1 /* Main.storyboard */,
+				49C985FE19FE7BA6006DCFE1 /* Images.xcassets */,
+				49A4EC331A0B39AD0064165E /* Resources */,
+				49C9862F19FF7F42006DCFE1 /* Classes */,
+				49C985ED19FE7BA6006DCFE1 /* Supporting Files */,
+			);
+			path = TrainSeat;
+			sourceTree = "<group>";
+		};
+		49C985ED19FE7BA6006DCFE1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				49C985EE19FE7BA6006DCFE1 /* TrainSeat-Info.plist */,
+				49C985EF19FE7BA6006DCFE1 /* InfoPlist.strings */,
+				49C985F219FE7BA6006DCFE1 /* main.m */,
+				49C985F419FE7BA6006DCFE1 /* TrainSeat-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		49C9860B19FE7BA6006DCFE1 /* TrainSeatTests */ = {
+			isa = PBXGroup;
+			children = (
+				49C9861119FE7BA6006DCFE1 /* TrainSeatTests.m */,
+				49C9860C19FE7BA6006DCFE1 /* Supporting Files */,
+			);
+			path = TrainSeatTests;
+			sourceTree = "<group>";
+		};
+		49C9860C19FE7BA6006DCFE1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				49C9860D19FE7BA6006DCFE1 /* TrainSeatTests-Info.plist */,
+				49C9860E19FE7BA6006DCFE1 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		49C9862F19FF7F42006DCFE1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				49C9863019FF7F42006DCFE1 /* Model */,
+				49C9863119FF7F42006DCFE1 /* View */,
+				49C9863319FF7F42006DCFE1 /* ViewController */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		49C9863019FF7F42006DCFE1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				49C9865919FF9808006DCFE1 /* Define.h */,
+				49C9865A19FF9808006DCFE1 /* Define.m */,
+				49C9865619FF977A006DCFE1 /* RailwayManager.h */,
+				49C9865719FF977A006DCFE1 /* RailwayManager.m */,
+				49C9865F19FFA249006DCFE1 /* Railway.h */,
+				49C9866019FFA249006DCFE1 /* Railway.m */,
+				49C9864A19FF7FA0006DCFE1 /* TrainInfo.h */,
+				49C9864B19FF7FA0006DCFE1 /* TrainInfo.m */,
+				495E06841A04C57300DDA0B2 /* UserManager.h */,
+				495E06851A04C57300DDA0B2 /* UserManager.m */,
+				49A4EC2D1A0B1BB80064165E /* Timetable.h */,
+				49A4EC2E1A0B1BB80064165E /* Timetable.m */,
+				49C9865019FF8083006DCFE1 /* Station.h */,
+				49C9865119FF8083006DCFE1 /* Station.m */,
+				49C9864D19FF7FD3006DCFE1 /* Connection.h */,
+				49C9864E19FF7FD4006DCFE1 /* Connection.m */,
+				49C9865C19FF9ABC006DCFE1 /* Connection+TokyoMetroAPI.h */,
+				49C9865D19FF9ABC006DCFE1 /* Connection+TokyoMetroAPI.m */,
+				49A4EC301A0B1F2F0064165E /* Connection+Database.h */,
+				49A4EC311A0B1F2F0064165E /* Connection+Database.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		49C9863119FF7F42006DCFE1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				49C9863219FF7F42006DCFE1 /* TrainMapView.xib */,
+				49C9864719FF7F60006DCFE1 /* TrainMapView.h */,
+				49C9864819FF7F60006DCFE1 /* TrainMapView.m */,
+				492AAD541A112539007A6777 /* StationButton.h */,
+				492AAD551A112539007A6777 /* StationButton.m */,
+				495A116D1A10DE9E008D40B9 /* LineButton.h */,
+				495A116E1A10DE9E008D40B9 /* LineButton.m */,
+				49A4EC5F1A0C810E0064165E /* RailwayMapView.h */,
+				49A4EC601A0C810E0064165E /* RailwayMapView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		49C9863319FF7F42006DCFE1 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				495E06871A04C5E400DDA0B2 /* BaseViewControllers */,
+				495E06881A04C5F300DDA0B2 /* InputViewControllers */,
+				49C9863619FF7F42006DCFE1 /* GetMenuViewController.h */,
+				49C9863719FF7F42006DCFE1 /* GetMenuViewController.m */,
+				49C9866219FFA9B1006DCFE1 /* TopMenuViewController.h */,
+				49C9866319FFA9B1006DCFE1 /* TopMenuViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		49C985E219FE7BA6006DCFE1 /* TrainSeat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49C9861519FE7BA6006DCFE1 /* Build configuration list for PBXNativeTarget "TrainSeat" */;
+			buildPhases = (
+				49C985DF19FE7BA6006DCFE1 /* Sources */,
+				49C985E019FE7BA6006DCFE1 /* Frameworks */,
+				49C985E119FE7BA6006DCFE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TrainSeat;
+			productName = TrainSeat;
+			productReference = 49C985E319FE7BA6006DCFE1 /* TrainSeat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		49C9860319FE7BA6006DCFE1 /* TrainSeatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49C9861819FE7BA6006DCFE1 /* Build configuration list for PBXNativeTarget "TrainSeatTests" */;
+			buildPhases = (
+				49C9860019FE7BA6006DCFE1 /* Sources */,
+				49C9860119FE7BA6006DCFE1 /* Frameworks */,
+				49C9860219FE7BA6006DCFE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49C9860A19FE7BA6006DCFE1 /* PBXTargetDependency */,
+			);
+			name = TrainSeatTests;
+			productName = TrainSeatTests;
+			productReference = 49C9860419FE7BA6006DCFE1 /* TrainSeatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		49C985DB19FE7BA6006DCFE1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Jin Sasaki";
+				TargetAttributes = {
+					49C9860319FE7BA6006DCFE1 = {
+						TestTargetID = 49C985E219FE7BA6006DCFE1;
+					};
+				};
+			};
+			buildConfigurationList = 49C985DE19FE7BA6006DCFE1 /* Build configuration list for PBXProject "TrainSeat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 49C985DA19FE7BA6006DCFE1;
+			productRefGroup = 49C985E419FE7BA6006DCFE1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				49C985E219FE7BA6006DCFE1 /* TrainSeat */,
+				49C9860319FE7BA6006DCFE1 /* TrainSeatTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		49C985E119FE7BA6006DCFE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49A4EC591A0B46A20064165E /* lineLogo_hanzoumon.png in Resources */,
+				49A4EC5B1A0B46A20064165E /* lineLogo_marunouchi.png in Resources */,
+				49C9864019FF7F42006DCFE1 /* TrainMapView.xib in Resources */,
+				49A4EC5A1A0B46A20064165E /* lineLogo_hibiya.png in Resources */,
+				49C985FF19FE7BA6006DCFE1 /* Images.xcassets in Resources */,
+				49A4EC5C1A0B46A20064165E /* lineLogo_nanboku.png in Resources */,
+				49A4EC5E1A0B46A20064165E /* lineLogo_yurakucho.png in Resources */,
+				49C985F119FE7BA6006DCFE1 /* InfoPlist.strings in Resources */,
+				49C985FA19FE7BA6006DCFE1 /* Main.storyboard in Resources */,
+				49A4EC561A0B46A20064165E /* lineLogo_chiyoda.png in Resources */,
+				49A4EC5D1A0B46A20064165E /* lineLogo_touzai.png in Resources */,
+				49A4EC571A0B46A20064165E /* lineLogo_fukutoshin.png in Resources */,
+				49A4EC581A0B46A20064165E /* lineLogo_ginza.png in Resources */,
+				49A4EC351A0B39C20064165E /* network.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49C9860219FE7BA6006DCFE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49C9861019FE7BA6006DCFE1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49C985DF19FE7BA6006DCFE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49C9864C19FF7FA0006DCFE1 /* TrainInfo.m in Sources */,
+				49A4EC611A0C810E0064165E /* RailwayMapView.m in Sources */,
+				492AAD561A112539007A6777 /* StationButton.m in Sources */,
+				49C985F719FE7BA6006DCFE1 /* AppDelegate.m in Sources */,
+				495E06861A04C57300DDA0B2 /* UserManager.m in Sources */,
+				49C9865219FF8083006DCFE1 /* Station.m in Sources */,
+				49C9864F19FF7FD4006DCFE1 /* Connection.m in Sources */,
+				49C9866119FFA249006DCFE1 /* Railway.m in Sources */,
+				49C9864119FF7F42006DCFE1 /* BaseViewController.m in Sources */,
+				49C9865819FF977A006DCFE1 /* RailwayManager.m in Sources */,
+				49C9866719FFC1DC006DCFE1 /* BaseNavigationViewController.m in Sources */,
+				49C9864619FF7F42006DCFE1 /* ViewController.m in Sources */,
+				495A116F1A10DE9E008D40B9 /* LineButton.m in Sources */,
+				49A4EC321A0B1F2F0064165E /* Connection+Database.m in Sources */,
+				49C9865E19FF9ABC006DCFE1 /* Connection+TokyoMetroAPI.m in Sources */,
+				49C9864219FF7F42006DCFE1 /* GetMenuViewController.m in Sources */,
+				4903ACCE1A04C10700A7612B /* CarInfoViewController.m in Sources */,
+				49A4EC2F1A0B1BB80064165E /* Timetable.m in Sources */,
+				49A4EC381A0B3A470064165E /* TrainSelectViewController.m in Sources */,
+				49C9864919FF7F60006DCFE1 /* TrainMapView.m in Sources */,
+				49C985F319FE7BA6006DCFE1 /* main.m in Sources */,
+				49C9864519FF7F42006DCFE1 /* TrainMapViewController.m in Sources */,
+				49C9864419FF7F42006DCFE1 /* TrainInfoViewController.m in Sources */,
+				49C9866419FFA9B1006DCFE1 /* TopMenuViewController.m in Sources */,
+				49C9865B19FF9808006DCFE1 /* Define.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49C9860019FE7BA6006DCFE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49C9861219FE7BA6006DCFE1 /* TrainSeatTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		49C9860A19FE7BA6006DCFE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49C985E219FE7BA6006DCFE1 /* TrainSeat */;
+			targetProxy = 49C9860919FE7BA6006DCFE1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		49C985EF19FE7BA6006DCFE1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49C985F019FE7BA6006DCFE1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		49C985F819FE7BA6006DCFE1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49C985F919FE7BA6006DCFE1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		49C9860E19FE7BA6006DCFE1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49C9860F19FE7BA6006DCFE1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		49C9861319FE7BA6006DCFE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		49C9861419FE7BA6006DCFE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		49C9861619FE7BA6006DCFE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TrainSeat/TrainSeat-Prefix.pch";
+				INFOPLIST_FILE = "TrainSeat/TrainSeat-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		49C9861719FE7BA6006DCFE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TrainSeat/TrainSeat-Prefix.pch";
+				INFOPLIST_FILE = "TrainSeat/TrainSeat-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		49C9861919FE7BA6006DCFE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TrainSeat.app/TrainSeat";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TrainSeat/TrainSeat-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TrainSeatTests/TrainSeatTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		49C9861A19FE7BA6006DCFE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TrainSeat.app/TrainSeat";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TrainSeat/TrainSeat-Prefix.pch";
+				INFOPLIST_FILE = "TrainSeatTests/TrainSeatTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		49C985DE19FE7BA6006DCFE1 /* Build configuration list for PBXProject "TrainSeat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49C9861319FE7BA6006DCFE1 /* Debug */,
+				49C9861419FE7BA6006DCFE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49C9861519FE7BA6006DCFE1 /* Build configuration list for PBXNativeTarget "TrainSeat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49C9861619FE7BA6006DCFE1 /* Debug */,
+				49C9861719FE7BA6006DCFE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49C9861819FE7BA6006DCFE1 /* Build configuration list for PBXNativeTarget "TrainSeatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49C9861919FE7BA6006DCFE1 /* Debug */,
+				49C9861A19FE7BA6006DCFE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 49C985DB19FE7BA6006DCFE1 /* Project object */;
+}
