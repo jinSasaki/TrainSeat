@@ -35,8 +35,6 @@
 
 - (NSArray *)loadTimeTableOfStation:(Station *)station;
 
-- (NSArray *)stationsOnRailwayIndex:(NSUInteger)index;
-- (NSArray *)stationsOnRailwayName:(NSString *)railwayName;
 
 - (NSString *)stationTitleWithStationName:(NSString *)staitonName;
 

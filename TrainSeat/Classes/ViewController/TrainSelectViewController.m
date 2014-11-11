@@ -12,6 +12,7 @@
 {
     TrainMapView *trainmap;
     NSArray *lineNames;
+    LocationManager *locationManager;
 }
 @end
 
@@ -25,8 +26,9 @@ const double selected = 1.0;
     [super viewDidLoad];
     
     RailwayManager *manager = [RailwayManager defaultManager];
+    locationManager = [LocationManager defaultManager];
+    locationManager.delegate = self;
 
-    
     //--------------------------------------------------------------------------------
     // 路線アイコン
     //-------------------------------------------------------------------------------
@@ -83,6 +85,7 @@ const double selected = 1.0;
         count++;
     }
     [trainmap nonSelectedStatusAllStations:nonSelected];
+
 }
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
@@ -107,8 +110,15 @@ const double selected = 1.0;
         RailwayMapView *railwayMap = [trainmap railwaymapWithRailwayName:pushedButton.railwayName];
         railwayMap.alpha = selected;
         [trainmap selectedStaionOnRailway:railwayMap.railway alpha:selected];
+        [locationManager startConnectionWithRailway:railwayMap.railway];
         
     }
+}
+
+- (void)didRecieve {
+    [trainmap updateTrainMapView];
+    NSLog(@"didReceived");
+    
 }
 
 

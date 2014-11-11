@@ -100,16 +100,6 @@ static RailwayManager *shareManager = nil;
     connection.delegate = self;
 }
 
-// 路線に対し、全ての駅名をインデックスか名前で取得する
-- (NSArray *)stationsOnRailwayIndex:(NSUInteger)index {
-#warning return nil;
-    return nil;
-}
-- (NSArray *)stationsOnRailwayName:(NSString *)railwayName {
-#warning return nil;
-    return nil;
-}
-
 - (NSString *)stationTitleWithStationName:(NSString *)staitonName {
     for (Station *station in self.allStation) {
         if ([station.stationName compare:staitonName] == NSOrderedSame) {

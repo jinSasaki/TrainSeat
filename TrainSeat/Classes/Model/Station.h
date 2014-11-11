@@ -32,6 +32,7 @@
 // "geo:long": 139.743207437669
 @property CLLocation *location;
 
+@property CGPoint center;
 - (id) initWithDictionary:(NSDictionary *)dict;
 
 @end

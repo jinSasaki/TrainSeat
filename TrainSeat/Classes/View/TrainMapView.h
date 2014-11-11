@@ -10,6 +10,7 @@
 #import "RailwayMapView.h"
 #import "RailwayManager.h"
 #import "StationButton.h"
+#import "LocationManager.h"
 
 @interface TrainMapView : UIView
 {
@@ -18,7 +19,10 @@
 
 @property (nonatomic) UIView *staionsMap;
 @property (nonatomic) UIView *railwayMap;
+@property (nonatomic) UIView *trainMap;
+
 @property (nonatomic) NSDictionary *groupStations;
+@property (nonatomic) NSDictionary *stationDict;
 
 + (double)maxWidth;
 + (double)maxHeight;
@@ -31,5 +35,7 @@
 
 - (void)nonSelectedStatusAllStations:(double)alpha;
 - (void)selectedStaionOnRailway:(Railway *)railway alpha:(double)alpha;
+
+- (void)updateTrainMapView;
 
 @end

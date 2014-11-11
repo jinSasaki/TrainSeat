@@ -10,6 +10,13 @@
 
 @implementation Connection (TokyoMetroAPI)
 
+- (void)sendRequestWithOdptType:(OdptType)type andQuery:(NSDictionary *)query {
+    
+    NSURL *url = [self createURLWithOdptType:type andQuery:query];
+    [self sendRequestWithURL:url];
+    
+}
+
 // タイプでリクエストを送る
 - (void)sendRequestWithOdptType:(OdptType)type {
 

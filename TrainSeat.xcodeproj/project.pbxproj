@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		4903ACCE1A04C10700A7612B /* CarInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4903ACCD1A04C10700A7612B /* CarInfoViewController.m */; };
 		492AAD561A112539007A6777 /* StationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 492AAD551A112539007A6777 /* StationButton.m */; };
+		492AAD591A113D40007A6777 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 492AAD581A113D40007A6777 /* LocationManager.m */; };
+		492AAD5C1A114A37007A6777 /* Train.m in Sources */ = {isa = PBXBuildFile; fileRef = 492AAD5B1A114A37007A6777 /* Train.m */; };
+		492AAD621A11C385007A6777 /* TrainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 492AAD611A11C385007A6777 /* TrainView.m */; };
 		495A116F1A10DE9E008D40B9 /* LineButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 495A116E1A10DE9E008D40B9 /* LineButton.m */; };
 		495E06861A04C57300DDA0B2 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 495E06851A04C57300DDA0B2 /* UserManager.m */; };
 		49A4EC2F1A0B1BB80064165E /* Timetable.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A4EC2E1A0B1BB80064165E /* Timetable.m */; };
@@ -72,6 +75,12 @@
 		4903ACCD1A04C10700A7612B /* CarInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarInfoViewController.m; sourceTree = "<group>"; };
 		492AAD541A112539007A6777 /* StationButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationButton.h; sourceTree = "<group>"; };
 		492AAD551A112539007A6777 /* StationButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationButton.m; sourceTree = "<group>"; };
+		492AAD571A113D40007A6777 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		492AAD581A113D40007A6777 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		492AAD5A1A114A37007A6777 /* Train.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Train.h; sourceTree = "<group>"; };
+		492AAD5B1A114A37007A6777 /* Train.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Train.m; sourceTree = "<group>"; };
+		492AAD601A11C385007A6777 /* TrainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrainView.h; path = ../../../TrainView.h; sourceTree = "<group>"; };
+		492AAD611A11C385007A6777 /* TrainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrainView.m; path = ../../../TrainView.m; sourceTree = "<group>"; };
 		495A116D1A10DE9E008D40B9 /* LineButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LineButton.h; path = TrainSeat/Classes/View/LineButton.h; sourceTree = SOURCE_ROOT; };
 		495A116E1A10DE9E008D40B9 /* LineButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LineButton.m; path = TrainSeat/Classes/View/LineButton.m; sourceTree = SOURCE_ROOT; };
 		495E06841A04C57300DDA0B2 /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
@@ -317,6 +326,10 @@
 				49C9865719FF977A006DCFE1 /* RailwayManager.m */,
 				49C9865F19FFA249006DCFE1 /* Railway.h */,
 				49C9866019FFA249006DCFE1 /* Railway.m */,
+				492AAD571A113D40007A6777 /* LocationManager.h */,
+				492AAD581A113D40007A6777 /* LocationManager.m */,
+				492AAD5A1A114A37007A6777 /* Train.h */,
+				492AAD5B1A114A37007A6777 /* Train.m */,
 				49C9864A19FF7FA0006DCFE1 /* TrainInfo.h */,
 				49C9864B19FF7FA0006DCFE1 /* TrainInfo.m */,
 				495E06841A04C57300DDA0B2 /* UserManager.h */,
@@ -343,6 +356,8 @@
 				49C9864819FF7F60006DCFE1 /* TrainMapView.m */,
 				492AAD541A112539007A6777 /* StationButton.h */,
 				492AAD551A112539007A6777 /* StationButton.m */,
+				492AAD601A11C385007A6777 /* TrainView.h */,
+				492AAD611A11C385007A6777 /* TrainView.m */,
 				495A116D1A10DE9E008D40B9 /* LineButton.h */,
 				495A116E1A10DE9E008D40B9 /* LineButton.m */,
 				49A4EC5F1A0C810E0064165E /* RailwayMapView.h */,
@@ -481,9 +496,12 @@
 				49C9864F19FF7FD4006DCFE1 /* Connection.m in Sources */,
 				49C9866119FFA249006DCFE1 /* Railway.m in Sources */,
 				49C9864119FF7F42006DCFE1 /* BaseViewController.m in Sources */,
+				492AAD5C1A114A37007A6777 /* Train.m in Sources */,
 				49C9865819FF977A006DCFE1 /* RailwayManager.m in Sources */,
+				492AAD621A11C385007A6777 /* TrainView.m in Sources */,
 				49C9866719FFC1DC006DCFE1 /* BaseNavigationViewController.m in Sources */,
 				49C9864619FF7F42006DCFE1 /* ViewController.m in Sources */,
+				492AAD591A113D40007A6777 /* LocationManager.m in Sources */,
 				495A116F1A10DE9E008D40B9 /* LineButton.m in Sources */,
 				49A4EC321A0B1F2F0064165E /* Connection+Database.m in Sources */,
 				49C9865E19FF9ABC006DCFE1 /* Connection+TokyoMetroAPI.m in Sources */,

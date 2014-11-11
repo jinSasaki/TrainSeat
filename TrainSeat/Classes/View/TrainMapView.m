@@ -19,26 +19,36 @@ const double view_height   = 160 * scale;
 
 static NSMutableDictionary *_matchList;
 static NSMutableDictionary *__groupStations;
+static NSMutableDictionary *__stationDict;
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
-    if (self) {
-        self.railwayMap = [[UIView alloc]initWithFrame:frame];
-        self.staionsMap = [[UIView alloc]initWithFrame:frame];
-        _matchList = [NSMutableDictionary dictionary];
-        NSArray *locationArray = [self parseJSONFromString:locationJSON];
-        for (NSDictionary *dict in locationArray) {
-            StationButton *addButton = [self createStationButtonFromInfo:dict];
-            addButton.tag = count;
-            [_matchList setObject:@(count) forKey:[self removeDashFromString:[dict objectForKey:@"station"]]];
-            [self.staionsMap addSubview:addButton];
-            count++;
-        }
-        
-        [self addSubview:self.railwayMap];
-        [self addSubview:self.staionsMap];
+    if (!self) {
+        return self;
     }
+    
+    self.railwayMap = [[UIView alloc]initWithFrame:frame];
+    self.staionsMap = [[UIView alloc]initWithFrame:frame];
+    self.trainMap = [[UIView alloc]initWithFrame:frame];
+    _matchList = [NSMutableDictionary dictionary];
+    __stationDict = [NSMutableDictionary dictionary];
+
+    NSArray *locationArray = [self parseJSONFromString:locationJSON];
+    for (NSDictionary *dict in locationArray) {
+        StationButton *addButton = [self createStationButtonFromInfo:dict];
+        addButton.tag = count;
+        [_matchList setObject:@(count) forKey:[self removeDashFromString:[dict objectForKey:@"station"]]];
+        [self.staionsMap addSubview:addButton];
+        count++;
+    }
+   
+    self.stationDict = __stationDict;
+
+    [self addSubview:self.railwayMap];
+    [self addSubview:self.staionsMap];
+    [self addSubview:self.trainMap];
+    
     return self;
 }
 - (NSDictionary *)matchList {
@@ -68,7 +78,7 @@ static NSMutableDictionary *__groupStations;
     if(searchResult.location == NSNotFound){
         return [string capitalizedString];
     }
-
+    
     NSArray *strs = [string componentsSeparatedByString:@"-"];
     NSString *result = @"";
     for (int i=0 ; i<strs.count ; i++) {
@@ -79,6 +89,27 @@ static NSMutableDictionary *__groupStations;
     
 }
 
+- (void)updateTrainMapView {
+    
+    for (UIView *view in self.trainMap.subviews) {
+        [view removeFromSuperview];
+    }
+    
+    LocationManager *locationManager = [LocationManager defaultManager];
+    for (Train *train in locationManager.trainArray) {
+        UILabel *trainLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 40, 20)];
+        trainLabel.text = train.terminalStation;
+        trainLabel.center = train.center;
+        trainLabel.minimumFontSize = 10.0;
+        trainLabel.adjustsFontSizeToFitWidth = YES;
+        trainLabel.textColor = [UIColor whiteColor];
+//        trainLabel.layer.borderWidth = 2.0;
+        trainLabel.layer.cornerRadius = 10.0;
+        trainLabel.layer.backgroundColor =[[UIColor redColor] CGColor];
+
+        [self.trainMap addSubview:trainLabel];
+    }
+}
 
 - (StationButton *)createStationButtonFromInfo:(NSDictionary *)stationInfo{
     
@@ -103,10 +134,13 @@ static NSMutableDictionary *__groupStations;
     double height = abs(y2 - y1);
     
     RailwayManager *manager = [RailwayManager defaultManager];
-    
-    StationButton *button = [StationButton buttonWithType:UIButtonTypeSystem frame:CGRectMake(x1, y1, width, height) station:manager.allStationDict[name]];
+    Station *station = manager.allStationDict[name];
+    StationButton *button = [StationButton buttonWithType:UIButtonTypeSystem frame:CGRectMake(x1, y1, width, height) station:station];
     [button setTitle:[manager stationTitleWithStationName:name] forState:UIControlStateNormal];
     [button setTitle:[manager stationTitleWithStationName:name] forState:UIControlStateSelected];
+    station.center = button.center;
+    [__stationDict setObject:button forKey:station.stationName];
+    
     return button;
 }
 

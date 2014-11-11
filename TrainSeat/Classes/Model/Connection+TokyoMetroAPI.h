@@ -13,8 +13,7 @@
 @interface Connection (TokyoMetroAPI)
 
 - (void)sendRequestWithOdptType:(OdptType)type;
-//- (NSData *)connectBySynchronousRequestWithOdptType:(OdptType)type;
+- (void)sendRequestWithOdptType:(OdptType)type andQuery:(NSDictionary *)query;
 - (NSData *)connectBySynchronousRequestWithOdptType:(OdptType)type andQuery:(NSDictionary *)query;
 
 @end
-

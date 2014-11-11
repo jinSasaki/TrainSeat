@@ -11,9 +11,10 @@
 #import "RailwayMapView.h"
 #import "RailwayManager.h"
 #import "LineButton.h"
+#import "LocationManager.h"
 
 @interface TrainSelectViewController : UIViewController
-<UIScrollViewDelegate>
+<UIScrollViewDelegate ,LocationManagerDelegate>
 
 @property (nonatomic) IBOutlet UIImageView *map;
 @property (nonatomic) IBOutlet UIScrollView *scrollView;
