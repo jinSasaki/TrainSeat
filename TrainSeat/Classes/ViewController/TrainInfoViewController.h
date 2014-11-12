@@ -15,10 +15,10 @@
 @interface TrainInfoViewController : UIViewController
 <UIPickerViewDataSource ,UIPickerViewDelegate>
 
-@property (nonatomic , weak) TrainInfo *trainInfo;
+@property (nonatomic) TrainInfo *trainInfo;
 
-@property (nonatomic , weak) IBOutlet UISegmentedControl *directionSegment;
-@property (nonatomic , weak) IBOutlet UISegmentedControl *statusSegment;
-@property (nonatomic , weak) IBOutlet UIPickerView *pickerview;
+@property (nonatomic) IBOutlet UISegmentedControl *directionSegment;
+@property (nonatomic) IBOutlet UISegmentedControl *statusSegment;
+@property (nonatomic) IBOutlet UIPickerView *pickerview;
 
 @end

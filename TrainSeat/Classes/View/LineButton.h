@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface LineButton : UIButton
-@property (nonatomic , weak) NSString *railwayName;
+@property (nonatomic) NSString *railwayName;
 - (id)initWithFrame:(CGRect)frame railwayTitle:(NSString *)railwayTitle;
 
 @end

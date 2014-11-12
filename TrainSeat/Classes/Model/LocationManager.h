@@ -26,11 +26,11 @@
 }
 @property id <LocationManagerDelegate> delegate;
 
-@property (nonatomic , weak) Railway *currentRailway;
+@property (nonatomic) Railway *currentRailway;
 
-@property (nonatomic , weak) NSDictionary *railwayDirections;
+@property (nonatomic) NSDictionary *railwayDirections;
 
-@property (nonatomic , weak) NSArray *trainArray;
+@property (nonatomic) NSArray *trainArray;
 
 + (instancetype)defaultManager;
 

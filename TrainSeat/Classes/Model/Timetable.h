@@ -13,7 +13,7 @@
 
 @interface Timetable : NSObject
 
-@property (nonatomic , weak) NSArray *tables;
+@property (nonatomic) NSArray *tables;
 
 - (NSArray *)loadTimetable:(Station *)station;
 

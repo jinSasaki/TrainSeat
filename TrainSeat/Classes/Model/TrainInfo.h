@@ -12,10 +12,10 @@
 @interface TrainInfo : NSObject
 
 // 次に電車が到着する駅
-@property (nonatomic , weak) Station *nearStation;
+@property (nonatomic) Station *nearStation;
 
 // 到着予定駅
-@property (nonatomic , weak) Station *dstStation;
+@property (nonatomic) Station *dstStation;
 
 // 路線のID ID管理するか、クラス管理するかはまた別途考える
 @property (nonatomic) NSInteger railwayIndex;
