@@ -18,14 +18,14 @@
     int count;
 }
 
-@property (nonatomic) UIView *staionsMap;
-@property (nonatomic) UIView *railwayMap;
-@property (nonatomic) UIView *trainMap;
+@property (nonatomic , weak) UIView *staionsMap;
+@property (nonatomic , weak) UIView *railwayMap;
+@property (nonatomic , weak) UIView *trainMap;
 
-@property (nonatomic) NSDictionary *groupStations;
-@property (nonatomic) NSDictionary *stationDict;
+@property (nonatomic , weak) NSDictionary *groupStations;
+@property (nonatomic , weak) NSDictionary *stationDict;
 
-@property (nonatomic) NSString *currentDirection;
+@property (nonatomic , weak) NSString *currentDirection;
 
 + (double)maxWidth;
 + (double)maxHeight;

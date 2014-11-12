@@ -11,13 +11,13 @@
 
 @interface TrainView : UIView
 
-@property (nonatomic) UIButton *trainIcon;
+@property (nonatomic , weak) UIButton *trainIcon;
 
-@property (nonatomic) UILabel *alertDelay;
+@property (nonatomic , weak) UILabel *alertDelay;
 
 @property (nonatomic) BOOL isRunning;
 
-@property (nonatomic) Train *train;
+@property (nonatomic , weak) Train *train;
 
 - (id)initWithFrame:(CGRect)frame train:(Train *)train;
 

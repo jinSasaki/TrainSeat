@@ -11,7 +11,7 @@
 
 @interface UserManager : NSObject
 
-@property (nonatomic) TrainInfo *currentTrainInfo;
+@property (nonatomic , weak) TrainInfo *currentTrainInfo;
 
 + (instancetype)defaultUserManager;
 

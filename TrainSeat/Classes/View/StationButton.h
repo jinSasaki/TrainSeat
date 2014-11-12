@@ -11,6 +11,6 @@
 
 @interface StationButton : UIButton
 
-@property (nonatomic) Station *staion;
+@property (nonatomic , weak) Station *staion;
 + (id)buttonWithType:(UIButtonType)buttonType frame:(CGRect)frame station:(Station *)station;
 @end

@@ -11,28 +11,28 @@
 @interface Train : NSObject
 
 // "@id": "urn:ucode:_00001C000000000000010000030CA13E",
-@property (nonatomic) NSString *ucode;
+@property (nonatomic , weak) NSString *ucode;
 
 // "odpt:trainType": "odpt.TrainType:TokyoMetro.Local",
-@property (nonatomic) NSString *trainType;
+@property (nonatomic , weak) NSString *trainType;
 
 // "odpt:delay": 0,
 @property (nonatomic) int delay;
 
 // "odpt:fromStation": "odpt.Station:TokyoMetro.Marunouchi.Myogadani",
-@property (nonatomic) NSString *fromStation;
+@property (nonatomic , weak) NSString *fromStation;
 
 // "odpt:toStation": "odpt.Station:TokyoMetro.Marunouchi.Korakuen",
-@property (nonatomic) NSString *toStation;
+@property (nonatomic , weak) NSString *toStation;
 
 // "odpt:startingStation": "odpt.Station:TokyoMetro.Marunouchi.Ikebukuro",
-@property (nonatomic) NSString *startingStaion;
+@property (nonatomic , weak) NSString *startingStaion;
 
 // "odpt:terminalStation": "odpt.Station:TokyoMetro.Marunouchi.Ogikubo",
-@property (nonatomic) NSString *terminalStation;
+@property (nonatomic , weak) NSString *terminalStation;
 
 // "odpt:railDirection": "odpt.RailDirection:TokyoMetro.Ogikubo",
-@property (nonatomic) NSString * railDirection;
+@property (nonatomic , weak) NSString * railDirection;
 
 @property (nonatomic) BOOL isStop;
 

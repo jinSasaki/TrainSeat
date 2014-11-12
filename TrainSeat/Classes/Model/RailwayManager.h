@@ -28,7 +28,7 @@
 
 @property (nonatomic) NSArray *allStation;
 @property (nonatomic) NSDictionary *allStationDict;
-@property (nonatomic) id <RailwayManagerDelegate> delegate;
+@property (nonatomic , weak) id <RailwayManagerDelegate> delegate;
 
 + (instancetype)defaultManager;
 - (void)updateRailwayInfomation;
