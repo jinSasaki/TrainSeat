@@ -97,19 +97,25 @@ static NSMutableDictionary *__stationDict;
     
     LocationManager *locationManager = [LocationManager defaultManager];
     for (Train *train in locationManager.trainArray) {
-        UILabel *trainLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 40, 20)];
-        trainLabel.text = train.terminalStation;
-        trainLabel.center = train.center;
-        trainLabel.minimumFontSize = 10.0;
-        trainLabel.adjustsFontSizeToFitWidth = YES;
-        trainLabel.textColor = [UIColor whiteColor];
-//        trainLabel.layer.borderWidth = 2.0;
-        trainLabel.layer.cornerRadius = 10.0;
-        trainLabel.layer.backgroundColor =[[UIColor redColor] CGColor];
-
-        [self.trainMap addSubview:trainLabel];
+        TrainView *trainView = [[TrainView alloc]initWithFrame:CGRectMake(0, 0, 40, 20) train:train];
+        trainView.center = train.center;
+        [self.trainMap addSubview:trainView];
+    }
+    
+}
+- (void)updateTrainMapViewWithRailDirection:(NSString *)direction {
+    
+    [self updateTrainMapView];
+    self.currentDirection = direction;
+    for (TrainView *trainView in self.trainMap.subviews) {
+        if ([trainView.train.railDirection compare:direction] == NSOrderedSame) {
+            trainView.hidden = NO;
+        }else {
+            trainView.hidden = YES;
+        }
     }
 }
+
 
 - (StationButton *)createStationButtonFromInfo:(NSDictionary *)stationInfo{
     
@@ -151,7 +157,7 @@ static NSMutableDictionary *__stationDict;
             return railwayMap;
         }
     }
-    NSLog(@"%@ return nil",railwayName);
+    LOG(@"%@ return nil",railwayName);
     return nil;
 }
 

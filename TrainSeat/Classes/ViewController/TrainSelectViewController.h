@@ -16,8 +16,11 @@
 @interface TrainSelectViewController : UIViewController
 <UIScrollViewDelegate ,LocationManagerDelegate>
 
-@property (nonatomic) IBOutlet UIImageView *map;
 @property (nonatomic) IBOutlet UIScrollView *scrollView;
 @property (nonatomic) IBOutlet UIScrollView *lineScrollView;
+
+@property (nonatomic) IBOutlet UISegmentedControl *directionSegment;
+
+- (IBAction)didChangeDirection:(id)sender;
 
 @end

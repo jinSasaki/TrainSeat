@@ -13,6 +13,7 @@
     TrainMapView *trainmap;
     NSArray *lineNames;
     LocationManager *locationManager;
+    NSArray *directionArray;
 }
 @end
 
@@ -78,13 +79,14 @@ const double selected = 1.0;
         RailwayMapView *railwaymap = [[RailwayMapView alloc]initWithFrame:trainmap.frame stationButtons:trainmap.staionsMap.subviews  stationOrder:railway.order matchList:[trainmap matchList] railwayColor:railway.color];
         [railwaymap setBackgroundColor:[UIColor clearColor]];
         railwaymap.railwayName = railwayName;
-        railwaymap.alpha = nonSelected;
+//        railwaymap.alpha = nonSelected;
         railwaymap.tag = count;
         railwaymap.railway = railway;
         [trainmap.railwayMap addSubview:railwaymap];
         count++;
     }
-    [trainmap nonSelectedStatusAllStations:nonSelected];
+    [trainmap nonSelectedStatusAllStations:selected];
+
 
 }
 
@@ -112,14 +114,36 @@ const double selected = 1.0;
         [trainmap selectedStaionOnRailway:railwayMap.railway alpha:selected];
         [locationManager startConnectionWithRailway:railwayMap.railway];
         
-    }
-}
+        directionArray = RailDirectionsFromRailway(locationManager.currentRailway.railwayName);
 
-- (void)didRecieve {
-    [trainmap updateTrainMapView];
-    NSLog(@"didReceived");
+        for (int i=0; i<directionArray.count ; i++ ) {
+            RailwayManager *manager = [RailwayManager defaultManager];
+            Station *station = manager.allStationDict[directionArray[i]];
+            [self.directionSegment setTitle:station.title forSegmentAtIndex:i];
+        }
+        [self.directionSegment reloadInputViews];
+        // TODO: 1つめの方を選んでるってことにする
+
+    }
+    
     
 }
 
+- (IBAction)didChangeDirection:(id)sender {
+
+    // update train map view
+    [trainmap updateTrainMapViewWithRailDirection:directionArray[self.directionSegment.selectedSegmentIndex]];
+}
+
+
+#pragma mark - Location Manager Delegate Methods
+- (void)didRecieve {
+
+    LOG(@"didReceived");
+    
+    // update train map view
+    [trainmap updateTrainMapViewWithRailDirection:directionArray[self.directionSegment.selectedSegmentIndex]];
+    
+}
 
 @end

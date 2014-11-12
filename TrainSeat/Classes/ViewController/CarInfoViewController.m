@@ -35,7 +35,7 @@
     [uManager setCurrentTrainInfo:self.trainInfo];
     
     // 完了のアラート
-    NSLog(@"%@",self.trainInfo);
+    LOG(@"%@",self.trainInfo);
     
     
     [self.navigationController popToRootViewControllerAnimated:YES];

@@ -12,6 +12,7 @@
 
 // singleton
 static LocationManager *shareInstance = nil;
+static NSMutableDictionary *__railwayDirections;
 + (instancetype)defaultManager {
     
     if (!shareInstance) {
@@ -25,7 +26,7 @@ static LocationManager *shareInstance = nil;
     self.currentRailway = railway;
     timer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(connection) userInfo:nil repeats:YES];
     [self connection];
-    NSLog(@"connection started");
+    LOG(@"connection started");
 }
 
 - (void)connection {
@@ -40,7 +41,7 @@ static LocationManager *shareInstance = nil;
 - (void)stopConnection {
     self.currentRailway = nil;
     [timer invalidate];
-    NSLog(@"connection stopped");
+    LOG(@"connection stopped");
 }
 
 
@@ -50,25 +51,37 @@ static LocationManager *shareInstance = nil;
 }
 -(void)connection:(Connection *)connection didRecieve:(NSData *)recievedData {
     RailwayManager *manager = [RailwayManager defaultManager];
+    
+    if(!__railwayDirections){
+        __railwayDirections = [NSMutableDictionary dictionary];
+    }
+    
     NSArray *jsonArray;
     jsonArray = [NSJSONSerialization JSONObjectWithData:recievedData options:NSJSONReadingAllowFragments error:nil];
     NSMutableArray *array = [NSMutableArray array];
-    
+    NSMutableArray *directions = [NSMutableArray array];
     for (NSDictionary *dict in jsonArray) {
         Train *train = [[Train alloc]initWithDictionary:dict];
+        Station *station;
         if (train.isStop) {
-            Station *station = manager.allStationDict[train.fromStation];
+            station = manager.allStationDict[train.fromStation];
             train.center = CGPointMake(station.center.x, station.center.y +20);
         }else {
         
-            Station *fromStation = manager.allStationDict[train.fromStation];
+            station = manager.allStationDict[train.fromStation];
             Station *toStation = manager.allStationDict[train.toStation];
-            train.center = CGPointMake((fromStation.center.x + toStation.center.x)/2, (fromStation.center.y + toStation.center.y)/2);
+            train.center = CGPointMake((station.center.x + toStation.center.x)/2, (station.center.y + toStation.center.y)/2);
         }
         
         [array addObject:train];
-        NSLog(@"%@",train.fromStation);
+        if (![directions containsObject:train.railDirection]) {
+            [directions addObject:train.railDirection];
+        }
     }
+    [__railwayDirections setObject:directions forKey:self.currentRailway.railwayName];
+
+    self.railwayDirections = __railwayDirections;
+
     self.trainArray = array;
 
     [self.delegate didRecieve];

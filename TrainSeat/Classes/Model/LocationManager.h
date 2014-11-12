@@ -28,6 +28,8 @@
 
 @property (nonatomic) Railway *currentRailway;
 
+@property (nonatomic) NSDictionary *railwayDirections;
+
 @property (nonatomic) NSArray *trainArray;
 
 + (instancetype)defaultManager;

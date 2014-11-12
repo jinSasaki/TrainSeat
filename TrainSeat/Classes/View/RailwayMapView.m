@@ -24,7 +24,7 @@
             if (matchList[order[i]]) {
                 [railwayBtnArray addObject:buttons[[matchList[order[i]] intValue]]];
             }else {
-                NSLog(@"not found %@",order[i]);
+                LOG(@"not found %@",order[i]);
             }
         }
         

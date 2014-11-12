@@ -106,7 +106,7 @@ static RailwayManager *shareManager = nil;
             return station.title;
         }
     }
-    NSLog(@"stationTitle not found.");
+    LOG(@"stationTitle not found.");
     return @"";
 }
 

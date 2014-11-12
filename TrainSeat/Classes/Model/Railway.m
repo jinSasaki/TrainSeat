@@ -25,6 +25,7 @@
         NSArray *codes = [self.code componentsSeparatedByString:@"."];
         self.railwayName = codes[codes.count-1];
         
+        
         // order作成
         NSArray *orderArray =[dict objectForKey:@"odpt:stationOrder"];
         NSMutableArray *mArray = [NSMutableArray array];
@@ -53,6 +54,7 @@
       @"南北":@"0,173,169",
       @"副都心":@"187,100,29"
       };
+    
     NSString *rgbParam = lineColorDict[title];
     return [self createUIColorWithRGBParameter:rgbParam];
     

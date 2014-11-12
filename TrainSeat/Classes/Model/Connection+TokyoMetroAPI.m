@@ -29,7 +29,7 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSError *error;
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:&error];
-    NSLog(@"%@",error);
+    LOG(@"%@",error);
     return data;
 
 }
@@ -41,7 +41,7 @@
 
     NSError *error;
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:&error];
-    NSLog(@"%@",error);
+    LOG(@"%@",error);
     return data;
     
 }
@@ -71,7 +71,7 @@
         }
     }
     
-    NSLog(@"%@",urlStr);
+    LOG(@"%@",urlStr);
     return [NSURL URLWithString:urlStr];
 
 }

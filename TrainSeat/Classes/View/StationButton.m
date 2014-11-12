@@ -45,7 +45,7 @@ const double minWidth = 30;
 - (void)didPush:(id)sender {
     StationButton *btn = sender;
     
-    NSLog(@"pushed %@",btn.currentTitle);
+    LOG(@"pushed %@",btn.currentTitle);
 }
 
 
