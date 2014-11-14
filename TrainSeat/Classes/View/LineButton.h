@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface LineButton : UIButton
-@property (nonatomic) NSString *railwayName;
+@property (nonatomic, copy) NSString *railwayName;
 - (id)initWithFrame:(CGRect)frame railwayTitle:(NSString *)railwayTitle;
 
 @end

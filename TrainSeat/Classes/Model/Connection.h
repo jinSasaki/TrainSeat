@@ -21,7 +21,7 @@
 
 @interface Connection : NSObject
 
-@property id <ConnectionDelegate> delegate;
+@property (nonatomic , weak) id <ConnectionDelegate> delegate;
 
 - (void)sendRequestWithURL:(NSURL *)url;
 

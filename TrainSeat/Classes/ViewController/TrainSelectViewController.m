@@ -58,9 +58,11 @@ const double selected = 1.0;
     // 駅マップ
     //--------------------------------------------------------------------------------
     
-    trainmap = [[TrainMapView alloc]initWithFrame:CGRectMake(0,0, [TrainMapView maxWidth], [TrainMapView maxHeight])];
+    trainmap = [[TrainMapView alloc]initWithFrame:CGRectMake(0,0, self.scrollView.frame.size.width * 4 ,self.scrollView.frame.size.height* 1.5) ];
     self.scrollView.contentSize = trainmap.bounds.size;
-    self.scrollView.contentOffset = CGPointMake(1000, 650);
+
+    // TODO: Fix Hard Cording
+    self.scrollView.contentOffset = CGPointMake(500,180);
     self.scrollView.minimumZoomScale = 0.4f;
     self.scrollView.maximumZoomScale = 2.0f;
     self.scrollView.delegate = self;
@@ -119,21 +121,27 @@ const double selected = 1.0;
         for (int i=0; i<directionArray.count ; i++ ) {
             RailwayManager *manager = [RailwayManager defaultManager];
             Station *station = manager.allStationDict[directionArray[i]];
-            [self.directionSegment setTitle:station.title forSegmentAtIndex:i];
+            [self.directionSegment setTitle:[station.title stringByAppendingString:@"方面"] forSegmentAtIndex:i];
         }
         [self.directionSegment reloadInputViews];
-        // TODO: 1つめの方を選んでるってことにする
-
     }
     
+    [trainmap.pinView removeFromSuperview];
+    trainmap.pinView = nil;
+    [trainmap.flagView removeFromSuperview];
+    trainmap.flagView = nil;;
     
 }
 
 - (IBAction)didChangeDirection:(id)sender {
 
+    [trainmap.pinView removeFromSuperview];
+    trainmap.pinView = nil;
+
     // update train map view
     [trainmap updateTrainMapViewWithRailDirection:directionArray[self.directionSegment.selectedSegmentIndex]];
 }
+
 
 
 #pragma mark - Location Manager Delegate Methods
@@ -144,6 +152,21 @@ const double selected = 1.0;
     // update train map view
     [trainmap updateTrainMapViewWithRailDirection:directionArray[self.directionSegment.selectedSegmentIndex]];
     
+}
+- (IBAction)didPushNext:(id)sender {
+    if (!trainmap.pinView) {
+        LOG(@"input pin");
+        return;
+    }
+    if (!trainmap.flagView) {
+        LOG(@"input flag");
+        return;
+    }
+    
+    TrainInfoViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"TrainInfo"];
+    vc.trainInfo.ridingTrain = [[LocationManager defaultManager]trainWithUCode:trainmap.selectedTrainUCode];
+    vc.trainInfo.dstStation = trainmap.selectedStationButton.staion;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

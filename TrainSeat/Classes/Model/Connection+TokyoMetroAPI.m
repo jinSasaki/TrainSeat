@@ -19,7 +19,7 @@
 
 // タイプでリクエストを送る
 - (void)sendRequestWithOdptType:(OdptType)type {
-
+    
     NSURL *url = [self createURLWithOdptType:type andQuery:nil];
     [self sendRequestWithURL:url];
 }
@@ -29,19 +29,25 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSError *error;
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:&error];
-    LOG(@"%@",error);
+    if (error) {
+        LOG_METHOD;
+        LOG(@"%@",error);
+    }
     return data;
-
+    
 }
 
 // クエリを用いて接続
 - (NSData *)connectBySynchronousRequestWithOdptType:(OdptType)type andQuery:(NSDictionary *)query {
     NSURL *url = [self createURLWithOdptType:type andQuery:query];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-
+    
     NSError *error;
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:&error];
-    LOG(@"%@",error);
+    if (error) {
+        LOG_METHOD;
+        LOG(@"%@",error);
+    }
     return data;
     
 }
@@ -51,7 +57,7 @@
 
 // URLの生成
 - (NSURL *)createURLWithOdptType:(OdptType)type andQuery:(NSDictionary *)query {
-
+    
     // アクセストークンとベースのURL
     NSString *urlStr = [NSString
                         stringWithFormat:@"%@?acl:consumerKey=%@",
@@ -70,9 +76,9 @@
             urlStr = [urlStr stringByAppendingString:appendQuery];
         }
     }
-    
-    LOG(@"%@",urlStr);
+    LOG_METHOD;
+    LOG_PRINTF(@"%@", urlStr);
     return [NSURL URLWithString:urlStr];
-
+    
 }
 @end

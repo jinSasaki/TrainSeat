@@ -84,6 +84,7 @@ static NSString *data_str;
 - (void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult result))completionHandler
 {
     // ここにバックグラウンド処理
+    LOG_METHOD;
     LOG(@"background");
 }
 

@@ -15,4 +15,6 @@
 
 + (instancetype)defaultUserManager;
 
+- (void)sendRidingData:(TrainInfo *)trainInfo;
+
 @end

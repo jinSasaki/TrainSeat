@@ -35,18 +35,24 @@ const double minWidth = 30;
     instance.layer.borderWidth = 1.0;
     
     instance.layer.cornerRadius = 5.0;
-    [instance addTarget:instance action:@selector(didPush:) forControlEvents:UIControlEventTouchUpInside];
+
+    instance.titleLabel.font = [UIFont systemFontOfSize:10];
+    station.center = instance.center;
 
     return instance;
     
 }
 
-
-- (void)didPush:(id)sender {
-    StationButton *btn = sender;
+- (void)addFlag {
+    self.flagView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 20, 40)];
+    self.flagView.image = [UIImage imageNamed:@"flag.png"];
+    [self addSubview:self.flagView];
     
-    LOG(@"pushed %@",btn.currentTitle);
 }
+- (void)removeFlag {
+    [self.flagView removeFromSuperview];
+}
+
 
 
 @end

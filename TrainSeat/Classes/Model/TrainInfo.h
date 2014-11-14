@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Station.h"
-
+#import "Train.h"
 @interface TrainInfo : NSObject
 
 // 次に電車が到着する駅
@@ -28,7 +28,7 @@
 @property (nonatomic) NSInteger status;
 
 // 乗車中の電車の発車時刻
-@property (nonatomic) NSString *departureTime;
+@property (nonatomic, copy) NSString *departureTime;
 
 // 乗車車両目
 @property (nonatomic) NSInteger carNumber;
@@ -41,6 +41,9 @@
 
 // 車内温度（目安を段階で）
 @property (nonatomic) NSInteger temperature;
+
+// 乗車中の電車
+@property (nonatomic) Train *ridingTrain;
 
 @end
 

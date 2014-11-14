@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Train.h"
+#import "Railway.h"
 
 @interface TrainView : UIView
 
@@ -19,7 +20,9 @@
 
 @property (nonatomic) Train *train;
 
-- (id)initWithFrame:(CGRect)frame train:(Train *)train;
+@property (nonatomic) BOOL isSelected;
+
+- (id)initWithFrame:(CGRect)frame train:(Train *)train railway:(Railway *)railway trainDidSelectSelector:(SEL)selector;
 
 - (void)hideWithDirection:(NSString *)direction;
 

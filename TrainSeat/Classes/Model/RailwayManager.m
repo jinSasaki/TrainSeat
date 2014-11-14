@@ -113,7 +113,6 @@ static RailwayManager *shareManager = nil;
 
 - (NSArray *)loadTimeTableOfStation:(Station *)station withRailway:(Railway *)railway andDirection:(UserDirection)direction {
     
-    NSArray *array = [self loadTimeTableOfStation:station];
 
     // 方向と路線を指定して取得
     

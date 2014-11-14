@@ -21,7 +21,9 @@
     // 一旦パース
     NSError *error = nil;
     NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
-    LOG(@"%@",error);
+    if (error) {
+        LOG(@"%@",error);
+    }
     
     NSMutableArray *arrayStrings = [NSMutableArray array];
     for (NSDictionary *dict in jsonArray) {

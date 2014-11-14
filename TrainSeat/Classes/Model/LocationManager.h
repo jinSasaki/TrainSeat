@@ -24,17 +24,18 @@
 {
     NSTimer *timer;
 }
-@property id <LocationManagerDelegate> delegate;
+@property (nonatomic , weak) id <LocationManagerDelegate> delegate;
 
 @property (nonatomic) Railway *currentRailway;
 
-@property (nonatomic) NSDictionary *railwayDirections;
+@property (nonatomic, copy) NSDictionary *railwayDirections;
 
-@property (nonatomic) NSArray *trainArray;
+@property (nonatomic, copy) NSArray *trainArray;
 
 + (instancetype)defaultManager;
 
 - (void)startConnectionWithRailway:(Railway *)railway;
 - (void)stopConnection;
 
+- (Train *)trainWithUCode:(NSString *)ucode;
 @end

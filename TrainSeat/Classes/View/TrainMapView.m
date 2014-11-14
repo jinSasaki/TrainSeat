@@ -11,11 +11,10 @@
 @implementation TrainMapView
 
 const double dLng   = 140;
-const double dLat   = -80;
-const double scale  = 8.0;
-
-const double view_width    = 280 * scale;
-const double view_height   = 160 * scale;
+const double dLat   = -70;
+double scale;
+const double view_width    = 280;
+const double view_height   = 160;
 
 static NSMutableDictionary *_matchList;
 static NSMutableDictionary *__groupStations;
@@ -28,12 +27,14 @@ static NSMutableDictionary *__stationDict;
         return self;
     }
     
+    scale = frame.size.width / view_width;
+    
     self.railwayMap = [[UIView alloc]initWithFrame:frame];
     self.staionsMap = [[UIView alloc]initWithFrame:frame];
-    self.trainMap = [[UIView alloc]initWithFrame:frame];
+    //    self.trainMap = [[UIView alloc]initWithFrame:frame];
     _matchList = [NSMutableDictionary dictionary];
     __stationDict = [NSMutableDictionary dictionary];
-
+    
     NSArray *locationArray = [self parseJSONFromString:locationJSON];
     for (NSDictionary *dict in locationArray) {
         StationButton *addButton = [self createStationButtonFromInfo:dict];
@@ -42,12 +43,12 @@ static NSMutableDictionary *__stationDict;
         [self.staionsMap addSubview:addButton];
         count++;
     }
-   
+    
     self.stationDict = __stationDict;
-
+    
     [self addSubview:self.railwayMap];
+    //    [self addSubview:self.trainMap];
     [self addSubview:self.staionsMap];
-    [self addSubview:self.trainMap];
     
     return self;
 }
@@ -55,12 +56,6 @@ static NSMutableDictionary *__stationDict;
     return _matchList;
 }
 
-+ (double)maxWidth {
-    return view_width;
-}
-+ (double)maxHeight {
-    return view_height;
-}
 
 - (NSArray *)parseJSONFromString:(NSString *)jsonString {
     NSData *jsonData = [jsonString dataUsingEncoding:NSUnicodeStringEncoding];
@@ -91,15 +86,17 @@ static NSMutableDictionary *__stationDict;
 
 - (void)updateTrainMapView {
     
-    for (UIView *view in self.trainMap.subviews) {
-        [view removeFromSuperview];
+    for (id view in self.staionsMap.subviews) {
+        if ([view isKindOfClass:[TrainView class]]) {
+            [view removeFromSuperview];
+        }
     }
     
     LocationManager *locationManager = [LocationManager defaultManager];
     for (Train *train in locationManager.trainArray) {
-        TrainView *trainView = [[TrainView alloc]initWithFrame:CGRectMake(0, 0, 40, 20) train:train];
+        TrainView *trainView = [[TrainView alloc]initWithFrame:CGRectMake(0, 0, 40, 20) train:train railway:self.currentRailway trainDidSelectSelector:@selector(trainIconDidPush:)];
         trainView.center = train.center;
-        [self.trainMap addSubview:trainView];
+        [self.staionsMap addSubview:trainView];
     }
     
 }
@@ -107,11 +104,19 @@ static NSMutableDictionary *__stationDict;
     
     [self updateTrainMapView];
     self.currentDirection = direction;
-    for (TrainView *trainView in self.trainMap.subviews) {
+    for (id view in self.staionsMap.subviews) {
+        if (![view isKindOfClass:[TrainView class]]) {
+            continue;
+        }
+        TrainView *trainView = view;
         if ([trainView.train.railDirection compare:direction] == NSOrderedSame) {
             trainView.hidden = NO;
         }else {
             trainView.hidden = YES;
+        }        
+        if ([trainView.train.ucode compare:self.selectedTrainUCode] == NSOrderedSame) {
+            trainView.isSelected = YES;
+            self.pinView.center = trainView.center;
         }
     }
 }
@@ -136,15 +141,14 @@ static NSMutableDictionary *__stationDict;
     
     NSString *name = [self removeDashFromString:[[stationInfo objectForKey:@"station"] capitalizedString]];
     
-    double width =  abs(x1 - x2);
-    double height = abs(y2 - y1);
+    double width =  abs(x1 - x2) * 0.8;
+    double height = abs(y2 - y1) * 0.8;
     
     RailwayManager *manager = [RailwayManager defaultManager];
     Station *station = manager.allStationDict[name];
     StationButton *button = [StationButton buttonWithType:UIButtonTypeSystem frame:CGRectMake(x1, y1, width, height) station:station];
     [button setTitle:[manager stationTitleWithStationName:name] forState:UIControlStateNormal];
-    [button setTitle:[manager stationTitleWithStationName:name] forState:UIControlStateSelected];
-    station.center = button.center;
+    [button addTarget:self action:@selector(stationBtnDidPush:) forControlEvents:UIControlEventTouchUpInside];
     [__stationDict setObject:button forKey:station.stationName];
     
     return button;
@@ -202,9 +206,42 @@ static NSMutableDictionary *__stationDict;
     }
 }
 - (void)selectedStaionOnRailway:(Railway *)railway alpha:(double)alpha {
+    self.currentRailway = railway;
+    
     for (StationButton *stationBtn in self.groupStations[railway.railwayName]) {
         stationBtn.alpha = alpha;
     }
+}
+
+- (void)stationBtnDidPush:(id)sender
+{
+    LOG_METHOD;
+    StationButton *button = sender;
+    if (!self.flagView) {
+        self.flagView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 20, 40)];
+        self.flagView.image = [UIImage imageNamed:@"flag.png"];
+        self.flagView.contentMode = UIViewContentModeScaleAspectFit;
+        [self addSubview:self.flagView];
+    }
+    if ([button.staion.railwayCode compare:self.currentRailway.code] == NSOrderedSame) {
+        self.flagView.center = CGPointMake(button.center.x, button.center.y - 10);
+    }
+}
+
+- (void)trainIconDidPush:(id)sender
+{
+    LOG_METHOD;
+    UIButton *trainIcon = sender;
+    TrainView *superView = (TrainView *)trainIcon.superview;
+    self.selectedTrainUCode = superView.train.ucode;
+
+    if (!self.pinView) {
+        self.pinView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 20, 40)];
+        self.pinView.image = [UIImage imageNamed:@"pin.png"];
+        self.pinView.contentMode = UIViewContentModeScaleAspectFit;
+        [self addSubview:self.pinView];
+    }
+    self.pinView.center = CGPointMake(superView.center.x, superView.center.y - 10);
 }
 
 //--------------------------------------------------------------------------------

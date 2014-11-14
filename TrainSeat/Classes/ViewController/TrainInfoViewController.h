@@ -17,8 +17,10 @@
 
 @property (nonatomic) TrainInfo *trainInfo;
 
+
 @property (nonatomic) IBOutlet UISegmentedControl *directionSegment;
 @property (nonatomic) IBOutlet UISegmentedControl *statusSegment;
 @property (nonatomic) IBOutlet UIPickerView *pickerview;
+
 
 @end

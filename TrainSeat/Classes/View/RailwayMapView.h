@@ -16,7 +16,7 @@
 }
 - (id)initWithFrame:(CGRect)frame stationButtons:(NSArray *)buttons stationOrder:(NSArray *)order matchList:(NSDictionary *)matchList railwayColor:(UIColor *)raiwayColor;
 
-@property (nonatomic) NSString *railwayName;
+@property (nonatomic, copy) NSString *railwayName;
 @property (nonatomic) UIColor *railwayColor;
 @property (nonatomic) Railway *railway;
 

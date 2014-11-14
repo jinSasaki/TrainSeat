@@ -20,15 +20,22 @@
 
 @property (nonatomic) UIView *staionsMap;
 @property (nonatomic) UIView *railwayMap;
-@property (nonatomic) UIView *trainMap;
+//@property (nonatomic) UIView *trainMap;
 
-@property (nonatomic) NSDictionary *groupStations;
-@property (nonatomic) NSDictionary *stationDict;
+@property (nonatomic, copy) NSDictionary *groupStations;
+@property (nonatomic, copy) NSDictionary *stationDict;
 
-@property (nonatomic) NSString *currentDirection;
+@property (nonatomic, copy) NSString *currentDirection;
+@property (nonatomic) Railway *currentRailway;
 
-+ (double)maxWidth;
-+ (double)maxHeight;
+@property (nonatomic) NSString *selectedTrainUCode;
+@property (nonatomic) StationButton *selectedStationButton;
+
+@property (nonatomic) UIImageView *pinView;
+@property (nonatomic) UIImageView *flagView;
+
+- (double)centerX;
+- (double)centerY;
 - (NSDictionary *)matchList;
 
 - (RailwayMapView *)railwaymapWithRailwayName:(NSString *)railwayName;

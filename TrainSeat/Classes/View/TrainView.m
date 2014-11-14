@@ -10,10 +10,7 @@
 
 @implementation TrainView
 
-
-const double height = 30;
-const double width = 50;
-- (id)initWithFrame:(CGRect)frame train:(Train *)train
+- (id)initWithFrame:(CGRect)frame train:(Train *)train railway:(Railway *)railway trainDidSelectSelector:(SEL)selector
 {
     self = [super initWithFrame:frame];
     if (self) {
@@ -24,22 +21,22 @@ const double width = 50;
                                    @"日比谷":@"hibiya.png",
                                    @"東西":@"touzai.png",
                                    @"千代田":@"chiyoda.png",
-                                   @"有楽町":@"yurakucho.png",
+                                   @"有楽町":@"yuurakuchou.png",
                                    @"半蔵門":@"hanzoumon.png",
                                    @"南北":@"nanboku.png",
                                    @"副都心":@"fukutoshin.png"
                                    };
         
         self.trainIcon = [UIButton buttonWithType:UIButtonTypeSystem];
-        self.trainIcon.frame = CGRectMake(0, 0, width, height);
-        [self.trainIcon addTarget:self action:@selector(trainIconDidPush:) forControlEvents:UIControlEventTouchUpInside];
+        self.trainIcon.frame = CGRectMake(0, 0, frame.size.width,frame.size.height);
+        [self.trainIcon addTarget:self.superview action:selector forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:self.trainIcon];
     
         #warning this is test case
-        [self.trainIcon setBackgroundImage:[UIImage imageNamed:iconDict[@"銀座"]] forState:UIControlStateNormal];
+        [self.trainIcon setBackgroundImage:[UIImage imageNamed:(NSString *)iconDict[railway.title]] forState:UIControlStateNormal];
         
         if (train.delay) {
-            self.alertDelay = [[UILabel alloc]initWithFrame:CGRectMake(0, frame.origin.y - 20, width, height)];
+            self.alertDelay = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, frame.size.width,frame.size.height)];
             self.alertDelay.text = [NSString stringWithFormat:@"%d",train.delay];
             self.alertDelay.textColor = [UIColor redColor];
             [self addSubview:self.alertDelay];
@@ -49,6 +46,7 @@ const double width = 50;
             self.alpha = 0.3;
             [NSTimer scheduledTimerWithTimeInterval:0.8 target:self selector:@selector(flash:) userInfo:nil repeats:YES];
         }
+        
         
     }
     return self;
@@ -74,20 +72,5 @@ const double width = 50;
     }
 }
 
-- (void)trainIconDidPush:(id)sender {
-    LOG_METHOD;
-    UIButton *trainIcon = sender;
-    TrainView *superView = (TrainView *)trainIcon.superview;
-    LOG(@"%@",superView.train.railDirection);
-}
-
-/*
- // Only override drawRect: if you perform custom drawing.
- // An empty implementation adversely affects performance during animation.
- - (void)drawRect:(CGRect)rect
- {
- // Drawing code
- }
- */
 
 @end

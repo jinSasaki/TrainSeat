@@ -13,4 +13,10 @@
 
 @property (nonatomic) Station *staion;
 + (id)buttonWithType:(UIButtonType)buttonType frame:(CGRect)frame station:(Station *)station;
+
+@property (nonatomic) UIImageView *flagView;
+
+
+- (void)addFlag;
+- (void)removeFlag;
 @end

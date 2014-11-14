@@ -23,11 +23,11 @@
 
 @interface RailwayManager : NSObject <ConnectionDelegate>
 
-@property (nonatomic) NSArray *allRailway;
-@property (nonatomic) NSDictionary *allRailwayDict;
+@property (nonatomic, copy) NSArray *allRailway;
+@property (nonatomic, copy) NSDictionary *allRailwayDict;
 
-@property (nonatomic) NSArray *allStation;
-@property (nonatomic) NSDictionary *allStationDict;
+@property (nonatomic, copy) NSArray *allStation;
+@property (nonatomic, copy) NSDictionary *allStationDict;
 @property (nonatomic) id <RailwayManagerDelegate> delegate;
 
 + (instancetype)defaultManager;
@@ -37,5 +37,6 @@
 
 
 - (NSString *)stationTitleWithStationName:(NSString *)staitonName;
+
 
 @end

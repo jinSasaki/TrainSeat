@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "TrainMapView.h"
-#import "RailwayMapView.h"
 #import "RailwayManager.h"
 #import "LineButton.h"
 #import "LocationManager.h"
+#import "TrainInfoViewController.h"
 
 @interface TrainSelectViewController : UIViewController
 <UIScrollViewDelegate ,LocationManagerDelegate>
@@ -22,5 +22,6 @@
 @property (nonatomic) IBOutlet UISegmentedControl *directionSegment;
 
 - (IBAction)didChangeDirection:(id)sender;
+- (IBAction)didPushNext:(id)sender;
 
 @end
