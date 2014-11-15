@@ -9,6 +9,11 @@
 #import "LineTableViewController.h"
 
 @interface LineTableViewController ()
+{
+    double nonSelectedAlpha;
+    double selectedAlpha;
+
+}
 @end
 
 @implementation LineTableViewController
@@ -16,17 +21,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    nonSelectedAlpha = 0.3;
+    selectedAlpha = 1.0;
+
     self.locationManager = [LocationManager defaultManager];
     self.railwayManager = [RailwayManager defaultManager];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.currentRailway = self.railwayManager.allRailwayDict[@"Ginza"];
+    
+
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -45,8 +51,8 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    NSArray *array = self.currentRailway.order;
-    return array.count;
+    NSArray *array = self.currentRailway.stationArray;
+    return array.count*2-1;
 }
 
 
@@ -57,7 +63,7 @@
     if (indexPath.row % 2 == 0) {
         cell = [tableView dequeueReusableCellWithIdentifier:@"station" forIndexPath:indexPath];
         Station *station = self.railwayManager.allStations[self.currentRailway.order[indexPath.row/2]];
-        cell.stationIcon.text = station.stationCode;
+        cell.stationIcon.image = [UIImage imageNamed:station.stationCode];
         cell.stationTitle.text = station.title;
         
     }else if(indexPath.row % 2 == 1) {
@@ -69,54 +75,62 @@
     return cell;
 }
 
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+//カスタマイズするheaderSectionの高さ指定
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 50;
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+//実際にカスタマイズを行う部分
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    if (!self.lineScrollView) {
+        [self initLineScrollView];
+    }
+    return self.lineScrollView;
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
+- (void)initLineScrollView {
+    self.lineScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
+    
+    double height = self.lineScrollView.frame.size.height;
+    double heightLabel = height / 5;
+    for (int i=0; i<self.railwayManager.allRailway.count; i++) {
+        Railway *railway = self.railwayManager.allRailway[i];
+        LineButton *button = [[LineButton alloc]initWithFrame:CGRectMake(height*i, 5, height - heightLabel, height  -heightLabel) railwayTitle:railway.title];
+        button.railwayName = railway.railwayName;
+        button.alpha = nonSelectedAlpha;
+        [button addTarget:self action:@selector(lineDidPush:) forControlEvents:UIControlEventTouchUpInside];
+        [self.lineScrollView addSubview:button];
+        
+        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(height*i, height - heightLabel, height - 10, heightLabel)];
+        label.text = railway.title;
+        label.font = [UIFont systemFontOfSize:11.0];
+        label.textAlignment = UITextAlignmentCenter;
+        [self.lineScrollView addSubview:label];
+        
+    }
+    self.lineScrollView.backgroundColor = [UIColor whiteColor];
+    self.lineScrollView.contentSize = CGSizeMake(height * self.railwayManager.allRailway.count, height);
+    self.lineScrollView.bounces = NO;
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+- (void)lineDidPush:(id)sender {
+    
+    // 一度すべてのアイコンを非選択状態に
+    for (LineButton *lineButton in self.lineScrollView.subviews) {
+        if (![lineButton isKindOfClass:[LineButton class]]) continue;
+        lineButton.alpha = nonSelectedAlpha;
+    }
+    
+    //
+    if (sender) {
+        LineButton *pushedButton = sender;
+        pushedButton.alpha = selectedAlpha;
+        Railway *railway = self.railwayManager.allRailwayDict[pushedButton.railwayName];
+        self.currentRailway = railway;
+        [self.tableView reloadData];
+
+    }
+    
 }
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

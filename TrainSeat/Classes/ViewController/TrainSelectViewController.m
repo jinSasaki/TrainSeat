@@ -18,9 +18,9 @@
 @end
 
 @implementation TrainSelectViewController
+double nonSelectedAlpha = 0.3;
+double selectedAlpha = 1.0;
 
-const double nonSelected = 0.3;
-const double selected = 1.0;
 
 - (void)viewDidLoad
 {
@@ -40,7 +40,7 @@ const double selected = 1.0;
         Railway *railway = manager.allRailway[i];
         LineButton *button = [[LineButton alloc]initWithFrame:CGRectMake(height*i, 5, height - heightLabel, height  -heightLabel) railwayTitle:railway.title];
         button.railwayName = railway.railwayName;
-        button.alpha = nonSelected;
+        button.alpha = nonSelectedAlpha;
         [button addTarget:self action:@selector(lineDidPush:) forControlEvents:UIControlEventTouchUpInside];
         [self.lineScrollView addSubview:button];
         
@@ -87,26 +87,26 @@ const double selected = 1.0;
     // 一度すべての路線を非選択状態に
     for (RailwayMapView *railwaymap in trainmap.subviews) {
         if ([railwaymap isKindOfClass:[RailwayMapView class]]) {
-            railwaymap.alpha = nonSelected;
+            railwaymap.alpha = nonSelectedAlpha;
         }
     }
     // 一度すべてのアイコンを非選択状態に
     for (LineButton *lineButton in self.lineScrollView.subviews) {
         if (![lineButton isKindOfClass:[LineButton class]]) continue;
-        lineButton.alpha = nonSelected;
+        lineButton.alpha = nonSelectedAlpha;
     }
     
     //
     if (sender) {
         LineButton *pushedButton = sender;
-        pushedButton.alpha = selected;
+        pushedButton.alpha = selectedAlpha;
 
         // 路線を表示
         RailwayMapView *railwayMap = [trainmap railwaymapWithRailwayName:pushedButton.railwayName];
 
         // TODO:  選択された路線を最前面にもってきたいけどなぜか落ちるので後回し
 //        [trainmap bringSubviewToFront:railwayMap];
-        railwayMap.alpha = selected;
+        railwayMap.alpha = selectedAlpha;
         
         [locationManager startConnectionWithRailway:railwayMap.railway];
         

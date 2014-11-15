@@ -15,7 +15,6 @@
 #define ORIGIN_PLACE @"https://api.tokyometroapp.jp/api/v2/places"
 
 //--------------------------------------------------------------------------------
-
 typedef NS_ENUM(NSInteger, OdptType) {
     OdptTrain = 0,
     OdptTrainInformation,

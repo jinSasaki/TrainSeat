@@ -10,10 +10,13 @@
 #import "RailwayManager.h"
 #import "LocationManager.h"
 #import "LineTableViewCell.h"
+#import "LineButton.h"
+
 @interface LineTableViewController : UITableViewController
 
 @property LocationManager *locationManager;
 @property RailwayManager *railwayManager;
 @property Railway *currentRailway;
+@property (nonatomic) UIScrollView *lineScrollView;
 
 @end
