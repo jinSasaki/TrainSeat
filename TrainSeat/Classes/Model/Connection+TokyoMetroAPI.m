@@ -12,7 +12,7 @@
 
 - (void)sendRequestWithOdptType:(OdptType)type andQuery:(NSDictionary *)query {
     
-    NSURL *url = [self createURLWithOdptType:type andQuery:query];
+    NSURL *url = [Connection createURLWithOdptType:type andQuery:query];
     [self sendRequestWithURL:url];
     
 }
@@ -20,12 +20,12 @@
 // タイプでリクエストを送る
 - (void)sendRequestWithOdptType:(OdptType)type {
     
-    NSURL *url = [self createURLWithOdptType:type andQuery:nil];
+    NSURL *url = [Connection createURLWithOdptType:type andQuery:nil];
     [self sendRequestWithURL:url];
 }
 
 - (NSData *)connectBySynchronousRequestWithOdptType:(OdptType)type{
-    NSURL *url = [self createURLWithOdptType:type andQuery:nil];
+    NSURL *url = [Connection createURLWithOdptType:type andQuery:nil];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSError *error;
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:&error];
@@ -39,7 +39,7 @@
 
 // クエリを用いて接続
 - (NSData *)connectBySynchronousRequestWithOdptType:(OdptType)type andQuery:(NSDictionary *)query {
-    NSURL *url = [self createURLWithOdptType:type andQuery:query];
+    NSURL *url = [Connection createURLWithOdptType:type andQuery:query];
     LOG_PRINTF(@"Request to \n%@", url);
 
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -61,7 +61,7 @@
 
 
 // URLの生成
-- (NSURL *)createURLWithOdptType:(OdptType)type andQuery:(NSDictionary *)query {
++ (NSURL *)createURLWithOdptType:(OdptType)type andQuery:(NSDictionary *)query {
     
     // アクセストークンとベースのURL
     NSString *urlStr = [NSString
@@ -71,17 +71,26 @@
                         ];
     
     // クエリのタイプを追加
-    NSString *appendType = [NSString stringWithFormat:@"&%@=%@",StringWithParameter(ParameterRdfType),StringWithOdptType(type)];
+    NSString *appendType = [NSString stringWithFormat:@"&%@=%@&",StringWithParameter(ParameterRdfType),StringWithOdptType(type)];
     urlStr = [urlStr stringByAppendingString:appendType];
     
     // クエリがあればそれに従って生成
     if (query) {
-        for (NSString *key in query) {
-            NSString *appendQuery = [NSString stringWithFormat:@"&%@=%@",key,query[key]];
-            urlStr = [urlStr stringByAppendingString:appendQuery];
-        }
+        urlStr = [urlStr stringByAppendingString:[Connection createURLStringWithQuery:query]];
     }
     return [NSURL URLWithString:urlStr];
-    
 }
+
++ (NSString *)createURLStringWithQuery:(NSDictionary *)query {
+    NSString *urlStr = @"";
+    NSMutableArray *array = [NSMutableArray array];
+    for (NSString *key in query) {
+        NSString *appendQuery = [NSString stringWithFormat:@"%@=%@",key,query[key]];
+        [array addObject:appendQuery];
+    }
+    urlStr = [array componentsJoinedByString:@"&"];
+
+    return urlStr;
+}
+
 @end

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 //#import "Station.h"
 #import "Connection+TokyoMetroAPI.h"
-#import "UserManager.h"
+#import "TrainInfoManager.h"
 
 @interface Timetable : NSObject
 

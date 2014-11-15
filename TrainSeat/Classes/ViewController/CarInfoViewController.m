@@ -47,16 +47,17 @@
     self.trainInfo.carNumber = (int)self.carSegument.selectedSegmentIndex;
     
     // traininfoの保存
-    UserManager *uManager = [UserManager defaultUserManager];
-    uManager.currentTrainInfo.carNumber = (int)self.carSegument.selectedSegmentIndex;
-    uManager.currentTrainInfo.position = self.selectedPositionNum;
-    uManager.currentTrainInfo.isSittng = (BOOL) self.sittingStatusSegment.selectedSegmentIndex;
+    TrainInfoManager *trainInfoManager = [TrainInfoManager defaultTrainInfoManager];
+    trainInfoManager.userTrainInfo.carNumber = (int)self.carSegument.selectedSegmentIndex;
+    trainInfoManager.userTrainInfo.position = self.selectedPositionNum;
+    trainInfoManager.userTrainInfo.isSittng = (BOOL) self.sittingStatusSegment.selectedSegmentIndex;
     
     // 完了のアラート
     [self alertWithMessage:@"登録しました"];
     LOG(@"save train info");
     
     // 送信
+    [trainInfoManager requestToSET];
     
     [self.navigationController popToRootViewControllerAnimated:YES];
     

@@ -233,8 +233,8 @@
 
 - (void)presentNextViewWithValidation {
     if (self.selectedTrainCode && self.selectedStation) {
-        UserManager *uManager = [UserManager defaultUserManager];
-        TrainInfo *info = uManager.currentTrainInfo;
+        TrainInfoManager *trainInfoManager = [TrainInfoManager defaultTrainInfoManager];
+        TrainInfo *info = trainInfoManager.userTrainInfo;
         info.trainCode = self.selectedTrainCode;
         info.destination = self.selectedStation.stationName;
         LOG(@"save train info");

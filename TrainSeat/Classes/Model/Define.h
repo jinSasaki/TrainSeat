@@ -13,6 +13,7 @@
 #define ORIGIN @"https://api.tokyometroapp.jp/api/v2/"
 #define ORIGIN_DATA @"https://api.tokyometroapp.jp/api/v2/datapoints"
 #define ORIGIN_PLACE @"https://api.tokyometroapp.jp/api/v2/places"
+#define API_IP_ADDRESS @"http://54.65.27.0:8080/"
 
 //--------------------------------------------------------------------------------
 typedef NS_ENUM(NSInteger, OdptType) {
@@ -63,3 +64,9 @@ NSString *ConvertToDirectionCodeFromJapanese(NSString *japanese);
 NSArray *RailDirectionsFromRailway(NSString *railwayName);
 
 NSString *stationTitleWithStationName(NSString *stationName);
+
+//--------------------------------------------------------------------------------
+typedef NS_ENUM(NSInteger, ConnectionIdentifer) {
+    ConnectionSet = 1,
+    ConnectionGet = 2
+};

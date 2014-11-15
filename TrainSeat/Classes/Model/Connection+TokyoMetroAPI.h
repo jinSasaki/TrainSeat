@@ -8,12 +8,13 @@
 
 #import "Connection.h"
 
-
-
 @interface Connection (TokyoMetroAPI)
 
 - (void)sendRequestWithOdptType:(OdptType)type;
 - (void)sendRequestWithOdptType:(OdptType)type andQuery:(NSDictionary *)query;
 - (NSData *)connectBySynchronousRequestWithOdptType:(OdptType)type andQuery:(NSDictionary *)query;
++ (NSURL *)createURLWithOdptType:(OdptType)type andQuery:(NSDictionary *)query;
++ (NSString *)createURLStringWithQuery:(NSDictionary *)query;
 
 @end
+

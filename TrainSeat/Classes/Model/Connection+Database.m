@@ -12,11 +12,5 @@
 NSString * const BASE_URL = @"path/to/url";
 
 @implementation Connection (Database)
-- (NSData *)sendGETRequestToDatabase:(id)sender {
-    
-    NSURL *url = [NSURL URLWithString:[BASE_URL stringByAppendingPathComponent:@"get.php"]];
-    [self sendRequestWithURL:url];
-    return nil;
-}
 
 @end

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TrainInfo.h"
 #import "RailwayManager.h"
-#import "UserManager.h"
+#import "TrainInfoManager.h"
 
 @interface CarInfoViewController : UIViewController
 

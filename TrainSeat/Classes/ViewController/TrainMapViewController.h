@@ -10,7 +10,7 @@
 #import "RailwayManager.h"
 #import "TrainInfoViewController.h"
 #import "TrainInfo.h"
-#import "UserManager.h"
+#import "TrainInfoManager.h"
 
 @interface TrainMapViewController : UIViewController
 <UIPickerViewDelegate,UIPickerViewDataSource , RailwayManagerDelegate>

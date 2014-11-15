@@ -901,10 +901,10 @@
             </objects>
             <point key="canvasLocation" x="657" y="607"/>
         </scene>
-        <!--View Controller-->
+        <!--Passenger View Controller-->
         <scene sceneID="xGo-he-BD8">
             <objects>
-                <viewController id="4C0-cw-UVl" sceneMemberID="viewController">
+                <viewController id="4C0-cw-UVl" customClass="PassengerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eR5-Pf-4et">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

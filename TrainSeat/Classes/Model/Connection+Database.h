@@ -11,7 +11,8 @@
 
 @interface Connection (Database)
 
-- (NSData *)sendGETRequestToDatabase:(id)sender;
+
+- (void)sendRequestWtihPrarmeters:(NSDictionary *)params;
 
 
 

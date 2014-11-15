@@ -57,5 +57,7 @@
 // 乗車中の電車
 @property (nonatomic) Train *ridingTrain;
 
+- (id)initWithDict:(NSDictionary *)dict;
+
 @end
 

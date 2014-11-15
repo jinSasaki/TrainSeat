@@ -8,11 +8,25 @@
 
 #import <Foundation/Foundation.h>
 #import "TrainInfo.h"
+#import "Connection+TokyoMetroAPI.h"
 
-@interface UserManager : NSObject
+@class UserManager;
+
+@protocol UserManagerDelegate <NSObject>
+
+- (void)userManager:(UserManager *)manager didRecievedTrainInfos:(NSArray *)trainInfos;
+
+@end
+@interface UserManager : NSObject <ConnectionDelegate>
 
 @property (nonatomic) TrainInfo *currentTrainInfo;
+@property (nonatomic,weak) id <UserManagerDelegate> delegate;
+@property (nonatomic) NSArray *trainInfos;
 
 + (instancetype)defaultUserManager;
+
+- (void)requestToGET;
+- (void)requestToSET;
+
 
 @end

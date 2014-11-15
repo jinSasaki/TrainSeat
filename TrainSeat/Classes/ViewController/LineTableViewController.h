@@ -11,7 +11,7 @@
 #import "LocationManager.h"
 #import "LineTableViewCell.h"
 #import "LineButton.h"
-#import "UserManager.h"
+#import "TrainInfoManager.h"
 
 @interface LineTableViewController : UITableViewController
 <LocationManagerDelegate>

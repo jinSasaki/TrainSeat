@@ -27,10 +27,10 @@
     manager = [RailwayManager defaultManager];
     manager.delegate = self;
 
-    UserManager *uManager = [UserManager defaultUserManager];
-    TrainInfo *currentTrainInfo = uManager.currentTrainInfo;
+    TrainInfoManager *trainInfoManager = [TrainInfoManager defaultTrainInfoManager];
+    TrainInfo *userTrainInfo = trainInfoManager.userTrainInfo;
     
-    Railway *currentRailway = manager.allRailway[currentTrainInfo.railwayIndex];
+    Railway *currentRailway = manager.allRailway[userTrainInfo.railwayIndex];
 
     stationArray = currentRailway.stationArray;
     railwayArray = manager.allRailway;
@@ -38,9 +38,9 @@
     self.pickerView.delegate = self;
     self.pickerView.dataSource = self;
     
-    if (currentTrainInfo) {
-        [self.pickerView selectRow:currentTrainInfo.railwayIndex inComponent:0 animated:NO];
-        [self.pickerView selectRow:currentTrainInfo.stationIndex inComponent:1 animated:NO];
+    if (userTrainInfo) {
+        [self.pickerView selectRow:userTrainInfo.railwayIndex inComponent:0 animated:NO];
+        [self.pickerView selectRow:userTrainInfo.stationIndex inComponent:1 animated:NO];
         
     }
 

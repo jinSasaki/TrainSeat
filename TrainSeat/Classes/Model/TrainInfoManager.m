@@ -1,27 +1,27 @@
 //
-//  UserManager.m
+//  TrainInfoManager.m
 //  TrainSeat
 //
-//  Created by Jin Sasaki on 2014/11/01.
+//  Created by Jin Sasaki on 2014/11/16.
 //  Copyright (c) 2014年 Jin Sasaki. All rights reserved.
 //
 
-#import "UserManager.h"
+#import "TrainInfoManager.h"
 
-@implementation UserManager
+@implementation TrainInfoManager
 // singleton
-static UserManager *shareInstance = nil;
-+ (instancetype)defaultUserManager {
+static TrainInfoManager *shareInstance = nil;
++ (instancetype)defaultTrainInfoManager {
     
     if (!shareInstance) {
-        shareInstance = [UserManager new];
+        shareInstance = [TrainInfoManager new];
     }
     return shareInstance;
 }
 - (void)requestToGET {
     Connection *connection = [Connection new];
     connection.delegate = self;
-    NSDictionary *paramDict = @{@"train_code": self.currentTrainInfo.trainCode,};
+    NSDictionary *paramDict = @{@"train_code": self.userTrainInfo.trainCode,};
     NSString *paramQuery = [Connection createURLStringWithQuery:paramDict];
     NSString * urlStr = [API_IP_ADDRESS stringByAppendingString:@"api/get?"];
     urlStr = [urlStr stringByAppendingString:paramQuery];
@@ -35,11 +35,11 @@ static UserManager *shareInstance = nil;
 - (void)requestToSET {
     Connection *connection = [Connection new];
     connection.delegate = self;
-    NSDictionary *paramDict = @{@"train_code": self.currentTrainInfo.trainCode,
-                                @"destination":self.currentTrainInfo.destination,
-                                @"car_number":[NSString stringWithFormat:@"%d",self.currentTrainInfo.carNumber],
-                                @"status":[NSString stringWithFormat:@"%ld",self.currentTrainInfo.status],
-                                @"position":[NSString stringWithFormat:@"%d",self.currentTrainInfo.position]};
+    NSDictionary *paramDict = @{@"train_code": self.userTrainInfo.trainCode,
+                                @"destination":self.userTrainInfo.destination,
+                                @"car_number":[NSString stringWithFormat:@"%d",self.userTrainInfo.carNumber],
+                                @"status":[NSString stringWithFormat:@"%ld",self.userTrainInfo.status],
+                                @"position":[NSString stringWithFormat:@"%d",self.userTrainInfo.position]};
     NSString *paramQuery = [Connection createURLStringWithQuery:paramDict];
     NSString * urlStr = [API_IP_ADDRESS stringByAppendingString:@"api/set?"];
     urlStr = [urlStr stringByAppendingString:paramQuery];
@@ -57,7 +57,7 @@ static UserManager *shareInstance = nil;
 }
 
 - (void)connection:(Connection *)connection didRecieve:(NSData *)recievedData {
-        NSDictionary *responseJSON = [NSJSONSerialization JSONObjectWithData:recievedData options:NSJSONReadingAllowFragments error:nil];
+    NSDictionary *responseJSON = [NSJSONSerialization JSONObjectWithData:recievedData options:NSJSONReadingAllowFragments error:nil];
     if ([connection.identifer isEqualToString: @"set"]) {
         if ([responseJSON objectForKey:@"isSuccess"]) {
             LOG_PRINTF(@"success");
@@ -67,7 +67,7 @@ static UserManager *shareInstance = nil;
     }else if ([connection.identifer isEqualToString:@"get"]) {
         // 一覧情報をパース
         NSMutableArray *trainInfoArray = [NSMutableArray array];
-
+        
         if ([responseJSON objectForKey:@"isSuccess"]) {
             LOG_PRINTF(@"success");
             NSArray *dataArray = [responseJSON objectForKey:@"data"];
@@ -76,13 +76,13 @@ static UserManager *shareInstance = nil;
                 [trainInfoArray addObject:trainInfo];
             }
             self.trainInfos = trainInfoArray;
-            [self.delegate userManager:self didRecievedTrainInfos:self.trainInfos];
+            [self.delegate trainInfoManager:self didRecievedTrainInfos:self.trainInfos];
         }else {
         }
-    
+        
     }
     
-
+    
 }
 - (void)connection:(Connection *)connection didResponseError:(NSError *)error {
     LOG_METHOD;
@@ -95,5 +95,6 @@ static UserManager *shareInstance = nil;
     LOG_PRINTF(@"%@",error);
     
 }
+
 
 @end

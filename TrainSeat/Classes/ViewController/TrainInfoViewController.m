@@ -42,11 +42,11 @@
         }
     }
     
-    UserManager *uManager = [UserManager defaultUserManager];
-    TrainInfo *currentTrainInfo = uManager.currentTrainInfo;
-    if (currentTrainInfo) {
-        self.statusSegment.selectedSegmentIndex = currentTrainInfo.status;
-        self.directionSegment.selectedSegmentIndex = currentTrainInfo.direction;
+    TrainInfoManager *trainInfoManager = [TrainInfoManager defaultTrainInfoManager];
+    TrainInfo *userTrainInfo = trainInfoManager.userTrainInfo;
+    if (userTrainInfo) {
+        self.statusSegment.selectedSegmentIndex = userTrainInfo.status;
+        self.directionSegment.selectedSegmentIndex = userTrainInfo.direction;
     }
 }
 
