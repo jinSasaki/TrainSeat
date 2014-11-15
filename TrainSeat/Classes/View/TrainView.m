@@ -16,15 +16,15 @@
     if (self) {
         self.train = train;
         NSDictionary *iconDict = @{
-                                   @"銀座":@"ginza.png",
-                                   @"丸ノ内":@"marunouchi.png",
-                                   @"日比谷":@"hibiya.png",
-                                   @"東西":@"touzai.png",
-                                   @"千代田":@"chiyoda.png",
-                                   @"有楽町":@"yuurakuchou.png",
-                                   @"半蔵門":@"hanzoumon.png",
-                                   @"南北":@"nanboku.png",
-                                   @"副都心":@"fukutoshin.png"
+                                   @"銀座":@"ginza_train.png",
+                                   @"丸ノ内":@"marunouchi_train.png",
+                                   @"日比谷":@"hibiya_train.png",
+                                   @"東西":@"touzai_train.png",
+                                   @"千代田":@"chiyoda_train.png",
+                                   @"有楽町":@"yuurakuchou_train.png",
+                                   @"半蔵門":@"hanzoumon_train.png",
+                                   @"南北":@"nanboku_train.png",
+                                   @"副都心":@"fukutoshin_train.png"
                                    };
         
         self.trainIcon = [UIButton buttonWithType:UIButtonTypeSystem];

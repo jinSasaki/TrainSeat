@@ -25,15 +25,15 @@
     if (self) {
 
         NSDictionary *lineLogoDict = @{
-                                       @"銀座":@"ginza.jpg",
-                                       @"丸ノ内":@"marunouchi.jpg",
-                                       @"日比谷":@"hibiya.jpg",
-                                       @"東西":@"touzai.jpg",
-                                       @"千代田":@"chiyoda.jpg",
-                                       @"有楽町":@"yurakucho.jpg",
-                                       @"半蔵門":@"hanzoumon.jpg",
-                                       @"南北":@"nanboku.jpg",
-                                       @"副都心":@"fukutoshin.jpg"
+                                       @"銀座":@"ginza.png",
+                                       @"丸ノ内":@"marunouchi.png",
+                                       @"日比谷":@"hibiya.png",
+                                       @"東西":@"touzai.png",
+                                       @"千代田":@"chiyoda.png",
+                                       @"有楽町":@"yurakucho.png",
+                                       @"半蔵門":@"hanzoumon.png",
+                                       @"南北":@"nanboku.png",
+                                       @"副都心":@"fukutoshin.png"
                                        };
 
         [self setBackgroundImage:[UIImage imageNamed:lineLogoDict[railwayTitle]] forState:UIControlStateNormal];

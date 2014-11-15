@@ -11,6 +11,18 @@
 #import "Train.h"
 @interface TrainInfo : NSObject
 
+
+@property (nonatomic) NSString *trainCode;
+@property (nonatomic) NSString *destination;
+@property (nonatomic) int carNumber;
+@property (nonatomic) BOOL isSittng;
+@property (nonatomic) int position;
+
+
+//--------------------------------------------------------------------------------
+// イラネ
+// TODO: delete
+
 // 次に電車が到着する駅
 @property (nonatomic) Station *nearStation;
 
@@ -31,7 +43,7 @@
 @property (nonatomic, copy) NSString *departureTime;
 
 // 乗車車両目
-@property (nonatomic) NSInteger carNumber;
+//@property (nonatomic) NSInteger carNumber;
 
 // 車両内の乗車位置
 @property (nonatomic) NSInteger locationInCar;

@@ -11,12 +11,17 @@
 #import "LocationManager.h"
 #import "LineTableViewCell.h"
 #import "LineButton.h"
+#import "UserManager.h"
 
 @interface LineTableViewController : UITableViewController
-
+<LocationManagerDelegate>
 @property LocationManager *locationManager;
 @property RailwayManager *railwayManager;
 @property Railway *currentRailway;
 @property (nonatomic) UIScrollView *lineScrollView;
+@property Station *selectedStation;
+@property NSString *selectedTrainCode;
+
+- (IBAction)trainDidPush:(id)sender;
 
 @end

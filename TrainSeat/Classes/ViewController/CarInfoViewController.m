@@ -19,27 +19,56 @@
 {
     [super viewDidLoad];
 
-    UserManager *uManager = [UserManager defaultUserManager];
-    if (uManager.currentTrainInfo) {
-        self.carSegument.selectedSegmentIndex = uManager.currentTrainInfo.carNumber;
+    for (UIButton *btn in self.positionBtnsInCar) {
+        btn.backgroundColor = RGBA(255, 219, 179, 61);
     }
+
 }
 
+- (void)alertWithMessage:(NSString *)message {
+    
+}
 
 - (IBAction)decideButtonDidPush:(id)sender {
 
-    self.trainInfo.carNumber = self.carSegument.selectedSegmentIndex;
+    
+    // validation
+    
+    if (!self.carSegument.selectedSegmentIndex) {
+        [self alertWithMessage:@"車両が入力されていません"];
+    }
+    if (!self.sittingStatusSegment.selectedSegmentIndex) {
+        [self alertWithMessage:@"乗車状態が入力されていません"];
+    }
+    if (!self.selectedPositionNum) {
+        [self alertWithMessage:@"乗車位置が入力されていません"];
+    }
+    
+    self.trainInfo.carNumber = (int)self.carSegument.selectedSegmentIndex;
     
     // traininfoの保存
     UserManager *uManager = [UserManager defaultUserManager];
-    [uManager setCurrentTrainInfo:self.trainInfo];
+    uManager.currentTrainInfo.carNumber = (int)self.carSegument.selectedSegmentIndex;
+    uManager.currentTrainInfo.position = self.selectedPositionNum;
+    uManager.currentTrainInfo.isSittng = (BOOL) self.sittingStatusSegment.selectedSegmentIndex;
     
     // 完了のアラート
-    LOG(@"%@",self.trainInfo);
+    [self alertWithMessage:@"登録しました"];
+    LOG(@"save train info");
     
+    // 送信
     
     [self.navigationController popToRootViewControllerAnimated:YES];
     
 }
-
+- (IBAction)positioonBtnDidPush:(id)sender {
+    
+    for (UIButton *btn in self.positionBtnsInCar) {
+        btn.backgroundColor = RGBA(255, 219, 179, 61);
+    }
+    UIButton *pushedBtn = sender;
+    pushedBtn.backgroundColor = RGBA(194, 194, 194 , 61 );
+    self.selectedPositionNum = [pushedBtn.currentTitle intValue];
+    LOG(@"%d did pushed",self.selectedPositionNum);
+}
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Train.h"
 
 @interface LineTableViewCell : UITableViewCell
 
@@ -17,5 +18,5 @@
 @property (nonatomic ,weak) IBOutlet UILabel *arrowUp;
 @property (nonatomic ,weak) IBOutlet UILabel *arrowDown;
 @property (nonatomic ,weak) IBOutlet UIView *line;
-
+@property (nonatomic) Train *train;
 @end

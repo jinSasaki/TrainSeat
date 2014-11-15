@@ -36,5 +36,7 @@
 - (id) initWithDictionary:(NSDictionary *)dict;
 
 
+@property (nonatomic) int order;
+
 
 @end

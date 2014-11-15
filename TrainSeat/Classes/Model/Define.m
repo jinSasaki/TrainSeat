@@ -37,26 +37,26 @@ NSArray *RailDirectionsFromRailway(NSString *railwayName){
     NSDictionary *dict = @{
                            @"Ginza":@[@"Shibuya",
                                       @"Asakusa"],
-                           @"Marunouchi":@[@"Ikebukuro",
-                                           @"Ogikubo"],
-                           @"MarunouchiBranch":@[@"NakanoSakaue",
-                                                 @"Honancho"],
-                           @"Hibiya":@[@"KitaSenju",
-                                       @"NakaMeguro"],
+                           @"Marunouchi":@[@"Ogikubo",
+                                           @"Ikebukuro"],
+                           @"MarunouchiBranch":@[@"Honancho",
+                                                 @"NakanoSakaue"],
+                           @"Hibiya":@[@"NakaMeguro",
+                                       @"KitaSenju"],
                            @"Tozai":@[@"Nakano",
                                       @"NishiFunabashi"],
-                           @"Chiyoda":@[@"Ayase",
-                                        @"YoyogiUehara"],
+                           @"Chiyoda":@[@"YoyogiUehara",
+                                        @"Ayase"],
                            @"Chiyoda2?":@[@"KitaAyase",
                                           @"Ayase"],
                            @"Yurakucho":@[@"Wakoshi",
                                           @"ShinKiba"],
-                           @"Hanzomon":@[@"Oshiage",
-                                         @"Shibuya"],
+                           @"Hanzomon":@[@"Shibuya",
+                                         @"Oshiage"],
                            @"Namboku":@[@"Meguro",
                                         @"AkabaneIwabuchi"],
-                           @"Fukutoshin":@[@"Shibuya",
-                                           @"Wakoshi"]
+                           @"Fukutoshin":@[@"Wakoshi",
+                                           @"Shibuya"]
                            };
     return dict[railwayName];
     
@@ -108,7 +108,7 @@ NSString *ConvertToDirectionCodeFromJapanese(NSString *japanese) {
       @"目黒":@"odpt.RailDirection:TokyoMetro.Meguro",
       @"赤羽岩淵":@"odpt.RailDirection:TokyoMetro.AkabaneIwabuchi",
       };
-
+    
     return direcitonStations[japanese];
     
 }

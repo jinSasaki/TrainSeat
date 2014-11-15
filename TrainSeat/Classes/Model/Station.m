@@ -25,7 +25,8 @@
         
         NSArray *codes = [self.sameAs componentsSeparatedByString:@"."];
         self.stationName = codes[codes.count-1];
-
+        
+        self.order = [[self.stationCode substringFromIndex:1] intValue];
     }
     
     return self;

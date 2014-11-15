@@ -23,8 +23,13 @@
 //        self.terminalStation = [self trimString:[dict objectForKey:@"odpt:terminalStation"]];
         self.fromStation = [dict objectForKey:@"odpt:fromStation"];
         self.toStation = [dict objectForKey:@"odpt:toStation"];
+
+        self.fromStationTrimed = [self trimString:[dict objectForKey:@"odpt:fromStation"]];
+        self.toStationTrimed = [self trimString:[dict objectForKey:@"odpt:toStation"]];
+
         self.startingStation = [dict objectForKey:@"odpt:startingStation"];
         self.terminalStation = [dict objectForKey:@"odpt:terminalStation"];
+
         self.railDirection = [dict objectForKey:@"odpt:railDirection"];
         self.railDirectionOnlyName = [self trimString:[dict objectForKey:@"odpt:railDirection"]];
         
@@ -34,6 +39,7 @@
         }else {
             self.isStop = NO;
         }
+        
         
     }
     return self;

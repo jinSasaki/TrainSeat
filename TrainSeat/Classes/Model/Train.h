@@ -21,9 +21,11 @@
 
 // "odpt:fromStation": "odpt.Station:TokyoMetro.Marunouchi.Myogadani",
 @property (nonatomic, copy) NSString *fromStation;
+@property (nonatomic, copy) NSString *fromStationTrimed;
 
 // "odpt:toStation": "odpt.Station:TokyoMetro.Marunouchi.Korakuen",
 @property (nonatomic, copy) NSString *toStation;
+@property (nonatomic, copy) NSString *toStationTrimed;
 
 // "odpt:startingStation": "odpt.Station:TokyoMetro.Marunouchi.Ikebukuro",
 @property (nonatomic, copy) NSString *startingStation;
@@ -41,7 +43,6 @@
 @property (nonatomic) CGPoint center;
 
 @property (nonatomic) BOOL isSelected;
-
 
 
 - (id) initWithDictionary:(NSDictionary *)dict;

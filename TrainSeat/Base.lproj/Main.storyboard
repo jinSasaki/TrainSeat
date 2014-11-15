@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Top Menu View Controller - HOME-->
+        <!--Top Menu View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="TopMenuViewController" sceneMemberID="viewController">
@@ -65,7 +65,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="HOME" id="hpi-cV-qtS"/>
+                    <navigationItem key="navigationItem" id="hpi-cV-qtS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -137,11 +137,11 @@
             </objects>
             <point key="canvasLocation" x="714" y="-504"/>
         </scene>
-        <!--Line Table View Controller-->
+        <!--Line Table View Controller - 到着駅を選択してください-->
         <scene sceneID="gYl-sG-A0I">
             <objects>
                 <tableViewController id="Iog-94-kCa" customClass="LineTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="LVz-nQ-nAw">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="LVz-nQ-nAw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -157,20 +157,6 @@
                                             <rect key="frame" x="20" y="10" width="40" height="40"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="A60-54-1b7">
-                                            <rect key="frame" x="86" y="20" width="40" height="20"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button" image="ginza.png">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="V6x-7x-ahL">
-                                            <rect key="frame" x="200" y="20" width="40" height="20"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button" image="ginza.png">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                        </button>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" id="ptx-lX-2AJ">
                                             <rect key="frame" x="74" y="14" width="173" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -178,6 +164,26 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="A60-54-1b7">
+                                            <rect key="frame" x="91" y="8" width="30" height="45"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button" image="ginza_train_1.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="trainDidPush:" destination="Iog-94-kCa" eventType="touchUpInside" id="kU7-1g-8Gz"/>
+                                            </connections>
+                                        </button>
+                                        <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="V6x-7x-ahL">
+                                            <rect key="frame" x="205" y="8" width="30" height="45"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button" image="ginza_train_2.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="trainDidPush:" destination="Iog-94-kCa" eventType="touchUpInside" id="9TZ-q9-tC7"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
@@ -187,7 +193,7 @@
                                     <outlet property="trainUp" destination="A60-54-1b7" id="tx1-he-W3W"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="interval" id="3nq-8k-fiw" customClass="LineTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="interval" id="3nq-8k-fiw" customClass="LineTableViewCell">
                                 <rect key="frame" x="0.0" y="160" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3nq-8k-fiw" id="nrr-it-sZl">
@@ -205,19 +211,25 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="PpO-XI-Wcs">
-                                            <rect key="frame" x="201" y="20" width="40" height="20"/>
+                                        <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="PpO-XI-Wcs">
+                                            <rect key="frame" x="206" y="8" width="30" height="45"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button" image="ginza.png">
+                                            <state key="normal" title="Button" image="ginza_train_2.png">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <action selector="trainDidPush:" destination="Iog-94-kCa" eventType="touchUpInside" id="OBU-5f-YPY"/>
+                                            </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aUa-Ak-zYR">
-                                            <rect key="frame" x="87" y="20" width="40" height="20"/>
+                                        <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aUa-Ak-zYR">
+                                            <rect key="frame" x="92" y="8" width="30" height="45"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button" image="ginza.png">
+                                            <state key="normal" title="Button" image="ginza_train_1.png">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <action selector="trainDidPush:" destination="Iog-94-kCa" eventType="touchUpInside" id="whq-Bv-IET"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="↑" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pXG-vb-sDF">
                                             <rect key="frame" x="126" y="20" width="17" height="21"/>
@@ -236,13 +248,33 @@
                                     <outlet property="trainUp" destination="aUa-Ak-zYR" id="fT3-Zm-EZi"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="init" id="AbY-tA-Of3" customClass="LineTableViewCell">
+                                <rect key="frame" x="0.0" y="220" width="320" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AbY-tA-Of3" id="RD0-2N-Ux9">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="路線を選択してください" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2M9-YM-WYe">
+                                            <rect key="frame" x="67" y="19" width="186" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.95788823339999996" green="0.95788823339999996" blue="0.95788823339999996" alpha="0.55000000000000004" colorSpace="calibratedRGB"/>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="Iog-94-kCa" id="jfq-Gj-TIC"/>
                             <outlet property="delegate" destination="Iog-94-kCa" id="Y6q-pS-iUw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="PuZ-Po-h9h"/>
+                    <navigationItem key="navigationItem" title="到着駅を選択してください" id="PuZ-Po-h9h">
+                        <barButtonItem key="backBarButtonItem" title="　" id="Irn-Vx-oEL"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3s1-Ge-5GG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -549,7 +581,7 @@
         <!--Car Info View Controller-->
         <scene sceneID="QLT-rt-u0m">
             <objects>
-                <viewController id="GrK-cD-wfR" customClass="CarInfoViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CarInfo" id="GrK-cD-wfR" customClass="CarInfoViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rb7-n8-5jG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -593,6 +625,9 @@
                                 <state key="normal" title="1">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="positioonBtnDidPush:" destination="GrK-cD-wfR" eventType="touchUpInside" id="Ry5-bg-HMv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UKz-Yj-eLW">
                                 <rect key="frame" x="69" y="284" width="44" height="30"/>
@@ -601,6 +636,9 @@
                                 <state key="normal" title="3">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="positioonBtnDidPush:" destination="GrK-cD-wfR" eventType="touchUpInside" id="669-lz-N4Q"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BcV-Hf-ZJm">
                                 <rect key="frame" x="115" y="285" width="20" height="62"/>
@@ -609,6 +647,9 @@
                                 <state key="normal" title="5">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="positioonBtnDidPush:" destination="GrK-cD-wfR" eventType="touchUpInside" id="Zmt-Kv-nWK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Nkj-EH-UWU">
                                 <rect key="frame" x="184" y="285" width="20" height="62"/>
@@ -617,6 +658,9 @@
                                 <state key="normal" title="8">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="positioonBtnDidPush:" destination="GrK-cD-wfR" eventType="touchUpInside" id="zVT-nE-O3K"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QhL-Qn-tGG">
                                 <rect key="frame" x="69" y="317" width="44" height="30"/>
@@ -625,6 +669,9 @@
                                 <state key="normal" title="4">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="positioonBtnDidPush:" destination="GrK-cD-wfR" eventType="touchUpInside" id="8EO-Vf-gep"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oEx-sY-ZYi">
                                 <rect key="frame" x="138" y="284" width="44" height="30"/>
@@ -633,6 +680,9 @@
                                 <state key="normal" title="6">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="positioonBtnDidPush:" destination="GrK-cD-wfR" eventType="touchUpInside" id="j6u-yz-9zn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Qyc-fF-S7t">
                                 <rect key="frame" x="138" y="317" width="44" height="30"/>
@@ -641,6 +691,9 @@
                                 <state key="normal" title="7">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="positioonBtnDidPush:" destination="GrK-cD-wfR" eventType="touchUpInside" id="oG9-P2-zNX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NYx-uq-8A1">
                                 <rect key="frame" x="206" y="284" width="44" height="30"/>
@@ -649,6 +702,9 @@
                                 <state key="normal" title="9">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="positioonBtnDidPush:" destination="GrK-cD-wfR" eventType="touchUpInside" id="Ua7-cT-au0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uGs-1x-aSk">
                                 <rect key="frame" x="206" y="317" width="44" height="30"/>
@@ -657,6 +713,9 @@
                                 <state key="normal" title="10">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="positioonBtnDidPush:" destination="GrK-cD-wfR" eventType="touchUpInside" id="wgG-KY-aXX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OX6-Yo-oqR">
                                 <rect key="frame" x="19" y="317" width="47" height="30"/>
@@ -665,6 +724,9 @@
                                 <state key="normal" title="2">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="positioonBtnDidPush:" destination="GrK-cD-wfR" eventType="touchUpInside" id="KbQ-Vn-ym9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yHh-sF-DKg">
                                 <rect key="frame" x="253" y="284" width="47" height="30"/>
@@ -673,14 +735,20 @@
                                 <state key="normal" title="11">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="positioonBtnDidPush:" destination="GrK-cD-wfR" eventType="touchUpInside" id="24Y-0c-lG7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rNr-lY-eMy">
                                 <rect key="frame" x="252" y="317" width="47" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.82279427329999999" blue="0.70095169479999997" alpha="0.60999999999999999" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.75929516423357668" alpha="0.60999999999999999" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="12">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="positioonBtnDidPush:" destination="GrK-cD-wfR" eventType="touchUpInside" id="LDv-zk-sfS"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_left.png" id="O9P-Vc-pHT">
                                 <rect key="frame" x="20" y="255" width="279" height="21"/>
@@ -697,8 +765,8 @@
                                 <rect key="frame" x="34" y="441" width="252" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="座り"/>
-                                    <segment title="立ち"/>
+                                    <segment title="座っている"/>
+                                    <segment title="立っている"/>
                                 </segments>
                             </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="乗車状態はどちらですか？" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tkN-y3-0N5">
@@ -711,14 +779,34 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="5UW-Mo-Xcc">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Daw-CZ-S1B"/>
                         <barButtonItem key="rightBarButtonItem" title="決定" id="7wB-Wc-xkd">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="decideButtonDidPush:" destination="GrK-cD-wfR" id="ERM-kY-Lpi"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="carSegument" destination="XFe-yj-Bbd" id="wec-uW-Yh3"/>
+                        <outlet property="sittingStatusSegment" destination="Yrx-L2-cmo" id="ptt-fa-RmB"/>
+                        <outletCollection property="positionBtnsInCar" destination="S29-Lg-ASU" id="L1j-SC-Tec"/>
+                        <outletCollection property="positionBtnsInCar" destination="OX6-Yo-oqR" id="qf6-kz-9Tq"/>
+                        <outletCollection property="positionBtnsInCar" destination="UKz-Yj-eLW" id="Ohj-Bz-OXe"/>
+                        <outletCollection property="positionBtnsInCar" destination="QhL-Qn-tGG" id="i8t-pR-sd5"/>
+                        <outletCollection property="positionBtnsInCar" destination="BcV-Hf-ZJm" id="0ke-ZL-jMd"/>
+                        <outletCollection property="positionBtnsInCar" destination="oEx-sY-ZYi" id="3B3-Pi-o4y"/>
+                        <outletCollection property="positionBtnsInCar" destination="Qyc-fF-S7t" id="mS6-lX-urI"/>
+                        <outletCollection property="positionBtnsInCar" destination="Nkj-EH-UWU" id="4us-1d-LQv"/>
+                        <outletCollection property="positionBtnsInCar" destination="NYx-uq-8A1" id="rTw-15-ur9"/>
+                        <outletCollection property="positionBtnsInCar" destination="uGs-1x-aSk" id="kCg-Em-dt8"/>
+                        <outletCollection property="positionBtnsInCar" destination="yHh-sF-DKg" id="IUd-in-ppp"/>
+                        <outletCollection property="positionBtnsInCar" destination="rNr-lY-eMy" id="Mpa-fV-rnu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eIr-cv-TdI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1101" y="-12"/>
+            <point key="canvasLocation" x="1419" y="-47"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="GNp-ZC-qG0">
@@ -899,7 +987,8 @@
     </scenes>
     <resources>
         <image name="arrow_left.png" width="547" height="47"/>
-        <image name="ginza.png" width="800" height="418"/>
+        <image name="ginza_train_1.png" width="105" height="200"/>
+        <image name="ginza_train_2.png" width="105" height="200"/>
         <image name="position_base.png" width="621" height="132"/>
     </resources>
     <color key="tintColor" red="0.10196079313755035" green="0.59607845544815063" blue="0.83529418706893921" alpha="1" colorSpace="deviceRGB"/>

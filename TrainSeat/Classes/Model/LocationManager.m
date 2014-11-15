@@ -26,7 +26,9 @@ static NSMutableDictionary *__railwayDirections;
     self.currentRailway = railway;
     timer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(connection) userInfo:nil repeats:YES];
     [self connection];
+    [self.delegate didStartUpdateing];
     LOG(@"connection started");
+
 }
 
 - (void)connection {

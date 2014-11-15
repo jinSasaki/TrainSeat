@@ -16,6 +16,7 @@
 
 @protocol LocationManagerDelegate <NSObject>
 
+- (void)didStartUpdateing;
 - (void)didRecieve;
 
 @end

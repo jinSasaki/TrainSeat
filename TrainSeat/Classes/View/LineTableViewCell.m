@@ -15,6 +15,10 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
+        self.trainDown.hidden = YES;
+        self.trainUp.hidden = YES;
+        self.arrowDown.hidden = YES;
+        self.arrowUp.hidden = YES;
     }
     return self;
 }

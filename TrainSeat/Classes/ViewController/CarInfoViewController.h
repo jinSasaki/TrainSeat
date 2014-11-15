@@ -17,9 +17,13 @@
 
 @property IBOutlet UISegmentedControl *carSegument;
 
-@property  IBOutletCollection(UIButton)NSArray *positionsInCar;
+@property  IBOutletCollection(UIButton)NSArray *positionBtnsInCar;
 
-@property IBOutlet UIPickerView *optionalInfo;
+@property IBOutlet UISegmentedControl *sittingStatusSegment;
+
+@property int selectedPositionNum;
+
+- (IBAction)positioonBtnDidPush:(id)sender;
 
 - (IBAction)decideButtonDidPush:(id)sender;
 

@@ -8,33 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4903ACCE1A04C10700A7612B /* CarInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4903ACCD1A04C10700A7612B /* CarInfoViewController.m */; };
-		49086F5E1A1711C80058E72E /* chiyoda.png in Resources */ = {isa = PBXBuildFile; fileRef = 49086F551A1711C80058E72E /* chiyoda.png */; };
-		49086F5F1A1711C80058E72E /* fukutoshin.png in Resources */ = {isa = PBXBuildFile; fileRef = 49086F561A1711C80058E72E /* fukutoshin.png */; };
-		49086F601A1711C80058E72E /* ginza.png in Resources */ = {isa = PBXBuildFile; fileRef = 49086F571A1711C80058E72E /* ginza.png */; };
-		49086F611A1711C80058E72E /* hanzoumon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49086F581A1711C80058E72E /* hanzoumon.png */; };
-		49086F621A1711C80058E72E /* hibiya.png in Resources */ = {isa = PBXBuildFile; fileRef = 49086F591A1711C80058E72E /* hibiya.png */; };
-		49086F631A1711C80058E72E /* marunouchi.png in Resources */ = {isa = PBXBuildFile; fileRef = 49086F5A1A1711C80058E72E /* marunouchi.png */; };
-		49086F641A1711C80058E72E /* nanboku.png in Resources */ = {isa = PBXBuildFile; fileRef = 49086F5B1A1711C80058E72E /* nanboku.png */; };
-		49086F651A1711C80058E72E /* touzai.png in Resources */ = {isa = PBXBuildFile; fileRef = 49086F5C1A1711C80058E72E /* touzai.png */; };
-		49086F661A1711C80058E72E /* yuurakuchou.png in Resources */ = {isa = PBXBuildFile; fileRef = 49086F5D1A1711C80058E72E /* yuurakuchou.png */; };
-		49086F7A1A1711D50058E72E /* chiyoda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49086F681A1711D50058E72E /* chiyoda.jpg */; };
-		49086F7B1A1711D50058E72E /* fukutoshin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49086F691A1711D50058E72E /* fukutoshin.jpg */; };
-		49086F7C1A1711D50058E72E /* ginza.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49086F6A1A1711D50058E72E /* ginza.jpg */; };
-		49086F7D1A1711D50058E72E /* hanzoumon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49086F6B1A1711D50058E72E /* hanzoumon.jpg */; };
-		49086F7E1A1711D50058E72E /* hibiya.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49086F6C1A1711D50058E72E /* hibiya.jpg */; };
-		49086F7F1A1711D50058E72E /* lineLogo_chiyoda.png in Resources */ = {isa = PBXBuildFile; fileRef = 49086F6D1A1711D50058E72E /* lineLogo_chiyoda.png */; };
-		49086F801A1711D50058E72E /* lineLogo_fukutoshin.png in Resources */ = {isa = PBXBuildFile; fileRef = 49086F6E1A1711D50058E72E /* lineLogo_fukutoshin.png */; };
-		49086F811A1711D50058E72E /* lineLogo_ginza.png in Resources */ = {isa = PBXBuildFile; fileRef = 49086F6F1A1711D50058E72E /* lineLogo_ginza.png */; };
-		49086F821A1711D50058E72E /* lineLogo_hanzoumon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49086F701A1711D50058E72E /* lineLogo_hanzoumon.png */; };
-		49086F831A1711D50058E72E /* lineLogo_hibiya.png in Resources */ = {isa = PBXBuildFile; fileRef = 49086F711A1711D50058E72E /* lineLogo_hibiya.png */; };
-		49086F841A1711D50058E72E /* lineLogo_marunouchi.png in Resources */ = {isa = PBXBuildFile; fileRef = 49086F721A1711D50058E72E /* lineLogo_marunouchi.png */; };
-		49086F851A1711D50058E72E /* lineLogo_nanboku.png in Resources */ = {isa = PBXBuildFile; fileRef = 49086F731A1711D50058E72E /* lineLogo_nanboku.png */; };
-		49086F861A1711D50058E72E /* lineLogo_touzai.png in Resources */ = {isa = PBXBuildFile; fileRef = 49086F741A1711D50058E72E /* lineLogo_touzai.png */; };
-		49086F871A1711D50058E72E /* lineLogo_yurakucho.png in Resources */ = {isa = PBXBuildFile; fileRef = 49086F751A1711D50058E72E /* lineLogo_yurakucho.png */; };
-		49086F881A1711D50058E72E /* marunouchi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49086F761A1711D50058E72E /* marunouchi.jpg */; };
-		49086F891A1711D50058E72E /* nanboku.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49086F771A1711D50058E72E /* nanboku.jpg */; };
-		49086F8A1A1711D50058E72E /* touzai.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49086F781A1711D50058E72E /* touzai.jpg */; };
-		49086F8B1A1711D50058E72E /* yurakucho.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49086F791A1711D50058E72E /* yurakucho.jpg */; };
 		49086F9A1A173EA90058E72E /* metro_stationDict.json in Resources */ = {isa = PBXBuildFile; fileRef = 49086F961A173EA90058E72E /* metro_stationDict.json */; };
 		49086F9C1A173EA90058E72E /* other_stationDict.json in Resources */ = {isa = PBXBuildFile; fileRef = 49086F981A173EA90058E72E /* other_stationDict.json */; };
 		4908705F1A1752EA0058E72E /* C01.png in Resources */ = {isa = PBXBuildFile; fileRef = 49086FA01A1752EA0058E72E /* C01.png */; };
@@ -220,6 +193,42 @@
 		490871131A1752EA0058E72E /* Z12.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908705C1A1752EA0058E72E /* Z12.png */; };
 		490871141A1752EA0058E72E /* Z13.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908705D1A1752EA0058E72E /* Z13.png */; };
 		490871151A1752EA0058E72E /* Z14.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908705E1A1752EA0058E72E /* Z14.png */; };
+		490871201A1765B00058E72E /* chiyoda.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871171A1765B00058E72E /* chiyoda.png */; };
+		490871211A1765B00058E72E /* fukutoshin.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871181A1765B00058E72E /* fukutoshin.png */; };
+		490871221A1765B00058E72E /* ginza.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871191A1765B00058E72E /* ginza.png */; };
+		490871231A1765B00058E72E /* hanzoumon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908711A1A1765B00058E72E /* hanzoumon.png */; };
+		490871241A1765B00058E72E /* hibiya.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908711B1A1765B00058E72E /* hibiya.png */; };
+		490871251A1765B00058E72E /* marunouchi.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908711C1A1765B00058E72E /* marunouchi.png */; };
+		490871261A1765B00058E72E /* nanboku.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908711D1A1765B00058E72E /* nanboku.png */; };
+		490871271A1765B00058E72E /* touzai.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908711E1A1765B00058E72E /* touzai.png */; };
+		490871281A1765B00058E72E /* yurakucho.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908711F1A1765B00058E72E /* yurakucho.png */; };
+		490871581A17A2350058E72E /* chiyoda_train.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908713D1A17A2350058E72E /* chiyoda_train.png */; };
+		490871591A17A2350058E72E /* chiyoda_train_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908713E1A17A2350058E72E /* chiyoda_train_1.png */; };
+		4908715A1A17A2350058E72E /* chiyoda_train_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908713F1A17A2350058E72E /* chiyoda_train_2.png */; };
+		4908715B1A17A2350058E72E /* fukutoshin_train.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871401A17A2350058E72E /* fukutoshin_train.png */; };
+		4908715C1A17A2350058E72E /* fukutoshin_train_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871411A17A2350058E72E /* fukutoshin_train_1.png */; };
+		4908715D1A17A2350058E72E /* fukutoshin_train_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871421A17A2350058E72E /* fukutoshin_train_2.png */; };
+		4908715E1A17A2350058E72E /* ginza_train.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871431A17A2350058E72E /* ginza_train.png */; };
+		4908715F1A17A2350058E72E /* ginza_train_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871441A17A2350058E72E /* ginza_train_1.png */; };
+		490871601A17A2350058E72E /* ginza_train_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871451A17A2350058E72E /* ginza_train_2.png */; };
+		490871611A17A2350058E72E /* hanzoumon_train.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871461A17A2350058E72E /* hanzoumon_train.png */; };
+		490871621A17A2350058E72E /* hanzoumon_train_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871471A17A2350058E72E /* hanzoumon_train_1.png */; };
+		490871631A17A2350058E72E /* hanzoumon_train_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871481A17A2350058E72E /* hanzoumon_train_2.png */; };
+		490871641A17A2350058E72E /* hibiya_train.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871491A17A2350058E72E /* hibiya_train.png */; };
+		490871651A17A2350058E72E /* hibiya_train_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908714A1A17A2350058E72E /* hibiya_train_1.png */; };
+		490871661A17A2350058E72E /* hibiya_train_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908714B1A17A2350058E72E /* hibiya_train_2.png */; };
+		490871671A17A2350058E72E /* marunouchi_train.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908714C1A17A2350058E72E /* marunouchi_train.png */; };
+		490871681A17A2350058E72E /* marunouchi_train_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908714D1A17A2350058E72E /* marunouchi_train_1.png */; };
+		490871691A17A2350058E72E /* marunouchi_train_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908714E1A17A2350058E72E /* marunouchi_train_2.png */; };
+		4908716A1A17A2350058E72E /* nanboku_train.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908714F1A17A2350058E72E /* nanboku_train.png */; };
+		4908716B1A17A2350058E72E /* nanboku_train_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871501A17A2350058E72E /* nanboku_train_1.png */; };
+		4908716C1A17A2350058E72E /* nanboku_train_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871511A17A2350058E72E /* nanboku_train_2.png */; };
+		4908716D1A17A2350058E72E /* touzai_train.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871521A17A2350058E72E /* touzai_train.png */; };
+		4908716E1A17A2350058E72E /* touzai_train_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871531A17A2350058E72E /* touzai_train_1.png */; };
+		4908716F1A17A2350058E72E /* touzai_train_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871541A17A2350058E72E /* touzai_train_2.png */; };
+		490871701A17A2350058E72E /* yuurakuchou_train.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871551A17A2350058E72E /* yuurakuchou_train.png */; };
+		490871711A17A2350058E72E /* yuurakuchou_train_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871561A17A2350058E72E /* yuurakuchou_train_1.png */; };
+		490871721A17A2350058E72E /* yuurakuchou_train_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871571A17A2350058E72E /* yuurakuchou_train_2.png */; };
 		490EDC161A138C2A00F19C18 /* flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 490EDC141A138C2A00F19C18 /* flag.png */; };
 		490EDC171A138C2A00F19C18 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 490EDC151A138C2A00F19C18 /* pin.png */; };
 		490EDC191A15FED200F19C18 /* position_base.png in Resources */ = {isa = PBXBuildFile; fileRef = 490EDC181A15FED200F19C18 /* position_base.png */; };
@@ -281,33 +290,6 @@
 /* Begin PBXFileReference section */
 		4903ACCC1A04C10700A7612B /* CarInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarInfoViewController.h; sourceTree = "<group>"; };
 		4903ACCD1A04C10700A7612B /* CarInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarInfoViewController.m; sourceTree = "<group>"; };
-		49086F551A1711C80058E72E /* chiyoda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chiyoda.png; sourceTree = "<group>"; };
-		49086F561A1711C80058E72E /* fukutoshin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fukutoshin.png; sourceTree = "<group>"; };
-		49086F571A1711C80058E72E /* ginza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ginza.png; sourceTree = "<group>"; };
-		49086F581A1711C80058E72E /* hanzoumon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hanzoumon.png; sourceTree = "<group>"; };
-		49086F591A1711C80058E72E /* hibiya.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hibiya.png; sourceTree = "<group>"; };
-		49086F5A1A1711C80058E72E /* marunouchi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marunouchi.png; sourceTree = "<group>"; };
-		49086F5B1A1711C80058E72E /* nanboku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanboku.png; sourceTree = "<group>"; };
-		49086F5C1A1711C80058E72E /* touzai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = touzai.png; sourceTree = "<group>"; };
-		49086F5D1A1711C80058E72E /* yuurakuchou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yuurakuchou.png; sourceTree = "<group>"; };
-		49086F681A1711D50058E72E /* chiyoda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chiyoda.jpg; sourceTree = "<group>"; };
-		49086F691A1711D50058E72E /* fukutoshin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fukutoshin.jpg; sourceTree = "<group>"; };
-		49086F6A1A1711D50058E72E /* ginza.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ginza.jpg; sourceTree = "<group>"; };
-		49086F6B1A1711D50058E72E /* hanzoumon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hanzoumon.jpg; sourceTree = "<group>"; };
-		49086F6C1A1711D50058E72E /* hibiya.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hibiya.jpg; sourceTree = "<group>"; };
-		49086F6D1A1711D50058E72E /* lineLogo_chiyoda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lineLogo_chiyoda.png; sourceTree = "<group>"; };
-		49086F6E1A1711D50058E72E /* lineLogo_fukutoshin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lineLogo_fukutoshin.png; sourceTree = "<group>"; };
-		49086F6F1A1711D50058E72E /* lineLogo_ginza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lineLogo_ginza.png; sourceTree = "<group>"; };
-		49086F701A1711D50058E72E /* lineLogo_hanzoumon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lineLogo_hanzoumon.png; sourceTree = "<group>"; };
-		49086F711A1711D50058E72E /* lineLogo_hibiya.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lineLogo_hibiya.png; sourceTree = "<group>"; };
-		49086F721A1711D50058E72E /* lineLogo_marunouchi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lineLogo_marunouchi.png; sourceTree = "<group>"; };
-		49086F731A1711D50058E72E /* lineLogo_nanboku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lineLogo_nanboku.png; sourceTree = "<group>"; };
-		49086F741A1711D50058E72E /* lineLogo_touzai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lineLogo_touzai.png; sourceTree = "<group>"; };
-		49086F751A1711D50058E72E /* lineLogo_yurakucho.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lineLogo_yurakucho.png; sourceTree = "<group>"; };
-		49086F761A1711D50058E72E /* marunouchi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = marunouchi.jpg; sourceTree = "<group>"; };
-		49086F771A1711D50058E72E /* nanboku.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nanboku.jpg; sourceTree = "<group>"; };
-		49086F781A1711D50058E72E /* touzai.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = touzai.jpg; sourceTree = "<group>"; };
-		49086F791A1711D50058E72E /* yurakucho.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yurakucho.jpg; sourceTree = "<group>"; };
 		49086F961A173EA90058E72E /* metro_stationDict.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = metro_stationDict.json; sourceTree = "<group>"; };
 		49086F981A173EA90058E72E /* other_stationDict.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = other_stationDict.json; sourceTree = "<group>"; };
 		49086FA01A1752EA0058E72E /* C01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = C01.png; sourceTree = "<group>"; };
@@ -493,6 +475,42 @@
 		4908705C1A1752EA0058E72E /* Z12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Z12.png; sourceTree = "<group>"; };
 		4908705D1A1752EA0058E72E /* Z13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Z13.png; sourceTree = "<group>"; };
 		4908705E1A1752EA0058E72E /* Z14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Z14.png; sourceTree = "<group>"; };
+		490871171A1765B00058E72E /* chiyoda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chiyoda.png; sourceTree = "<group>"; };
+		490871181A1765B00058E72E /* fukutoshin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fukutoshin.png; sourceTree = "<group>"; };
+		490871191A1765B00058E72E /* ginza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ginza.png; sourceTree = "<group>"; };
+		4908711A1A1765B00058E72E /* hanzoumon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hanzoumon.png; sourceTree = "<group>"; };
+		4908711B1A1765B00058E72E /* hibiya.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hibiya.png; sourceTree = "<group>"; };
+		4908711C1A1765B00058E72E /* marunouchi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marunouchi.png; sourceTree = "<group>"; };
+		4908711D1A1765B00058E72E /* nanboku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanboku.png; sourceTree = "<group>"; };
+		4908711E1A1765B00058E72E /* touzai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = touzai.png; sourceTree = "<group>"; };
+		4908711F1A1765B00058E72E /* yurakucho.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yurakucho.png; sourceTree = "<group>"; };
+		4908713D1A17A2350058E72E /* chiyoda_train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chiyoda_train.png; sourceTree = "<group>"; };
+		4908713E1A17A2350058E72E /* chiyoda_train_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chiyoda_train_1.png; sourceTree = "<group>"; };
+		4908713F1A17A2350058E72E /* chiyoda_train_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chiyoda_train_2.png; sourceTree = "<group>"; };
+		490871401A17A2350058E72E /* fukutoshin_train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fukutoshin_train.png; sourceTree = "<group>"; };
+		490871411A17A2350058E72E /* fukutoshin_train_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fukutoshin_train_1.png; sourceTree = "<group>"; };
+		490871421A17A2350058E72E /* fukutoshin_train_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fukutoshin_train_2.png; sourceTree = "<group>"; };
+		490871431A17A2350058E72E /* ginza_train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ginza_train.png; sourceTree = "<group>"; };
+		490871441A17A2350058E72E /* ginza_train_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ginza_train_1.png; sourceTree = "<group>"; };
+		490871451A17A2350058E72E /* ginza_train_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ginza_train_2.png; sourceTree = "<group>"; };
+		490871461A17A2350058E72E /* hanzoumon_train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hanzoumon_train.png; sourceTree = "<group>"; };
+		490871471A17A2350058E72E /* hanzoumon_train_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hanzoumon_train_1.png; sourceTree = "<group>"; };
+		490871481A17A2350058E72E /* hanzoumon_train_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hanzoumon_train_2.png; sourceTree = "<group>"; };
+		490871491A17A2350058E72E /* hibiya_train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hibiya_train.png; sourceTree = "<group>"; };
+		4908714A1A17A2350058E72E /* hibiya_train_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hibiya_train_1.png; sourceTree = "<group>"; };
+		4908714B1A17A2350058E72E /* hibiya_train_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hibiya_train_2.png; sourceTree = "<group>"; };
+		4908714C1A17A2350058E72E /* marunouchi_train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marunouchi_train.png; sourceTree = "<group>"; };
+		4908714D1A17A2350058E72E /* marunouchi_train_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marunouchi_train_1.png; sourceTree = "<group>"; };
+		4908714E1A17A2350058E72E /* marunouchi_train_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marunouchi_train_2.png; sourceTree = "<group>"; };
+		4908714F1A17A2350058E72E /* nanboku_train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanboku_train.png; sourceTree = "<group>"; };
+		490871501A17A2350058E72E /* nanboku_train_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanboku_train_1.png; sourceTree = "<group>"; };
+		490871511A17A2350058E72E /* nanboku_train_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanboku_train_2.png; sourceTree = "<group>"; };
+		490871521A17A2350058E72E /* touzai_train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = touzai_train.png; sourceTree = "<group>"; };
+		490871531A17A2350058E72E /* touzai_train_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = touzai_train_1.png; sourceTree = "<group>"; };
+		490871541A17A2350058E72E /* touzai_train_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = touzai_train_2.png; sourceTree = "<group>"; };
+		490871551A17A2350058E72E /* yuurakuchou_train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yuurakuchou_train.png; sourceTree = "<group>"; };
+		490871561A17A2350058E72E /* yuurakuchou_train_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yuurakuchou_train_1.png; sourceTree = "<group>"; };
+		490871571A17A2350058E72E /* yuurakuchou_train_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yuurakuchou_train_2.png; sourceTree = "<group>"; };
 		490EDC141A138C2A00F19C18 /* flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flag.png; sourceTree = "<group>"; };
 		490EDC151A138C2A00F19C18 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
 		490EDC181A15FED200F19C18 /* position_base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = position_base.png; sourceTree = "<group>"; };
@@ -597,47 +615,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		49086F541A1711C80058E72E /* TrainIcon */ = {
-			isa = PBXGroup;
-			children = (
-				49086F551A1711C80058E72E /* chiyoda.png */,
-				49086F561A1711C80058E72E /* fukutoshin.png */,
-				49086F571A1711C80058E72E /* ginza.png */,
-				49086F581A1711C80058E72E /* hanzoumon.png */,
-				49086F591A1711C80058E72E /* hibiya.png */,
-				49086F5A1A1711C80058E72E /* marunouchi.png */,
-				49086F5B1A1711C80058E72E /* nanboku.png */,
-				49086F5C1A1711C80058E72E /* touzai.png */,
-				49086F5D1A1711C80058E72E /* yuurakuchou.png */,
-			);
-			path = TrainIcon;
-			sourceTree = "<group>";
-		};
-		49086F671A1711D50058E72E /* line_logos */ = {
-			isa = PBXGroup;
-			children = (
-				49086F681A1711D50058E72E /* chiyoda.jpg */,
-				49086F691A1711D50058E72E /* fukutoshin.jpg */,
-				49086F6A1A1711D50058E72E /* ginza.jpg */,
-				49086F6B1A1711D50058E72E /* hanzoumon.jpg */,
-				49086F6C1A1711D50058E72E /* hibiya.jpg */,
-				49086F6D1A1711D50058E72E /* lineLogo_chiyoda.png */,
-				49086F6E1A1711D50058E72E /* lineLogo_fukutoshin.png */,
-				49086F6F1A1711D50058E72E /* lineLogo_ginza.png */,
-				49086F701A1711D50058E72E /* lineLogo_hanzoumon.png */,
-				49086F711A1711D50058E72E /* lineLogo_hibiya.png */,
-				49086F721A1711D50058E72E /* lineLogo_marunouchi.png */,
-				49086F731A1711D50058E72E /* lineLogo_nanboku.png */,
-				49086F741A1711D50058E72E /* lineLogo_touzai.png */,
-				49086F751A1711D50058E72E /* lineLogo_yurakucho.png */,
-				49086F761A1711D50058E72E /* marunouchi.jpg */,
-				49086F771A1711D50058E72E /* nanboku.jpg */,
-				49086F781A1711D50058E72E /* touzai.jpg */,
-				49086F791A1711D50058E72E /* yurakucho.jpg */,
-			);
-			path = line_logos;
-			sourceTree = "<group>";
-		};
 		49086F951A173EA90058E72E /* dict_station */ = {
 			isa = PBXGroup;
 			children = (
@@ -909,6 +886,56 @@
 			path = "Z_半蔵門線";
 			sourceTree = "<group>";
 		};
+		490871161A1765B00058E72E /* line_logos */ = {
+			isa = PBXGroup;
+			children = (
+				490871171A1765B00058E72E /* chiyoda.png */,
+				490871181A1765B00058E72E /* fukutoshin.png */,
+				490871191A1765B00058E72E /* ginza.png */,
+				4908711A1A1765B00058E72E /* hanzoumon.png */,
+				4908711B1A1765B00058E72E /* hibiya.png */,
+				4908711C1A1765B00058E72E /* marunouchi.png */,
+				4908711D1A1765B00058E72E /* nanboku.png */,
+				4908711E1A1765B00058E72E /* touzai.png */,
+				4908711F1A1765B00058E72E /* yurakucho.png */,
+			);
+			path = line_logos;
+			sourceTree = "<group>";
+		};
+		4908713C1A17A2350058E72E /* TrainIcon */ = {
+			isa = PBXGroup;
+			children = (
+				4908713D1A17A2350058E72E /* chiyoda_train.png */,
+				4908713E1A17A2350058E72E /* chiyoda_train_1.png */,
+				4908713F1A17A2350058E72E /* chiyoda_train_2.png */,
+				490871401A17A2350058E72E /* fukutoshin_train.png */,
+				490871411A17A2350058E72E /* fukutoshin_train_1.png */,
+				490871421A17A2350058E72E /* fukutoshin_train_2.png */,
+				490871431A17A2350058E72E /* ginza_train.png */,
+				490871441A17A2350058E72E /* ginza_train_1.png */,
+				490871451A17A2350058E72E /* ginza_train_2.png */,
+				490871461A17A2350058E72E /* hanzoumon_train.png */,
+				490871471A17A2350058E72E /* hanzoumon_train_1.png */,
+				490871481A17A2350058E72E /* hanzoumon_train_2.png */,
+				490871491A17A2350058E72E /* hibiya_train.png */,
+				4908714A1A17A2350058E72E /* hibiya_train_1.png */,
+				4908714B1A17A2350058E72E /* hibiya_train_2.png */,
+				4908714C1A17A2350058E72E /* marunouchi_train.png */,
+				4908714D1A17A2350058E72E /* marunouchi_train_1.png */,
+				4908714E1A17A2350058E72E /* marunouchi_train_2.png */,
+				4908714F1A17A2350058E72E /* nanboku_train.png */,
+				490871501A17A2350058E72E /* nanboku_train_1.png */,
+				490871511A17A2350058E72E /* nanboku_train_2.png */,
+				490871521A17A2350058E72E /* touzai_train.png */,
+				490871531A17A2350058E72E /* touzai_train_1.png */,
+				490871541A17A2350058E72E /* touzai_train_2.png */,
+				490871551A17A2350058E72E /* yuurakuchou_train.png */,
+				490871561A17A2350058E72E /* yuurakuchou_train_1.png */,
+				490871571A17A2350058E72E /* yuurakuchou_train_2.png */,
+			);
+			path = TrainIcon;
+			sourceTree = "<group>";
+		};
 		492AAD761A11ECC9007A6777 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -917,10 +944,10 @@
 				490EDC1A1A16011600F19C18 /* arrow_left.png */,
 				490EDC1B1A16011600F19C18 /* arrow_right.png */,
 				490EDC181A15FED200F19C18 /* position_base.png */,
+				4908713C1A17A2350058E72E /* TrainIcon */,
+				490871161A1765B00058E72E /* line_logos */,
 				49086F9E1A1752EA0058E72E /* station_number_icon */,
 				49086F951A173EA90058E72E /* dict_station */,
-				49086F671A1711D50058E72E /* line_logos */,
-				49086F541A1711C80058E72E /* TrainIcon */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1183,14 +1210,16 @@
 				490870641A1752EA0058E72E /* C06.png in Resources */,
 				490871141A1752EA0058E72E /* Z13.png in Resources */,
 				490870631A1752EA0058E72E /* C05.png in Resources */,
-				49086F631A1711C80058E72E /* marunouchi.png in Resources */,
+				490871201A1765B00058E72E /* chiyoda.png in Resources */,
 				490871031A1752EA0058E72E /* Y20.png in Resources */,
+				490871681A17A2350058E72E /* marunouchi_train_1.png in Resources */,
 				4908710F1A1752EA0058E72E /* Z08.png in Resources */,
 				490870971A1752EA0058E72E /* H02.png in Resources */,
 				490870D21A1752EA0058E72E /* N14.png in Resources */,
 				490870E91A1752EA0058E72E /* T18.png in Resources */,
 				490870E31A1752EA0058E72E /* T12.png in Resources */,
 				490870771A1752EA0058E72E /* F05.png in Resources */,
+				4908715C1A17A2350058E72E /* fukutoshin_train_1.png in Resources */,
 				490870BE1A1752EA0058E72E /* M19.png in Resources */,
 				4908709D1A1752EA0058E72E /* H08.png in Resources */,
 				490870C51A1752EA0058E72E /* N01.png in Resources */,
@@ -1207,32 +1236,33 @@
 				490870B31A1752EA0058E72E /* M08.png in Resources */,
 				490871061A1752EA0058E72E /* Y23.png in Resources */,
 				4908706A1A1752EA0058E72E /* C12.png in Resources */,
-				49086F821A1711D50058E72E /* lineLogo_hanzoumon.png in Resources */,
 				490870C81A1752EA0058E72E /* N04.png in Resources */,
 				490870661A1752EA0058E72E /* C08.png in Resources */,
-				49086F8A1A1711D50058E72E /* touzai.jpg in Resources */,
 				490870A81A1752EA0058E72E /* H19.png in Resources */,
+				4908716A1A17A2350058E72E /* nanboku_train.png in Resources */,
 				490870951A1752EA0058E72E /* G19.png in Resources */,
 				4908709E1A1752EA0058E72E /* H09.png in Resources */,
 				4908706F1A1752EA0058E72E /* C17.png in Resources */,
 				490870C61A1752EA0058E72E /* N02.png in Resources */,
 				490870921A1752EA0058E72E /* G16.png in Resources */,
 				490870A71A1752EA0058E72E /* H18.png in Resources */,
+				4908715B1A17A2350058E72E /* fukutoshin_train.png in Resources */,
 				490870CD1A1752EA0058E72E /* N09.png in Resources */,
 				4908708B1A1752EA0058E72E /* G09.png in Resources */,
 				4908706B1A1752EA0058E72E /* C13.png in Resources */,
 				490870F51A1752EA0058E72E /* Y06.png in Resources */,
 				490871101A1752EA0058E72E /* Z09.png in Resources */,
-				49086F851A1711D50058E72E /* lineLogo_nanboku.png in Resources */,
 				490870EF1A1752EA0058E72E /* Tky.png in Resources */,
 				490870AB1A1752EA0058E72E /* M-0.png in Resources */,
 				490870AA1A1752EA0058E72E /* H21.png in Resources */,
+				490871651A17A2350058E72E /* hibiya_train_1.png in Resources */,
 				490EDC191A15FED200F19C18 /* position_base.png in Resources */,
 				490870681A1752EA0058E72E /* C10.png in Resources */,
+				4908716B1A17A2350058E72E /* nanboku_train_1.png in Resources */,
+				4908715E1A17A2350058E72E /* ginza_train.png in Resources */,
 				4908707B1A1752EA0058E72E /* F09.png in Resources */,
 				490EDC1C1A16011600F19C18 /* arrow_left.png in Resources */,
 				490870E51A1752EA0058E72E /* T14.png in Resources */,
-				49086F661A1711C80058E72E /* yuurakuchou.png in Resources */,
 				490870B51A1752EA0058E72E /* M10.png in Resources */,
 				490870B81A1752EA0058E72E /* M13.png in Resources */,
 				490870BD1A1752EA0058E72E /* M18.png in Resources */,
@@ -1243,8 +1273,8 @@
 				490871131A1752EA0058E72E /* Z12.png in Resources */,
 				490870C21A1752EA0058E72E /* M23.png in Resources */,
 				490870E71A1752EA0058E72E /* T16.png in Resources */,
-				49086F7F1A1711D50058E72E /* lineLogo_chiyoda.png in Resources */,
 				49086F9C1A173EA90058E72E /* other_stationDict.json in Resources */,
+				490871701A17A2350058E72E /* yuurakuchou_train.png in Resources */,
 				4908710C1A1752EA0058E72E /* Z05.png in Resources */,
 				490870F21A1752EA0058E72E /* Y03.png in Resources */,
 				490870961A1752EA0058E72E /* H01.png in Resources */,
@@ -1252,50 +1282,58 @@
 				490870EB1A1752EA0058E72E /* T20.png in Resources */,
 				490871021A1752EA0058E72E /* Y19.png in Resources */,
 				4908707C1A1752EA0058E72E /* F10.png in Resources */,
+				4908715D1A17A2350058E72E /* fukutoshin_train_2.png in Resources */,
 				490870D41A1752EA0058E72E /* N16.png in Resources */,
 				490870DC1A1752EA0058E72E /* T05.png in Resources */,
 				490870691A1752EA0058E72E /* C11.png in Resources */,
+				490871671A17A2350058E72E /* marunouchi_train.png in Resources */,
 				490870E21A1752EA0058E72E /* T11.png in Resources */,
 				490870C31A1752EA0058E72E /* M24.png in Resources */,
 				490870CC1A1752EA0058E72E /* N08.png in Resources */,
-				49086F811A1711D50058E72E /* lineLogo_ginza.png in Resources */,
 				490871151A1752EA0058E72E /* Z14.png in Resources */,
 				490870B21A1752EA0058E72E /* M07.png in Resources */,
 				490870A01A1752EA0058E72E /* H11.png in Resources */,
 				490870B71A1752EA0058E72E /* M12.png in Resources */,
+				490871691A17A2350058E72E /* marunouchi_train_2.png in Resources */,
 				490870B91A1752EA0058E72E /* M14.png in Resources */,
-				49086F5F1A1711C80058E72E /* fukutoshin.png in Resources */,
 				490EDC171A138C2A00F19C18 /* pin.png in Resources */,
+				490871711A17A2350058E72E /* yuurakuchou_train_1.png in Resources */,
 				490870D61A1752EA0058E72E /* N18.png in Resources */,
 				490870F61A1752EA0058E72E /* Y07.png in Resources */,
 				4908706C1A1752EA0058E72E /* C14.png in Resources */,
 				490870A61A1752EA0058E72E /* H17.png in Resources */,
+				490871631A17A2350058E72E /* hanzoumon_train_2.png in Resources */,
 				490870A31A1752EA0058E72E /* H14.png in Resources */,
 				490870FA1A1752EA0058E72E /* Y11.png in Resources */,
 				490870C01A1752EA0058E72E /* M21.png in Resources */,
 				490870AC1A1752EA0058E72E /* M01.png in Resources */,
 				490871111A1752EA0058E72E /* Z10.png in Resources */,
+				490871231A1765B00058E72E /* hanzoumon.png in Resources */,
+				490871211A1765B00058E72E /* fukutoshin.png in Resources */,
 				490870EE1A1752EA0058E72E /* T23.png in Resources */,
-				49086F5E1A1711C80058E72E /* chiyoda.png in Resources */,
 				4908710E1A1752EA0058E72E /* Z07.png in Resources */,
+				4908716F1A17A2350058E72E /* touzai_train_2.png in Resources */,
 				490870721A1752EA0058E72E /* C20.png in Resources */,
 				490870851A1752EA0058E72E /* G03.png in Resources */,
 				490870761A1752EA0058E72E /* F04.png in Resources */,
 				490870701A1752EA0058E72E /* C18.png in Resources */,
 				490870811A1752EA0058E72E /* F15.png in Resources */,
+				4908716C1A17A2350058E72E /* nanboku_train_2.png in Resources */,
 				4908708E1A1752EA0058E72E /* G12.png in Resources */,
 				4908706D1A1752EA0058E72E /* C15.png in Resources */,
-				49086F601A1711C80058E72E /* ginza.png in Resources */,
 				490870981A1752EA0058E72E /* H03.png in Resources */,
-				49086F801A1711D50058E72E /* lineLogo_fukutoshin.png in Resources */,
 				490870A91A1752EA0058E72E /* H20.png in Resources */,
 				4908709A1A1752EA0058E72E /* H05.png in Resources */,
+				490871281A1765B00058E72E /* yurakucho.png in Resources */,
 				4908710A1A1752EA0058E72E /* Z03.png in Resources */,
 				490870931A1752EA0058E72E /* G17.png in Resources */,
+				4908716E1A17A2350058E72E /* touzai_train_1.png in Resources */,
 				490870611A1752EA0058E72E /* C03.png in Resources */,
 				490870871A1752EA0058E72E /* G05.png in Resources */,
+				490871641A17A2350058E72E /* hibiya_train.png in Resources */,
 				490870D51A1752EA0058E72E /* N17.png in Resources */,
 				490871081A1752EA0058E72E /* Z01.png in Resources */,
+				4908716D1A17A2350058E72E /* touzai_train.png in Resources */,
 				4908708D1A1752EA0058E72E /* G11.png in Resources */,
 				490870D31A1752EA0058E72E /* N15.png in Resources */,
 				490870E01A1752EA0058E72E /* T09.png in Resources */,
@@ -1303,15 +1341,14 @@
 				490870A21A1752EA0058E72E /* H13.png in Resources */,
 				490870FF1A1752EA0058E72E /* Y16.png in Resources */,
 				490870F31A1752EA0058E72E /* Y04.png in Resources */,
-				49086F7C1A1711D50058E72E /* ginza.jpg in Resources */,
 				490870A51A1752EA0058E72E /* H16.png in Resources */,
 				490870FC1A1752EA0058E72E /* Y13.png in Resources */,
+				490871601A17A2350058E72E /* ginza_train_2.png in Resources */,
 				490870901A1752EA0058E72E /* G14.png in Resources */,
 				490870841A1752EA0058E72E /* G02.png in Resources */,
 				4908708F1A1752EA0058E72E /* G13.png in Resources */,
 				490871011A1752EA0058E72E /* Y18.png in Resources */,
 				490870731A1752EA0058E72E /* F01.png in Resources */,
-				49086F871A1711D50058E72E /* lineLogo_yurakucho.png in Resources */,
 				490870911A1752EA0058E72E /* G15.png in Resources */,
 				4908709B1A1752EA0058E72E /* H06.png in Resources */,
 				490870E81A1752EA0058E72E /* T17.png in Resources */,
@@ -1322,21 +1359,21 @@
 				490870F41A1752EA0058E72E /* Y05.png in Resources */,
 				490870F71A1752EA0058E72E /* Y08.png in Resources */,
 				490870C91A1752EA0058E72E /* N05.png in Resources */,
-				49086F7B1A1711D50058E72E /* fukutoshin.jpg in Resources */,
+				490871271A1765B00058E72E /* touzai.png in Resources */,
 				490870AE1A1752EA0058E72E /* M03.png in Resources */,
 				49C985F119FE7BA6006DCFE1 /* InfoPlist.strings in Resources */,
 				490870791A1752EA0058E72E /* F07.png in Resources */,
-				49086F841A1711D50058E72E /* lineLogo_marunouchi.png in Resources */,
 				490870FD1A1752EA0058E72E /* Y14.png in Resources */,
 				4908708C1A1752EA0058E72E /* G10.png in Resources */,
-				49086F621A1711C80058E72E /* hibiya.png in Resources */,
-				49086F861A1711D50058E72E /* lineLogo_touzai.png in Resources */,
 				490870AD1A1752EA0058E72E /* M02.png in Resources */,
+				490871581A17A2350058E72E /* chiyoda_train.png in Resources */,
 				490870861A1752EA0058E72E /* G04.png in Resources */,
+				490871261A1765B00058E72E /* nanboku.png in Resources */,
 				490870A41A1752EA0058E72E /* H15.png in Resources */,
 				490870F01A1752EA0058E72E /* Y01.png in Resources */,
 				490870751A1752EA0058E72E /* F03.png in Resources */,
 				490870DA1A1752EA0058E72E /* T03.png in Resources */,
+				490871721A17A2350058E72E /* yuurakuchou_train_2.png in Resources */,
 				4908705F1A1752EA0058E72E /* C01.png in Resources */,
 				490870741A1752EA0058E72E /* F02.png in Resources */,
 				490870671A1752EA0058E72E /* C09.png in Resources */,
@@ -1345,55 +1382,54 @@
 				4908707D1A1752EA0058E72E /* F11.png in Resources */,
 				490870BC1A1752EA0058E72E /* M17.png in Resources */,
 				490870C41A1752EA0058E72E /* M25.png in Resources */,
+				490871621A17A2350058E72E /* hanzoumon_train_1.png in Resources */,
 				490870891A1752EA0058E72E /* G07.png in Resources */,
 				490870B11A1752EA0058E72E /* M06.png in Resources */,
 				490870DE1A1752EA0058E72E /* T07.png in Resources */,
-				49086F831A1711D50058E72E /* lineLogo_hibiya.png in Resources */,
+				4908715F1A17A2350058E72E /* ginza_train_1.png in Resources */,
+				490871591A17A2350058E72E /* chiyoda_train_1.png in Resources */,
 				490870801A1752EA0058E72E /* F14.png in Resources */,
-				49086F651A1711C80058E72E /* touzai.png in Resources */,
-				49086F881A1711D50058E72E /* marunouchi.jpg in Resources */,
 				490870E11A1752EA0058E72E /* T10.png in Resources */,
 				49086F9A1A173EA90058E72E /* metro_stationDict.json in Resources */,
 				4908710B1A1752EA0058E72E /* Z04.png in Resources */,
-				49086F7A1A1711D50058E72E /* chiyoda.jpg in Resources */,
 				490870D81A1752EA0058E72E /* T01.png in Resources */,
 				490870DD1A1752EA0058E72E /* T06.png in Resources */,
 				490870831A1752EA0058E72E /* G01.png in Resources */,
 				490870ED1A1752EA0058E72E /* T22.png in Resources */,
-				49086F891A1711D50058E72E /* nanboku.jpg in Resources */,
 				490870BF1A1752EA0058E72E /* M20.png in Resources */,
 				490871001A1752EA0058E72E /* Y17.png in Resources */,
 				4908707E1A1752EA0058E72E /* F12.png in Resources */,
 				4908707A1A1752EA0058E72E /* F08.png in Resources */,
+				490871221A1765B00058E72E /* ginza.png in Resources */,
 				490870E41A1752EA0058E72E /* T13.png in Resources */,
-				49086F611A1711C80058E72E /* hanzoumon.png in Resources */,
 				490870DF1A1752EA0058E72E /* T08.png in Resources */,
 				490871121A1752EA0058E72E /* Z11.png in Resources */,
 				490870711A1752EA0058E72E /* C19.png in Resources */,
 				490870CF1A1752EA0058E72E /* N11.png in Resources */,
 				490871091A1752EA0058E72E /* Z02.png in Resources */,
+				490871611A17A2350058E72E /* hanzoumon_train.png in Resources */,
 				490870F81A1752EA0058E72E /* Y09.png in Resources */,
 				490870FE1A1752EA0058E72E /* Y15.png in Resources */,
 				490870881A1752EA0058E72E /* G06.png in Resources */,
 				490870651A1752EA0058E72E /* C07.png in Resources */,
+				490871661A17A2350058E72E /* hibiya_train_2.png in Resources */,
 				490870B01A1752EA0058E72E /* M05.png in Resources */,
+				490871251A1765B00058E72E /* marunouchi.png in Resources */,
+				4908715A1A17A2350058E72E /* chiyoda_train_2.png in Resources */,
 				490870D91A1752EA0058E72E /* T02.png in Resources */,
 				4908707F1A1752EA0058E72E /* F13.png in Resources */,
 				490870CE1A1752EA0058E72E /* N10.png in Resources */,
 				4908710D1A1752EA0058E72E /* Z06.png in Resources */,
 				490870FB1A1752EA0058E72E /* Y12.png in Resources */,
-				49086F7E1A1711D50058E72E /* hibiya.jpg in Resources */,
-				49086F7D1A1711D50058E72E /* hanzoumon.jpg in Resources */,
-				49086F641A1711C80058E72E /* nanboku.png in Resources */,
 				490870F91A1752EA0058E72E /* Y10.png in Resources */,
 				490870821A1752EA0058E72E /* F16.png in Resources */,
-				49086F8B1A1711D50058E72E /* yurakucho.jpg in Resources */,
 				490870601A1752EA0058E72E /* C02.png in Resources */,
 				490871051A1752EA0058E72E /* Y22.png in Resources */,
 				490870C11A1752EA0058E72E /* M22.png in Resources */,
 				490870D01A1752EA0058E72E /* N12.png in Resources */,
 				490870941A1752EA0058E72E /* G18.png in Resources */,
 				490870E61A1752EA0058E72E /* T15.png in Resources */,
+				490871241A1765B00058E72E /* hibiya.png in Resources */,
 				4908709F1A1752EA0058E72E /* H10.png in Resources */,
 				49C985FA19FE7BA6006DCFE1 /* Main.storyboard in Resources */,
 				490EDC161A138C2A00F19C18 /* flag.png in Resources */,
