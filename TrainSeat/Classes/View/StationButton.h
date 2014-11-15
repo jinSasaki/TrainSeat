@@ -11,8 +11,8 @@
 
 @interface StationButton : UIButton
 
-@property (nonatomic) Station *staion;
-+ (id)buttonWithType:(UIButtonType)buttonType frame:(CGRect)frame station:(Station *)station;
+@property (nonatomic) Station *station;
++ (id)buttonWithType:(UIButtonType)buttonType frame:(CGRect)frame;
 
 @property (nonatomic) UIImageView *flagView;
 

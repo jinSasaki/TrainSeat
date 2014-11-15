@@ -32,6 +32,17 @@
     return self;
 }
 
+- (id)initWithFrame:(CGRect)frame stationButtons:(NSArray *)buttons railwayColor:(UIColor *)raiwayColor {
+    self.railwayColor = raiwayColor;
+    self = [super initWithFrame:frame];
+    if (self) {
+        railwayBtnArray = (NSMutableArray *)buttons;
+    }
+    return self;
+    
+}
+
+
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect

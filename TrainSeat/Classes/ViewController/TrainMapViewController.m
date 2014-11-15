@@ -32,7 +32,7 @@
     
     Railway *currentRailway = manager.allRailway[currentTrainInfo.railwayIndex];
 
-    stationArray = currentRailway.stations;
+    stationArray = currentRailway.stationArray;
     railwayArray = manager.allRailway;
     
     self.pickerView.delegate = self;
@@ -103,7 +103,7 @@
     
     Railway *currentRailway = manager.allRailway[row];
     
-    stationArray = currentRailway.stations;
+    stationArray = currentRailway.stationArray;
 
 }
 

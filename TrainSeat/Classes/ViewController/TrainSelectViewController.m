@@ -55,7 +55,7 @@ const double selected = 1.0;
     self.lineScrollView.contentSize = CGSizeMake(height * manager.allRailway.count, height);
 
     //--------------------------------------------------------------------------------
-    // 駅マップ
+    // 路線図
     //--------------------------------------------------------------------------------
     
     trainmap = [[TrainMapView alloc]initWithFrame:CGRectMake(0,0, self.scrollView.frame.size.width * 4 ,self.scrollView.frame.size.height* 1.5) ];
@@ -68,26 +68,12 @@ const double selected = 1.0;
     self.scrollView.delegate = self;
     [self.scrollView addSubview:trainmap];
     
-    [trainmap groupStationsOnRailways:manager.allRailway];
     
     
     //--------------------------------------------------------------------------------
     // 路線マップ
     //--------------------------------------------------------------------------------
 
-    int count = 0;
-    for (NSString *railwayName in manager.allRailwayDict) {
-        Railway *railway = manager.allRailwayDict[railwayName];
-        RailwayMapView *railwaymap = [[RailwayMapView alloc]initWithFrame:trainmap.frame stationButtons:trainmap.staionsMap.subviews  stationOrder:railway.order matchList:[trainmap matchList] railwayColor:railway.color];
-        [railwaymap setBackgroundColor:[UIColor clearColor]];
-        railwaymap.railwayName = railwayName;
-//        railwaymap.alpha = nonSelected;
-        railwaymap.tag = count;
-        railwaymap.railway = railway;
-        [trainmap.railwayMap addSubview:railwaymap];
-        count++;
-    }
-    [trainmap nonSelectedStatusAllStations:selected];
 
 
 }
@@ -98,34 +84,41 @@ const double selected = 1.0;
 
 - (void)lineDidPush:(id)sender {
     
-    for (RailwayMapView *railwaymap in trainmap.railwayMap.subviews) {
-        railwaymap.alpha = nonSelected;
+    // 一度すべての路線を非選択状態に
+    for (RailwayMapView *railwaymap in trainmap.subviews) {
+        if ([railwaymap isKindOfClass:[RailwayMapView class]]) {
+            railwaymap.alpha = nonSelected;
+        }
     }
+    // 一度すべてのアイコンを非選択状態に
     for (LineButton *lineButton in self.lineScrollView.subviews) {
         if (![lineButton isKindOfClass:[LineButton class]]) continue;
         lineButton.alpha = nonSelected;
     }
-    [trainmap nonSelectedStatusAllStations:nonSelected];
+    
+    //
     if (sender) {
         LineButton *pushedButton = sender;
         pushedButton.alpha = selected;
 
         // 路線を表示
         RailwayMapView *railwayMap = [trainmap railwaymapWithRailwayName:pushedButton.railwayName];
+
+        // TODO:  選択された路線を最前面にもってきたいけどなぜか落ちるので後回し
+//        [trainmap bringSubviewToFront:railwayMap];
         railwayMap.alpha = selected;
-        [trainmap selectedStaionOnRailway:railwayMap.railway alpha:selected];
+        
         [locationManager startConnectionWithRailway:railwayMap.railway];
         
         directionArray = RailDirectionsFromRailway(locationManager.currentRailway.railwayName);
 
         for (int i=0; i<directionArray.count ; i++ ) {
-            RailwayManager *manager = [RailwayManager defaultManager];
-            Station *station = manager.allStationDict[directionArray[i]];
-            [self.directionSegment setTitle:[station.title stringByAppendingString:@"方面"] forSegmentAtIndex:i];
+            
+            [self.directionSegment setTitle:[stationTitleWithStationName(directionArray[i]) stringByAppendingString:@"方面"] forSegmentAtIndex:i];
         }
         [self.directionSegment reloadInputViews];
+
     }
-    
     [trainmap.pinView removeFromSuperview];
     trainmap.pinView = nil;
     [trainmap.flagView removeFromSuperview];
@@ -165,7 +158,7 @@ const double selected = 1.0;
     
     TrainInfoViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"TrainInfo"];
     vc.trainInfo.ridingTrain = [[LocationManager defaultManager]trainWithUCode:trainmap.selectedTrainUCode];
-    vc.trainInfo.dstStation = trainmap.selectedStationButton.staion;
+    vc.trainInfo.dstStation = trainmap.selectedStationButton.station;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

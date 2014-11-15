@@ -30,25 +30,51 @@ static NSMutableDictionary *__stationDict;
     scale = frame.size.width / view_width;
     
     self.railwayMap = [[UIView alloc]initWithFrame:frame];
-    self.staionsMap = [[UIView alloc]initWithFrame:frame];
+    self.trainMap = [[UIView alloc]initWithFrame:frame];
     //    self.trainMap = [[UIView alloc]initWithFrame:frame];
     _matchList = [NSMutableDictionary dictionary];
     __stationDict = [NSMutableDictionary dictionary];
     
+    // 文字列jsonから位置情報の配列を作成
     NSArray *locationArray = [self parseJSONFromString:locationJSON];
+    NSMutableDictionary *locations = [NSMutableDictionary dictionary];
+
     for (NSDictionary *dict in locationArray) {
-        StationButton *addButton = [self createStationButtonFromInfo:dict];
-        addButton.tag = count;
-        [_matchList setObject:@(count) forKey:[self removeDashFromString:[dict objectForKey:@"station"]]];
-        [self.staionsMap addSubview:addButton];
-        count++;
+
+        // 駅名をキャメルケースに揃える
+        NSString *name = [self removeDashFromString:[[dict objectForKey:@"station"] capitalizedString]];
+
+        // 駅名をキーにした配列
+        [locations setObject:dict forKey:name];
+
+    }
+
+    // all railwayを取得
+    RailwayManager *manager = [RailwayManager defaultManager];
+    for (Railway *railway in manager.allRailway) {
+        NSMutableArray *btnArray = [NSMutableArray array];
+        for (int i=0; i<railway.stationArray.count ; i++) {
+            Station *station = railway.stationArray[i];
+            NSDictionary *stationLocationInfo = locations[station.stationName];
+            StationButton *button = [StationButton buttonWithType:UIButtonTypeSystem frame:[self createButtonFrameWtihStationInfo:stationLocationInfo]];
+            button.station = station;
+            station.center = button.center;
+            [button setTitle:station.title forState:UIControlStateNormal];
+            [button addTarget:self action:@selector(stationBtnDidPush:) forControlEvents:UIControlEventTouchUpInside];
+            [btnArray addObject:button];
+        }
+        
+        RailwayMapView *railwayMap = [[RailwayMapView alloc]initWithFrame:self.frame stationButtons:btnArray railwayColor:railway.color];
+        for (StationButton *btn in btnArray) {
+            [railwayMap addSubview:btn];
+        }
+        railwayMap.backgroundColor = [UIColor clearColor];
+        railwayMap.railway = railway;
+        [self addSubview:railwayMap];
     }
     
-    self.stationDict = __stationDict;
     
-    [self addSubview:self.railwayMap];
-    //    [self addSubview:self.trainMap];
-    [self addSubview:self.staionsMap];
+    [self addSubview:self.trainMap];
     
     return self;
 }
@@ -86,7 +112,7 @@ static NSMutableDictionary *__stationDict;
 
 - (void)updateTrainMapView {
     
-    for (id view in self.staionsMap.subviews) {
+    for (id view in self.trainMap.subviews) {
         if ([view isKindOfClass:[TrainView class]]) {
             [view removeFromSuperview];
         }
@@ -94,9 +120,9 @@ static NSMutableDictionary *__stationDict;
     
     LocationManager *locationManager = [LocationManager defaultManager];
     for (Train *train in locationManager.trainArray) {
-        TrainView *trainView = [[TrainView alloc]initWithFrame:CGRectMake(0, 0, 40, 20) train:train railway:self.currentRailway trainDidSelectSelector:@selector(trainIconDidPush:)];
+        TrainView *trainView = [[TrainView alloc]initWithFrame:CGRectMake(0, 0, 40, 20) train:train railway:locationManager.currentRailway trainDidSelectSelector:@selector(trainIconDidPush:)];
         trainView.center = train.center;
-        [self.staionsMap addSubview:trainView];
+        [self.trainMap addSubview:trainView];
     }
     
 }
@@ -104,12 +130,12 @@ static NSMutableDictionary *__stationDict;
     
     [self updateTrainMapView];
     self.currentDirection = direction;
-    for (id view in self.staionsMap.subviews) {
+    for (id view in self.trainMap.subviews) {
         if (![view isKindOfClass:[TrainView class]]) {
             continue;
         }
         TrainView *trainView = view;
-        if ([trainView.train.railDirection compare:direction] == NSOrderedSame) {
+        if ([trainView.train.railDirectionOnlyName compare:direction] == NSOrderedSame) {
             trainView.hidden = NO;
         }else {
             trainView.hidden = YES;
@@ -122,42 +148,44 @@ static NSMutableDictionary *__stationDict;
 }
 
 
-- (StationButton *)createStationButtonFromInfo:(NSDictionary *)stationInfo{
+- (CGRect )createButtonFrameWtihStationInfo:(NSDictionary *)stationInfo{
     
+    // 緯度経度取得
     double lng1 = [[stationInfo objectForKey:@"lng1"] doubleValue];
     double lng2 = [[stationInfo objectForKey:@"lng2"] doubleValue];
     double lat1 = [[stationInfo objectForKey:@"lat1"] doubleValue];
     double lat2 = [[stationInfo objectForKey:@"lat2"] doubleValue];
     
+    
+    // 座標に変換（平行移動と反転）
     double x1 = lng1 + dLng;
     double x2 = lng2 + dLng;
     double y1 = -1 * (lat1 + dLat);
     double y2 = -1 * (lat2 + dLat);
     
+    // 拡大
     x1 *= scale;
     x2 *= scale;
     y1 *= scale;
     y2 *= scale;
     
-    NSString *name = [self removeDashFromString:[[stationInfo objectForKey:@"station"] capitalizedString]];
     
+    // 縮小（サイズ感の調整
     double width =  abs(x1 - x2) * 0.8;
     double height = abs(y2 - y1) * 0.8;
     
-    RailwayManager *manager = [RailwayManager defaultManager];
-    Station *station = manager.allStationDict[name];
-    StationButton *button = [StationButton buttonWithType:UIButtonTypeSystem frame:CGRectMake(x1, y1, width, height) station:station];
-    [button setTitle:[manager stationTitleWithStationName:name] forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(stationBtnDidPush:) forControlEvents:UIControlEventTouchUpInside];
-    [__stationDict setObject:button forKey:station.stationName];
     
-    return button;
+    return CGRectMake(x1, y1, width, height);
 }
 
 
 - (RailwayMapView *)railwaymapWithRailwayName:(NSString *)railwayName {
-    for (RailwayMapView *railwayMap in self.railwayMap.subviews) {
-        if ([railwayMap.railwayName compare:railwayName] == NSOrderedSame) {
+    for (RailwayMapView *railwayMap in self.subviews) {
+        if (![railwayMap isKindOfClass:[railwayMap class]]) {
+            LOG(@"this is not railway map!!!");
+            continue;
+        }
+        if ([railwayMap.railway.railwayName compare:railwayName] == NSOrderedSame) {
             return railwayMap;
         }
     }
@@ -165,53 +193,6 @@ static NSMutableDictionary *__stationDict;
     return nil;
 }
 
-- (RailwayMapView *)railwaymapWithTitle:(NSString *)title {
-    for (RailwayMapView *railwayMap in self.railwayMap.subviews) {
-        if ([railwayMap.railwayName compare:title] == NSOrderedSame) {
-            return railwayMap;
-        }
-    }
-    return nil;
-    
-}
-
-- (void)groupStationsOnRailways:(NSArray *)railways {
-    
-    __groupStations = [NSMutableDictionary dictionary];
-    
-    NSArray *stations = self.staionsMap.subviews;
-    for (Railway *railway in railways) {
-        NSArray *array = [self createArrayGroupStationsOnRailway:stations railway:railway];
-        [__groupStations setObject:array forKey:railway.railwayName];
-    }
-    self.groupStations = __groupStations;
-}
-
-- (NSArray *)createArrayGroupStationsOnRailway:(NSArray *)stations railway:(Railway *)railway {
-    NSMutableArray *array = [NSMutableArray array];
-    for (StationButton *stationBtn in stations) {
-        for (NSString *stationName in railway.order) {
-            if ([stationBtn.staion.stationName compare:stationName] == NSOrderedSame) {
-                [array addObject:stationBtn];
-                continue;
-            }
-        }
-    }
-    return array;
-    
-}
-- (void)nonSelectedStatusAllStations:(double)alpha {
-    for (StationButton *stationBtn in self.staionsMap.subviews) {
-        stationBtn.alpha = alpha;
-    }
-}
-- (void)selectedStaionOnRailway:(Railway *)railway alpha:(double)alpha {
-    self.currentRailway = railway;
-    
-    for (StationButton *stationBtn in self.groupStations[railway.railwayName]) {
-        stationBtn.alpha = alpha;
-    }
-}
 
 - (void)stationBtnDidPush:(id)sender
 {
@@ -223,7 +204,7 @@ static NSMutableDictionary *__stationDict;
         self.flagView.contentMode = UIViewContentModeScaleAspectFit;
         [self addSubview:self.flagView];
     }
-    if ([button.staion.railwayCode compare:self.currentRailway.code] == NSOrderedSame) {
+    if ([button.station.railwayCode compare:self.currentRailway.code] == NSOrderedSame) {
         self.flagView.center = CGPointMake(button.center.x, button.center.y - 10);
     }
 }
@@ -234,6 +215,9 @@ static NSMutableDictionary *__stationDict;
     UIButton *trainIcon = sender;
     TrainView *superView = (TrainView *)trainIcon.superview;
     self.selectedTrainUCode = superView.train.ucode;
+    LOG(@"%@",superView.train.toStation);
+    LOG(@"%@",superView.train.fromStation);
+    LOG(@"%@",superView.train.railDirectionOnlyName);
 
     if (!self.pinView) {
         self.pinView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 20, 40)];

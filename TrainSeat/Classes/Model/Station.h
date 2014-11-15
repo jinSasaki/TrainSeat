@@ -35,4 +35,6 @@
 @property CGPoint center;
 - (id) initWithDictionary:(NSDictionary *)dict;
 
+
+
 @end

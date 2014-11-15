@@ -40,13 +40,18 @@
 // クエリを用いて接続
 - (NSData *)connectBySynchronousRequestWithOdptType:(OdptType)type andQuery:(NSDictionary *)query {
     NSURL *url = [self createURLWithOdptType:type andQuery:query];
+    LOG_PRINTF(@"Request to \n%@", url);
+
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    
+
     NSError *error;
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:&error];
     if (error) {
         LOG_METHOD;
         LOG(@"%@",error);
+    }
+    if (data == nil) {
+        LOG(@"data is nil!!!!");
     }
     return data;
     
@@ -76,8 +81,6 @@
             urlStr = [urlStr stringByAppendingString:appendQuery];
         }
     }
-    LOG_METHOD;
-    LOG_PRINTF(@"%@", urlStr);
     return [NSURL URLWithString:urlStr];
     
 }

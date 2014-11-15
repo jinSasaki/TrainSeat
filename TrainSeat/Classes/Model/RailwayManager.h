@@ -23,20 +23,22 @@
 
 @interface RailwayManager : NSObject <ConnectionDelegate>
 
+// 全路線情報
 @property (nonatomic, copy) NSArray *allRailway;
 @property (nonatomic, copy) NSDictionary *allRailwayDict;
 
-@property (nonatomic, copy) NSArray *allStation;
-@property (nonatomic, copy) NSDictionary *allStationDict;
-@property (nonatomic) id <RailwayManagerDelegate> delegate;
+// 全駅情報
+@property (nonatomic, copy) NSDictionary *allStations;
 
+@property (nonatomic, weak) id <RailwayManagerDelegate> delegate;
+
+// シングルトンを返す
 + (instancetype)defaultManager;
+
+// 路線情報の更新
 - (void)updateRailwayInfomation;
 
+// 時刻表の読み込み（通信）
 - (NSArray *)loadTimeTableOfStation:(Station *)station;
-
-
-- (NSString *)stationTitleWithStationName:(NSString *)staitonName;
-
 
 @end

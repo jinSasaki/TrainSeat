@@ -13,7 +13,7 @@
 const double minHeight = 20;
 const double minWidth = 30;
 
-+ (id)buttonWithType:(UIButtonType)buttonType frame:(CGRect)frame station:(Station *)station {
++ (id)buttonWithType:(UIButtonType)buttonType frame:(CGRect)frame {
     StationButton *instance = [super buttonWithType:buttonType];
     
     if (frame.size.height < minHeight) {
@@ -24,7 +24,6 @@ const double minWidth = 30;
     }
     
     instance.frame = frame;
-    instance.staion = station;
     instance.titleLabel.adjustsFontSizeToFitWidth = YES;
     instance.titleLabel.minimumFontSize = 9.0;
     instance.titleLabel.textColor = [UIColor blackColor];
@@ -37,7 +36,7 @@ const double minWidth = 30;
     instance.layer.cornerRadius = 5.0;
 
     instance.titleLabel.font = [UIFont systemFontOfSize:10];
-    station.center = instance.center;
+//    station.center = instance.center;
 
     return instance;
     

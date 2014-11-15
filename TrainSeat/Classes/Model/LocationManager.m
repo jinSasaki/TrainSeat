@@ -72,12 +72,12 @@ static NSMutableDictionary *__railwayDirections;
         Train *train = [[Train alloc]initWithDictionary:dict];
         Station *station;
         if (train.isStop) {
-            station = manager.allStationDict[train.fromStation];
+            station = manager.allStations[train.fromStation];
             train.center = CGPointMake(station.center.x, station.center.y +20);
         }else {
         
-            station = manager.allStationDict[train.fromStation];
-            Station *toStation = manager.allStationDict[train.toStation];
+            station = manager.allStations[train.fromStation];
+            Station *toStation = manager.allStations[train.toStation];
             train.center = CGPointMake((station.center.x + toStation.center.x)/2, (station.center.y + toStation.center.y)/2);
         }
         

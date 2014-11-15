@@ -8,6 +8,9 @@
 
 #import "RailwayManager.h"
 
+
+#warning check todo
+// TODO: userDefault
 // 内部的にいろんな一覧を蓄えておく
 // UserDefaultに蓄える
 
@@ -41,56 +44,109 @@ static RailwayManager *shareManager = nil;
     // あえて同期で通信
     NSData *data;
     NSArray *jsonArray;
-    
-    
-    // すべての駅を取得
-    NSMutableArray *stationArray = [NSMutableArray array];
-    NSMutableDictionary *__allstationDict = [NSMutableDictionary dictionary];
-    
-    data = [connection connectBySynchronousRequestWithOdptType:OdptStation andQuery:nil];
-    jsonArray = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
 
-    for (NSDictionary *stationDict in jsonArray) {
-        Station *station = [[Station alloc]initWithDictionary:stationDict];
-        [stationArray addObject:station];
-        [__allstationDict setObject:station forKey:station.stationName];
-    }
-    
-    self.allStationDict = __allstationDict;
-    self.allStation = stationArray;
-    
-    
-    // すべての路線を取得
+    /**
+     * 路線を取得
+     */
+
     NSMutableArray *railwayArray = [NSMutableArray array];
     NSMutableDictionary *railwayDictionay = [NSMutableDictionary dictionary];
+    // 全路線を取得
     data = [connection connectBySynchronousRequestWithOdptType:OdptRailway andQuery:nil];
     jsonArray = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
 
-    // Railwayインスタンスをセット
+    data = [connection connectBySynchronousRequestWithOdptType:OdptStation andQuery:nil];
+    NSArray *stationsJSON = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+
+    NSMutableDictionary *allStations = [NSMutableDictionary dictionary];
+                                   
+    // 駅の全配列をつくる
+    for (NSDictionary *stationDict in stationsJSON) {
+        Station *station = [[Station alloc]initWithDictionary:stationDict];
+        [allStations setObject:station forKey:station.sameAs];
+    }
     for (NSDictionary *railwayDict in jsonArray) {
+        NSMutableArray *stationArray = [NSMutableArray array];
+        NSMutableDictionary *stationDict = [NSMutableDictionary dictionary];
+
+        // 路線インスタンスの生成
         Railway *railway = [[Railway alloc]initWithDictionary:railwayDict];
         
-        // 路線に一致する駅のみ抽出
-        NSMutableArray *array = [NSMutableArray array];
-        for (Station *station in stationArray) {
-            if ([railway.code compare:station.railwayCode] == NSOrderedSame) {
-                [array addObject:station];
-            }
+        for (NSString *stationCode in railway.order) {
+            // 路線の駅順配列から駅を取得
+            // 駅インスタンスの生成
+            Station *station = [allStations objectForKey:stationCode];
+            [stationArray addObject:station];
+            [stationDict setObject:station forKey:station.stationName];
         }
-        railway.stations = array;
+
+        railway.stationArray = stationArray;
+        railway.stationDict = stationDict;
 
         [railwayArray addObject:railway];
         [railwayDictionay setObject:railway forKey:railway.railwayName];
-
-
     }
+    
     
     self.allRailway = railwayArray;
     self.allRailwayDict = railwayDictionay;
     
+    self.allStations = allStations;
+    
+    LOG(@"=============connection is finished=================");
+    // デリゲートに通知
     if ([self.delegate respondsToSelector:@selector(didUpdateRailwayInformation)]) {
         [self.delegate didUpdateRailwayInformation];
     }
+
+//    // すべての駅を取得
+//    NSMutableArray *stationArray = [NSMutableArray array];
+//    NSMutableDictionary *__allstationDict = [NSMutableDictionary dictionary];
+//    
+//    data = [connection connectBySynchronousRequestWithOdptType:OdptStation andQuery:nil];
+//    jsonArray = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+//
+//    for (NSDictionary *stationDict in jsonArray) {
+//        Station *station = [[Station alloc]initWithDictionary:stationDict];
+//        [stationArray addObject:station];
+//        [__allstationDict setObject:station forKey:station.stationName];
+//    }
+//    
+//    self.allStationDict = __allstationDict;
+//    self.allStation = stationArray;
+//    
+//    
+//    // すべての路線を取得
+//    NSMutableArray *railwayArray = [NSMutableArray array];
+//    NSMutableDictionary *railwayDictionay = [NSMutableDictionary dictionary];
+//    data = [connection connectBySynchronousRequestWithOdptType:OdptRailway andQuery:nil];
+//    jsonArray = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+//
+//    // Railwayインスタンスをセット
+//    for (NSDictionary *railwayDict in jsonArray) {
+//        Railway *railway = [[Railway alloc]initWithDictionary:railwayDict];
+//        
+//        // 路線に一致する駅のみ抽出
+//        NSMutableArray *array = [NSMutableArray array];
+//        for (Station *station in stationArray) {
+//            if ([railway.code compare:station.railwayCode] == NSOrderedSame) {
+//                [array addObject:station];
+//            }
+//        }
+//        railway.stations = array;
+//
+//        [railwayArray addObject:railway];
+//        [railwayDictionay setObject:railway forKey:railway.railwayName];
+//
+//
+//    }
+//    
+//    self.allRailway = railwayArray;
+//    self.allRailwayDict = railwayDictionay;
+//    
+//    if ([self.delegate respondsToSelector:@selector(didUpdateRailwayInformation)]) {
+//        [self.delegate didUpdateRailwayInformation];
+//    }
 }
 
 // APIを叩いて路線・駅情報を最新版に更新する
@@ -100,15 +156,6 @@ static RailwayManager *shareManager = nil;
     connection.delegate = self;
 }
 
-- (NSString *)stationTitleWithStationName:(NSString *)staitonName {
-    for (Station *station in self.allStation) {
-        if ([station.stationName compare:staitonName] == NSOrderedSame) {
-            return station.title;
-        }
-    }
-    LOG(@"stationTitle not found.");
-    return @"";
-}
 
 
 - (NSArray *)loadTimeTableOfStation:(Station *)station withRailway:(Railway *)railway andDirection:(UserDirection)direction {
@@ -142,6 +189,10 @@ static RailwayManager *shareManager = nil;
 - (void)connection:(Connection *)connection didRecieve:(NSData *)recievedData {
     // 受け取ったデータをStationやRailwayクラスにキャストして保存する
     // ここがとっても複雑？あるいはdictごと渡してStationとかにやらせる？
+    
+    LOG(@"connection did recieved. but this time do not unsync");
+    
+    return;
     NSArray *jsonArray;
     jsonArray = [NSJSONSerialization JSONObjectWithData:recievedData options:NSJSONReadingAllowFragments error:nil];
     NSMutableArray *railwayArray = [NSMutableArray array];

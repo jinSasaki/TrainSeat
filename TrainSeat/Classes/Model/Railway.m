@@ -31,8 +31,7 @@
         NSMutableArray *mArray = [NSMutableArray array];
         for (int i=0; i<orderArray.count; i++) {
             NSString *orderStr = [orderArray[i] objectForKey:@"odpt:station"];
-            NSArray *seperated = [orderStr componentsSeparatedByString:@"."];
-            [mArray addObject:seperated[seperated.count-1]];
+            [mArray addObject:orderStr];
         }
         self.order = mArray;
         self.color = [self createColorWithTitle:self.title];

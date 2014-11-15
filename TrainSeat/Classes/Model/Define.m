@@ -108,8 +108,13 @@ NSString *ConvertToDirectionCodeFromJapanese(NSString *japanese) {
       @"目黒":@"odpt.RailDirection:TokyoMetro.Meguro",
       @"赤羽岩淵":@"odpt.RailDirection:TokyoMetro.AkabaneIwabuchi",
       };
-    
+
     return direcitonStations[japanese];
     
-    
+}
+
+NSString *stationTitleWithStationName(NSString *stationName) {
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    NSDictionary *stationDict = [ud dictionaryForKey:@"stationName"];
+    return stationDict[stationName];
 }

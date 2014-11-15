@@ -7,16 +7,57 @@
 //
 
 #import "AppDelegate.h"
-
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    if ([ud dictionaryForKey:@"stationName"]) {
+        return YES;
+    }
+    
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSMutableDictionary *metroStationNameDict =  [NSMutableDictionary dictionaryWithDictionary:[self dictionaryFromJSONFileWithFilePath:[bundle pathForResource:@"metro_stationDict" ofType:@"json"]]];
+    
+    NSDictionary *otherStationNameDict =  [self dictionaryFromJSONFileWithFilePath:[bundle pathForResource:@"other_stationDict" ofType:@"json"]];
+    
+    [metroStationNameDict addEntriesFromDictionary:otherStationNameDict];
+
+    [ud setObject:metroStationNameDict forKey:@"stationName"];    
+    [ud synchronize];
+    
     return YES;
     
 }
+
+- (NSDictionary *)dictionaryFromJSONFileWithFilePath:(NSString *)filePath {
+
+    NSError *error0 = nil;
+    NSString *jsonString = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error: &error0];
+    NSData *jsonData = [jsonString dataUsingEncoding:NSUnicodeStringEncoding];
+    if(error0){
+        NSLog(@"load error");
+        return nil;
+    }
+    
+    //------------------------------
+    // NSArray に変換
+    //------------------------------
+    NSError *error1 = nil;
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                                           options:NSJSONReadingAllowFragments
+                                                                             error:&error1];
+    
+    if(error1){
+        NSLog(@"parse error");
+        return nil;
+    }
+    return dict;
+
+}
+
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {

@@ -22,7 +22,9 @@
 // MarunouchiBranch
 @property NSString *railwayName;
 
-@property NSArray *stations;
+// Stationのインスタンスが入った配列
+@property NSArray *stationArray;
+@property NSDictionary *stationDict;
 
 @property NSArray *order;
 

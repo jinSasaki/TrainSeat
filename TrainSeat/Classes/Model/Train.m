@@ -17,14 +17,19 @@
         self.ucode = [dict objectForKey:@"@id"];
         self.trainType = [dict objectForKey:@"odpt:trainType"];
         self.delay = [[dict objectForKey:@"odpt:delay"] intValue];
-        self.fromStation = [self trimString:[dict objectForKey:@"odpt:fromStation"]];
-        self.toStation = [self trimString:[dict objectForKey:@"odpt:toStation"]];
-        self.startingStaion = [self trimString:[dict objectForKey:@"odpt:startingStation"]];
-        self.terminalStation = [self trimString:[dict objectForKey:@"odpt:terminalStation"]];
-        self.railDirection = [self trimString:[dict objectForKey:@"odpt:railDirection"]];
+//        self.fromStation = [self trimString:[dict objectForKey:@"odpt:fromStation"]];
+//        self.toStation = [self trimString:[dict objectForKey:@"odpt:toStation"]];
+//        self.startingStation = [self trimString:[dict objectForKey:@"odpt:startingStation"]];
+//        self.terminalStation = [self trimString:[dict objectForKey:@"odpt:terminalStation"]];
+        self.fromStation = [dict objectForKey:@"odpt:fromStation"];
+        self.toStation = [dict objectForKey:@"odpt:toStation"];
+        self.startingStation = [dict objectForKey:@"odpt:startingStation"];
+        self.terminalStation = [dict objectForKey:@"odpt:terminalStation"];
+        self.railDirection = [dict objectForKey:@"odpt:railDirection"];
+        self.railDirectionOnlyName = [self trimString:[dict objectForKey:@"odpt:railDirection"]];
         
         
-        if (!self.toStation) {
+        if (![self trimString:self.toStation]) {
             self.isStop = YES;
         }else {
             self.isStop = NO;

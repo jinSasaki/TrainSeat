@@ -62,3 +62,5 @@ typedef NS_ENUM(NSUInteger,RidingStatus) {
 NSString *ConvertToJapaneseFromDirectionCode(NSString *code);
 NSString *ConvertToDirectionCodeFromJapanese(NSString *japanese);
 NSArray *RailDirectionsFromRailway(NSString *railwayName);
+
+NSString *stationTitleWithStationName(NSString *stationName);

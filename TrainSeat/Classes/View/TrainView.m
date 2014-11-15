@@ -30,10 +30,8 @@
         self.trainIcon = [UIButton buttonWithType:UIButtonTypeSystem];
         self.trainIcon.frame = CGRectMake(0, 0, frame.size.width,frame.size.height);
         [self.trainIcon addTarget:self.superview action:selector forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:self.trainIcon];
-    
-        #warning this is test case
         [self.trainIcon setBackgroundImage:[UIImage imageNamed:(NSString *)iconDict[railway.title]] forState:UIControlStateNormal];
+        [self addSubview:self.trainIcon];
         
         if (train.delay) {
             self.alertDelay = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, frame.size.width,frame.size.height)];
@@ -46,8 +44,6 @@
             self.alpha = 0.3;
             [NSTimer scheduledTimerWithTimeInterval:0.8 target:self selector:@selector(flash:) userInfo:nil repeats:YES];
         }
-        
-        
     }
     return self;
 }

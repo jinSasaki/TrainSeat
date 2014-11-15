@@ -56,7 +56,7 @@
 
     if (indexPath.row % 2 == 0) {
         cell = [tableView dequeueReusableCellWithIdentifier:@"station" forIndexPath:indexPath];
-        Station *station = self.railwayManager.allStationDict[self.currentRailway.order[indexPath.row/2]];
+        Station *station = self.railwayManager.allStations[self.currentRailway.order[indexPath.row/2]];
         cell.stationIcon.text = station.stationCode;
         cell.stationTitle.text = station.title;
         

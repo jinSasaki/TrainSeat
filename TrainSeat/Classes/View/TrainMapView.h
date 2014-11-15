@@ -18,9 +18,9 @@
     int count;
 }
 
-@property (nonatomic) UIView *staionsMap;
+@property (nonatomic) UIView *stationsMap;
 @property (nonatomic) UIView *railwayMap;
-//@property (nonatomic) UIView *trainMap;
+@property (nonatomic) UIView *trainMap;
 
 @property (nonatomic, copy) NSDictionary *groupStations;
 @property (nonatomic, copy) NSDictionary *stationDict;
@@ -34,17 +34,10 @@
 @property (nonatomic) UIImageView *pinView;
 @property (nonatomic) UIImageView *flagView;
 
-- (double)centerX;
-- (double)centerY;
 - (NSDictionary *)matchList;
 
 - (RailwayMapView *)railwaymapWithRailwayName:(NSString *)railwayName;
-- (RailwayMapView *)railwaymapWithTitle:(NSString *)title;
 
-- (void)groupStationsOnRailways:(NSArray *)railways;
-
-- (void)nonSelectedStatusAllStations:(double)alpha;
-- (void)selectedStaionOnRailway:(Railway *)railway alpha:(double)alpha;
 
 - (void)updateTrainMapView;
 

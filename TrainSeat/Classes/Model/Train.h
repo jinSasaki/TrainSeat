@@ -26,13 +26,15 @@
 @property (nonatomic, copy) NSString *toStation;
 
 // "odpt:startingStation": "odpt.Station:TokyoMetro.Marunouchi.Ikebukuro",
-@property (nonatomic, copy) NSString *startingStaion;
+@property (nonatomic, copy) NSString *startingStation;
 
 // "odpt:terminalStation": "odpt.Station:TokyoMetro.Marunouchi.Ogikubo",
 @property (nonatomic, copy) NSString *terminalStation;
 
 // "odpt:railDirection": "odpt.RailDirection:TokyoMetro.Ogikubo",
 @property (nonatomic, copy) NSString * railDirection;
+// Ogikubo,
+@property (nonatomic, copy) NSString * railDirectionOnlyName;
 
 @property (nonatomic) BOOL isStop;
 
