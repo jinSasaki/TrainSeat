@@ -50,6 +50,40 @@ static TrainInfoManager *shareInstance = nil;
     
 }
 
+- (void)createDictionaryForView {
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+
+    for (TrainInfo *trainInfo in self.trainInfos) {
+        NSMutableDictionary *cars;
+        NSMutableArray *positions;
+        
+        // 駅が登録されてたら
+        if ([dict objectForKey:trainInfo.destination]) {
+            cars = [dict objectForKey:trainInfo.destination];
+
+            // 車両が登録されてたら
+            if ([cars objectForKey:@(trainInfo.carNumber)]) {
+                positions = [cars objectForKey:@(trainInfo.carNumber)];
+
+                // ポジション追加
+                [positions addObject:@(trainInfo.position)];
+            }
+
+            // 車両が登録されてなかったら車両をキーにポジション配列を追加
+            else {
+                [cars setObject:@[@(trainInfo.position)] forKey:@(trainInfo.carNumber)];
+            }
+        }
+
+        // 駅が登録されてなかったら、駅をキーに、車両がキーのポジション配列を追加した辞書を追加
+        else {
+            [dict setObject:@{@(trainInfo.carNumber): @[@(trainInfo.position)]} forKey:trainInfo.destination];
+        }
+    }
+    self.trainInfoForView = dict;
+}
+
+#pragma mark - connection delegate
 
 - (void)connection:(Connection *)connection didConnectionError:(NSError *)error {
     LOG_METHOD;
@@ -78,12 +112,13 @@ static TrainInfoManager *shareInstance = nil;
             self.trainInfos = trainInfoArray;
             [self.delegate trainInfoManager:self didRecievedTrainInfos:self.trainInfos];
         }else {
+            
         }
-        
     }
     
-    
+    [self createDictionaryForView];
 }
+
 - (void)connection:(Connection *)connection didResponseError:(NSError *)error {
     LOG_METHOD;
     LOG_PRINTF(@"%@",error);

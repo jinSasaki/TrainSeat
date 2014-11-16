@@ -23,6 +23,7 @@
 @property (nonatomic) TrainInfo *userTrainInfo;
 @property (nonatomic,weak) id <TrainInfoManagerDelegate> delegate;
 @property (nonatomic) NSArray *trainInfos;
+@property (nonatomic) NSDictionary *trainInfoForView;
 
 + (instancetype)defaultTrainInfoManager;
 

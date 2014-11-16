@@ -35,7 +35,7 @@
 @property CGPoint center;
 - (id) initWithDictionary:(NSDictionary *)dict;
 
-
+// 1 ~ stations.count
 @property (nonatomic) int order;
 
 

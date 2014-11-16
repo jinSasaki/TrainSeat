@@ -22,6 +22,9 @@
 @property Station *selectedStation;
 @property NSString *selectedTrainCode;
 
+@property NSDictionary *upTrains;
+@property NSDictionary *downTrains;
+
 - (IBAction)trainDidPush:(id)sender;
 
 @end

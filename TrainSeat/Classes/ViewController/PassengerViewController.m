@@ -23,6 +23,12 @@
     [self test];
     
     [self.manager requestToGET];
+    
+    // ボタンの色
+    RGBA(194, 194, 194 , 61 );
+    
+    
+    
 }
 
 - (void)test {

@@ -231,6 +231,7 @@
 		490871721A17A2350058E72E /* yuurakuchou_train_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871571A17A2350058E72E /* yuurakuchou_train_2.png */; };
 		490871751A17BBBD0058E72E /* PassengerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 490871741A17BBBD0058E72E /* PassengerViewController.m */; };
 		490871781A17C23A0058E72E /* TrainInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 490871771A17C23A0058E72E /* TrainInfoManager.m */; };
+		4908717B1A18ABD50058E72E /* TrainButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4908717A1A18ABD50058E72E /* TrainButton.m */; };
 		490EDC161A138C2A00F19C18 /* flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 490EDC141A138C2A00F19C18 /* flag.png */; };
 		490EDC171A138C2A00F19C18 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 490EDC151A138C2A00F19C18 /* pin.png */; };
 		490EDC191A15FED200F19C18 /* position_base.png in Resources */ = {isa = PBXBuildFile; fileRef = 490EDC181A15FED200F19C18 /* position_base.png */; };
@@ -517,6 +518,8 @@
 		490871741A17BBBD0058E72E /* PassengerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassengerViewController.m; sourceTree = "<group>"; };
 		490871761A17C23A0058E72E /* TrainInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainInfoManager.h; sourceTree = "<group>"; };
 		490871771A17C23A0058E72E /* TrainInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainInfoManager.m; sourceTree = "<group>"; };
+		490871791A18ABD50058E72E /* TrainButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainButton.h; sourceTree = "<group>"; };
+		4908717A1A18ABD50058E72E /* TrainButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainButton.m; sourceTree = "<group>"; };
 		490EDC141A138C2A00F19C18 /* flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flag.png; sourceTree = "<group>"; };
 		490EDC151A138C2A00F19C18 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
 		490EDC181A15FED200F19C18 /* position_base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = position_base.png; sourceTree = "<group>"; };
@@ -1116,6 +1119,8 @@
 				492AAD9E1A11ECE7007A6777 /* TrainView.m */,
 				495A116D1A10DE9E008D40B9 /* LineButton.h */,
 				495A116E1A10DE9E008D40B9 /* LineButton.m */,
+				490871791A18ABD50058E72E /* TrainButton.h */,
+				4908717A1A18ABD50058E72E /* TrainButton.m */,
 				49A4EC5F1A0C810E0064165E /* RailwayMapView.h */,
 				49A4EC601A0C810E0064165E /* RailwayMapView.m */,
 				490EDC211A1606CF00F19C18 /* LineTableViewCell.h */,
@@ -1468,6 +1473,7 @@
 				492AAD561A112539007A6777 /* StationButton.m in Sources */,
 				49C985F719FE7BA6006DCFE1 /* AppDelegate.m in Sources */,
 				495E06861A04C57300DDA0B2 /* UserManager.m in Sources */,
+				4908717B1A18ABD50058E72E /* TrainButton.m in Sources */,
 				49C9865219FF8083006DCFE1 /* Station.m in Sources */,
 				490EDC231A1606CF00F19C18 /* LineTableViewCell.m in Sources */,
 				49C9864F19FF7FD4006DCFE1 /* Connection.m in Sources */,

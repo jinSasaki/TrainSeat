@@ -53,6 +53,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+
+    
     LineTableViewCell *cell;
     if (!self.currentRailway) {
         cell = [tableView dequeueReusableCellWithIdentifier:@"init" forIndexPath:indexPath];
@@ -70,6 +73,26 @@
     }else if(indexPath.row % 2 == 1) {
         cell = [tableView dequeueReusableCellWithIdentifier:@"interval" forIndexPath:indexPath];
         cell.line.backgroundColor = self.currentRailway.color;
+    }
+
+    // remove all train buttons
+    for (int i=0; i<[self.tableView numberOfRowsInSection:0]; i++) {
+        
+        UIView *cellScrollView = cell.subviews[0];
+        for (id subView in cellScrollView.subviews) {
+            if ([subView isKindOfClass:[TrainButton class]]) {
+                [subView removeFromSuperview];
+            }
+        
+        }
+    }
+    
+    // add train buttons if cell needs
+    if (self.upTrains[@(indexPath.row)]) {
+        [cell addSubview:self.upTrains[@(indexPath.row)]];
+    }
+    if (self.downTrains[@(indexPath.row)]) {
+        [cell addSubview:self.downTrains[@(indexPath.row)]];
     }
     
     
@@ -131,6 +154,7 @@
         pushedButton.alpha = selectedAlpha;
         Railway *railway = self.railwayManager.allRailwayDict[pushedButton.railwayName];
         self.currentRailway = railway;
+        self.locationManager.currentRailway = railway;
         [self.tableView reloadData];
         [self.locationManager startConnectionWithRailway:railway];
         
@@ -147,53 +171,80 @@
     
     for (int i=0; i<[self.tableView numberOfRowsInSection:0]; i++) {
         LineTableViewCell *cell = (LineTableViewCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
-        cell.trainUp.hidden = YES;
-        cell.trainDown.hidden = YES;
-        cell.train = nil;
         
+        for (UIView *subView in cell.subviews) {
+            if ([subView isKindOfClass:[TrainButton class]]) {
+                [subView removeFromSuperview];
+            }
+        }
     }
+    
+    NSMutableDictionary *__upTrains = [NSMutableDictionary dictionary];
+    NSMutableDictionary *__downTrains = [NSMutableDictionary dictionary];
     
     for (Train *train in self.locationManager.trainArray) {
         
-        int predictionNum = 1;
-        
-        
-        NSArray *directions = RailDirectionsFromRailway(self.currentRailway.railwayName);
-        Station *fromStation = self.currentRailway.stationDict[train.fromStationTrimed];
-        int row = (fromStation.order - 1) * 2;
 
-        Station *directionStation = self.railwayManager.allStations[train.railDirectionOnlyName];
+        Station *fromStation = self.currentRailway.stationDict[train.fromStationTrimed];
+        
+        NSMutableArray *separeted = (NSMutableArray *)[train.fromStation componentsSeparatedByString:@"."];
+        [separeted removeObjectAtIndex:separeted.count-1];
+        NSString *stationCodeTemplate = [separeted componentsJoinedByString:@"."];
+        NSString *directionStationCode = [NSString stringWithFormat:@"%@.%@",stationCodeTemplate,train.railDirectionOnlyName];
+        Station *directionStation = self.railwayManager.allStations[directionStationCode];
+        
+        TrainButtonDirection direction;
+        
+        int row = (fromStation.order - 1) * 2;
         
         if (directionStation.order < fromStation.order) {
             // 上向きのところのcellを更新
             if (!train.isStop) {
                 row --;
             }
-            row -= predictionNum;
-            
-            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
-            LineTableViewCell *cell = (LineTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
-            cell.trainUp.hidden = NO;
-            cell.train = train;
+            direction = TrainButtonDirectionUp;
             
         }else if(directionStation.order > fromStation.order) {
             // 下向き
             if (!train.isStop) {
                 row ++;
             }
-            row += predictionNum;
-            
-            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
-            LineTableViewCell *cell = (LineTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
-            cell.trainDown.hidden = NO;
-            cell.train = train;
+            direction = TrainButtonDirectionDown;
+
         } else {
             // 規定の行き先じゃないときの計算
-            LOG_PRINTF(@"this is other direction");
-            
         }
         
+        TrainButton *trainBtn = [TrainButton buttonWithType:UIButtonTypeSystem railWay:self.currentRailway direction:direction];
+        trainBtn.train = train;
+        [trainBtn addTarget:self action:@selector(trainDidPush:) forControlEvents:UIControlEventTouchUpInside];
+
+        switch (direction) {
+
+            case TrainButtonDirectionUp:
+                [__upTrains setObject:trainBtn forKey:@(row)];
+                break;
+                
+            case TrainButtonDirectionDown:
+                [__downTrains setObject:trainBtn forKey:@(row)];
+                break;
+                
+            default:
+                break;
+        }
+        
+        
+        LOG_PRINTF(@"\n");
+   
     }
+    
+    
+    self.upTrains = __upTrains;
+    self.downTrains = __downTrains;
+
+
+    // test
+    [self.locationManager stopConnection];
     
     [self.tableView reloadData];
     
@@ -211,20 +262,21 @@
     }
     Station *station = self.currentRailway.stationArray[indexPath.row / 2];
     self.selectedStation = station;
-    LOG(@"%@",self.selectedStation.title);
+    LOG(@"[%ld] %@", indexPath.row,self.selectedStation.title);
     self.navigationItem.title = @"乗車中の電車を選択してください";
     
     [self presentNextViewWithValidation];
 }
 
-
+// 電車が押された
 - (IBAction)trainDidPush:(id)sender {
     
-    UIButton *trainBtn = sender;
-    LineTableViewCell *cell = (LineTableViewCell *)trainBtn.superview.superview.superview;
-    self.selectedTrainCode = cell.train.ucode;
+    TrainButton *trainBtn = sender;
+    self.selectedTrainCode = trainBtn.train.ucode;
     
-    LOG_PRINTF(@"%@ -> %@ direction to %@", cell.train.fromStation, cell.train.toStation , cell.train.railDirection);
+    LOG_PRINTF(@"%@ -> %@ direction to %@", trainBtn.train.fromStation, trainBtn.train.toStation , trainBtn.train.railDirectionOnlyName);
+    
+    
     [self presentNextViewWithValidation];
     
     

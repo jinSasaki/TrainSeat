@@ -14,5 +14,11 @@
 <TrainInfoManagerDelegate>
 
 @property (nonatomic)TrainInfoManager *manager;
+@property (nonatomic ,weak) IBOutletCollection(UIButton)NSArray *positionBtns;
+@property (nonatomic ,weak) IBOutlet UISegmentedControl *carSegement;
+@property (nonatomic ,weak) IBOutlet UIScrollView *stationScrollView;
+- (IBAction)changeCarNumber:(id)sender;
+
 
 @end
+    
