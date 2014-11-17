@@ -19,12 +19,47 @@
     return self;
 }
 
++ (id)buttonWithType:(UIButtonType)buttonType railWay:(Railway *)railway direction:(TrainButtonDirection)direction train:(Train *)train {
+    TrainButton *instance = [self buttonWithType:buttonType railWay:railway direction:direction];
+    instance.train = train;
+    
+    
+    return instance;
+}
+
+
+- (id)initWithRailway:(Railway *)railway direction:(TrainButtonDirection)direction train:(Train *)train
+{
+    self = [TrainButton buttonWithType:UIButtonTypeSystem railWay:railway direction:direction train:train];
+    if (self) {
+        // Initialization code
+        
+        if (!train.isStop) {
+            // タイマーを起動
+            self.flashTimer = [NSTimer scheduledTimerWithTimeInterval:0.8 target:self selector:@selector(flash) userInfo:nil repeats:YES];
+        }
+    }
+
+    return self;
+}
+
+// flashがないっておこられる
+
+- (void)flash {
+    if (self.alpha > 0.5) {
+        self.alpha = 0.3;
+    } else {
+        self.alpha = 1.0;
+    }
+    
+}
+
 + (id)buttonWithType:(UIButtonType)buttonType railWay:(Railway *)railway direction:(TrainButtonDirection)direction {
     TrainButton *instance = [super buttonWithType:buttonType];
     NSString *imageName;
     CGPoint center;
     instance.frame = CGRectMake(0, 0, 30, 45);
-
+    
     switch (direction) {
         case TrainButtonDirectionUp:
             // 上
@@ -46,6 +81,7 @@
     instance.center = center;
     [instance setBackgroundImage:
      [UIImage imageNamed:imageName] forState:UIControlStateNormal];
+    
     return instance;
 }
 

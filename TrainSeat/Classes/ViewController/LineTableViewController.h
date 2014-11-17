@@ -19,6 +19,7 @@
 @property RailwayManager *railwayManager;
 @property Railway *currentRailway;
 @property (nonatomic) UIScrollView *lineScrollView;
+
 @property Station *selectedStation;
 @property NSString *selectedTrainCode;
 

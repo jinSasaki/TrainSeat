@@ -117,16 +117,17 @@
     }
     Train *train = [self.locationManager trainWithUCode:self.trainInfoManager.userTrainInfo.trainCode];
     self.railwayLabel.text = [NSString stringWithFormat:@"%@線",railway.title];
-    self.directionLabel.text = [NSString stringWithFormat:@"%@方面",ConvertToJapaneseFromDirectionCode(train.railDirection)];
+    if ( ConvertToJapaneseFromDirectionCode(train.railDirection)) {
+        self.directionLabel.text = [NSString stringWithFormat:@"%@方面",ConvertToJapaneseFromDirectionCode(train.railDirection)];
+    }
     
 
     [self.trainInfoManager startConnectionWtihTimeInterval:10];
     
     // 次に到着する駅の情報を初期で表示
-    
-//    Train *train = [self.locationManager trainWithUCode:self.trainInfoManager.userTrainInfo.trainCode];
+
+    // 上下で異なる
     Station *station = railway.stationDict[train.fromStationTrimed];
-//    Station *station = railway.stationDict[@"Edogawabashi"];
     self.index = station.order-1;
     
     self.stationScrollView.contentOffset = CGPointMake(self.index * 320, 0);
@@ -153,18 +154,15 @@
     }
     
     // open position which will be free
-    for (NSArray *positions in carNumDict[stringFromNSInteger(self.carSegement.selectedSegmentIndex)]) {
-        for (NSString *position in positions) {
+    for (NSString *position in carNumDict[stringFromNSInteger(self.carSegement.selectedSegmentIndex)]) {
             UIButton *positionBtn = self.positionBtns[position.intValue];
             positionBtn.backgroundColor = RGBA(200, 40, 40 , 60);
-        }
     }
-    
-    // message update
 
+    // message update
     self.carLabel.text = [NSString stringWithFormat:@"%ld 両目は", self.carSegement.selectedSegmentIndex + 1];
     self.dropNumLabel.text = stringFromNSInteger(carNumDict.count);
-    self.openSeatNumLabel.text = stringFromNSInteger(carNumDict.count);
+    self.openSeatNumLabel.text = stringFromNSInteger([carNumDict[stringFromNSInteger(self.carSegement.selectedSegmentIndex)] count]);
     
 }
 

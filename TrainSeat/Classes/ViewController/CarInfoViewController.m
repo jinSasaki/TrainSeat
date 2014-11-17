@@ -59,7 +59,8 @@
     // 送信
     [trainInfoManager requestToSET];
     
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"trainInfo"];
+    [self.navigationController pushViewController:vc animated:YES];
     
 }
 - (IBAction)positioonBtnDidPush:(id)sender {

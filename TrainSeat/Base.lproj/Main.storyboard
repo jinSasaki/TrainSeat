@@ -56,7 +56,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="202" y="528"/>
+            <point key="canvasLocation" x="-4" y="31"/>
         </scene>
         <!--Base Navigation View Controller-->
         <scene sceneID="rhn-n9-r8Y">
@@ -80,7 +80,7 @@
             </objects>
             <point key="canvasLocation" x="-431" y="31"/>
         </scene>
-        <!--Line Table View Controller - 到着駅を選択してください-->
+        <!--Line Table View Controller - 電車を選択してください-->
         <scene sceneID="gYl-sG-A0I">
             <objects>
                 <tableViewController id="Iog-94-kCa" customClass="LineTableViewController" sceneMemberID="viewController">
@@ -171,7 +171,7 @@
                             <outlet property="delegate" destination="Iog-94-kCa" id="Y6q-pS-iUw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="到着駅を選択してください" id="PuZ-Po-h9h">
+                    <navigationItem key="navigationItem" title="電車を選択してください" id="PuZ-Po-h9h">
                         <barButtonItem key="backBarButtonItem" title="　" id="Irn-Vx-oEL"/>
                     </navigationItem>
                     <connections>
@@ -180,7 +180,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3s1-Ge-5GG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="804" y="-99"/>
+            <point key="canvasLocation" x="504" y="293"/>
         </scene>
         <!--Train Select View Controller-->
         <scene sceneID="gT9-fi-GxE">
@@ -224,7 +224,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TwP-Rz-I1m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="257" y="-349"/>
+            <point key="canvasLocation" x="519" y="-497"/>
         </scene>
         <!--Car Info View Controller-->
         <scene sceneID="QLT-rt-u0m">
@@ -432,7 +432,6 @@
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="decideButtonDidPush:" destination="GrK-cD-wfR" id="ERM-kY-Lpi"/>
-                                <segue destination="4C0-cw-UVl" kind="push" id="Qwg-T6-Qf5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -455,12 +454,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eIr-cv-TdI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1167" y="19"/>
+            <point key="canvasLocation" x="911" y="293"/>
         </scene>
         <!--Passenger View Controller-->
         <scene sceneID="xGo-he-BD8">
             <objects>
-                <viewController id="4C0-cw-UVl" customClass="PassengerViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="trainInfo" id="4C0-cw-UVl" customClass="PassengerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eR5-Pf-4et">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -688,7 +687,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fzr-0n-3jq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="824" y="465"/>
+            <point key="canvasLocation" x="1330" y="293"/>
         </scene>
     </scenes>
     <resources>
@@ -698,7 +697,7 @@
         <image name="position_base.png" width="621" height="132"/>
         <image name="seatInfoIcon.png" width="600" height="417"/>
     </resources>
-    <color key="tintColor" red="0.0" green="0.62745098039215685" blue="0.87450980392156863" alpha="1" colorSpace="deviceRGB"/>
+    <color key="tintColor" red="0.0" green="0.62745098039215685" blue="0.9137254901960784" alpha="1" colorSpace="deviceRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

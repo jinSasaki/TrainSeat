@@ -53,6 +53,7 @@ static TrainInfoManager *shareInstance = nil;
 }
 
 - (void)startConnectionWtihTimeInterval:(NSTimeInterval)timeInterval {
+    [self requestToGET];
    self.timer = [NSTimer scheduledTimerWithTimeInterval:timeInterval target:self selector:@selector(requestToGET) userInfo:nil repeats:YES];
 }
 - (void)stopConnection {
@@ -66,6 +67,7 @@ static TrainInfoManager *shareInstance = nil;
     for (TrainInfo *trainInfo in self.trainInfos) {
         NSMutableDictionary *cars;
         NSMutableArray *positions = [NSMutableArray array];;
+        NSInteger offPeople = 0;
         
         // 駅が登録されてたら
         if ([dict objectForKey:trainInfo.destination]) {
@@ -75,8 +77,11 @@ static TrainInfoManager *shareInstance = nil;
             if ([cars objectForKey:stringFromInteger(trainInfo.carNumber)]) {
                 positions = [NSMutableArray arrayWithArray:[cars objectForKey:stringFromInteger(trainInfo.carNumber)]];
 
-                // ポジション追加
-                [positions addObject:stringFromInteger(trainInfo.position)];
+                // 座ってたらポジション追加
+                if (trainInfo.isSittng){
+                    [positions addObject:stringFromInteger(trainInfo.position)];
+                }
+                offPeople++;
             }
 
             // 車両が登録されてなかったら車両をキーにポジション配列を追加
@@ -87,9 +92,18 @@ static TrainInfoManager *shareInstance = nil;
 
         // 駅が登録されてなかったら、駅をキーに、車両がキーのポジション配列を追加した辞書を追加
         else {
-            [dict setObject:@{stringFromInteger(trainInfo.carNumber): @[stringFromInteger(trainInfo.position)]} forKey:trainInfo.destination];
+            NSArray *positions;
+            // 座ってたらポジション追加
+            if (trainInfo.isSittng){
+                positions = @[stringFromInteger(trainInfo.position)];
+            }
+            [dict setObject:@{stringFromInteger(trainInfo.carNumber): positions} forKey:trainInfo.destination];
+            offPeople++;
+
         }
     }
+    
+    
     self.trainInfoForView = dict;
 }
 
@@ -121,13 +135,13 @@ static TrainInfoManager *shareInstance = nil;
                 [trainInfoArray addObject:trainInfo];
             }
             self.trainInfos = trainInfoArray;
+            [self createDictionaryForView];
             [self.delegate trainInfoManager:self didRecievedTrainInfos:self.trainInfos];
         }else {
             
         }
     }
     
-    [self createDictionaryForView];
 }
 
 - (void)connection:(Connection *)connection didResponseError:(NSError *)error {

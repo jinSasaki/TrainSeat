@@ -19,7 +19,6 @@
 @property (nonatomic) BOOL isSittng;
 @property (nonatomic) int position;
 
-
 //--------------------------------------------------------------------------------
 // イラネ
 // TODO: delete
@@ -35,7 +34,7 @@
 @property (nonatomic) NSInteger stationIndex;
 
 // 電車の進行方向（主に座ってる人の位置を考えるためのもの）
-@property (nonatomic) NSInteger direction;
+//@property (nonatomic) NSInteger direction;
 
 // 乗車状態 立ち・座りの２値
 @property (nonatomic) NSInteger status;

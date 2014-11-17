@@ -21,10 +21,10 @@
 @interface TrainInfoManager : NSObject <ConnectionDelegate>
 
 @property (nonatomic) TrainInfo *userTrainInfo;
+
 @property (nonatomic,weak) id <TrainInfoManagerDelegate> delegate;
 @property (nonatomic) NSArray *trainInfos;
 @property (nonatomic) NSDictionary *trainInfoForView;
-
 @property NSTimer *timer;
 
 

@@ -12,7 +12,7 @@
 {
     double nonSelectedAlpha;
     double selectedAlpha;
-    
+    NSTimer *flashTimer;
 }
 @end
 
@@ -141,6 +141,7 @@
     
     self.selectedTrainCode = nil;
     self.selectedStation = nil;
+    self.navigationItem.title = @"電車を選択してください";
     
     // 一度すべてのアイコンを非選択状態に
     for (LineButton *lineButton in self.lineScrollView.subviews) {
@@ -215,8 +216,9 @@
             // 規定の行き先じゃないときの計算
         }
         
-        TrainButton *trainBtn = [TrainButton buttonWithType:UIButtonTypeSystem railWay:self.currentRailway direction:direction];
-        trainBtn.train = train;
+        TrainButton *trainBtn = [[TrainButton alloc]initWithRailway:self.currentRailway direction:direction train:train];
+        trainBtn.direction = direction;
+
         [trainBtn addTarget:self action:@selector(trainDidPush:) forControlEvents:UIControlEventTouchUpInside];
 
         switch (direction) {
@@ -246,19 +248,24 @@
 }
 
 
+
 - (void)didStartUpdateing {
     
 }
 
 // セルが押された
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    if (!self.selectedTrainCode) {
+        return;
+    }
+
     if (indexPath.row % 2 == 1) {
         return;
     }
     Station *station = self.currentRailway.stationArray[indexPath.row / 2];
     self.selectedStation = station;
     LOG(@"[%ld] %@", indexPath.row,self.selectedStation.title);
-    self.navigationItem.title = @"乗車中の電車を選択してください";
     
     [self presentNextViewWithValidation];
 }
@@ -266,8 +273,11 @@
 // 電車が押された
 - (IBAction)trainDidPush:(id)sender {
     
+    
     TrainButton *trainBtn = sender;
     self.selectedTrainCode = trainBtn.train.ucode;
+    
+    self.navigationItem.title = @"到着駅を選択してください";
     
     LOG_PRINTF(@"%@ -> %@ direction to %@", trainBtn.train.fromStation, trainBtn.train.toStation , trainBtn.train.railDirectionOnlyName);
     
@@ -290,7 +300,6 @@
         UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"CarInfo"];
         
         self.railwayManager.userRailway = self.currentRailway;
-
         [self.locationManager stopConnection];
         
         [self.navigationController pushViewController:vc animated:YES];

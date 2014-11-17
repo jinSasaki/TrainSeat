@@ -77,3 +77,9 @@ typedef NS_ENUM(NSInteger, ConnectionIdentifer) {
 
 NSString *stringFromInteger(int number);
 NSString *stringFromNSInteger(NSInteger nsNumber);
+
+//--------------------------------------------------------------------------------
+typedef NS_ENUM(NSInteger, TrainButtonDirection) {
+    TrainButtonDirectionUp = 0,
+    TrainButtonDirectionDown,
+};

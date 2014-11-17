@@ -9,14 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "Train.h"
 #import "Railway.h"
-typedef NS_ENUM(NSInteger, TrainButtonDirection) {
-    TrainButtonDirectionUp = 0,
-    TrainButtonDirectionDown,
-};
+
+@class TrainButton;
 
 @interface TrainButton : UIButton
 @property (nonatomic) Train *train;
+@property (nonatomic) TrainButtonDirection direction;
+@property NSTimer *flashTimer;
 
 + (id)buttonWithType:(UIButtonType)buttonType railWay:(Railway *)railway direction:(TrainButtonDirection)direction;
++ (id)buttonWithType:(UIButtonType)buttonType railWay:(Railway *)railway direction:(TrainButtonDirection)direction train:(Train *)train;
+- (id)initWithRailway:(Railway *)railway direction:(TrainButtonDirection)direction train:(Train *)train;
+
 @end
 
