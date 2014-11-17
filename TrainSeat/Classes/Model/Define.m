@@ -118,3 +118,10 @@ NSString *stationTitleWithStationName(NSString *stationName) {
     NSDictionary *stationDict = [ud dictionaryForKey:@"stationName"];
     return stationDict[stationName];
 }
+NSString *stringFromInteger(int number) {
+    return [NSString stringWithFormat:@"%d",number];
+}
+NSString *stringFromNSInteger(NSInteger nsNumber) {
+    return [NSString stringWithFormat:@"%ld",nsNumber];
+    
+}

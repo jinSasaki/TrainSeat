@@ -202,36 +202,37 @@
 		490871261A1765B00058E72E /* nanboku.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908711D1A1765B00058E72E /* nanboku.png */; };
 		490871271A1765B00058E72E /* touzai.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908711E1A1765B00058E72E /* touzai.png */; };
 		490871281A1765B00058E72E /* yurakucho.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908711F1A1765B00058E72E /* yurakucho.png */; };
-		490871581A17A2350058E72E /* chiyoda_train.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908713D1A17A2350058E72E /* chiyoda_train.png */; };
-		490871591A17A2350058E72E /* chiyoda_train_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908713E1A17A2350058E72E /* chiyoda_train_1.png */; };
-		4908715A1A17A2350058E72E /* chiyoda_train_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908713F1A17A2350058E72E /* chiyoda_train_2.png */; };
-		4908715B1A17A2350058E72E /* fukutoshin_train.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871401A17A2350058E72E /* fukutoshin_train.png */; };
-		4908715C1A17A2350058E72E /* fukutoshin_train_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871411A17A2350058E72E /* fukutoshin_train_1.png */; };
-		4908715D1A17A2350058E72E /* fukutoshin_train_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871421A17A2350058E72E /* fukutoshin_train_2.png */; };
-		4908715E1A17A2350058E72E /* ginza_train.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871431A17A2350058E72E /* ginza_train.png */; };
-		4908715F1A17A2350058E72E /* ginza_train_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871441A17A2350058E72E /* ginza_train_1.png */; };
-		490871601A17A2350058E72E /* ginza_train_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871451A17A2350058E72E /* ginza_train_2.png */; };
-		490871611A17A2350058E72E /* hanzoumon_train.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871461A17A2350058E72E /* hanzoumon_train.png */; };
-		490871621A17A2350058E72E /* hanzoumon_train_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871471A17A2350058E72E /* hanzoumon_train_1.png */; };
-		490871631A17A2350058E72E /* hanzoumon_train_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871481A17A2350058E72E /* hanzoumon_train_2.png */; };
-		490871641A17A2350058E72E /* hibiya_train.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871491A17A2350058E72E /* hibiya_train.png */; };
-		490871651A17A2350058E72E /* hibiya_train_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908714A1A17A2350058E72E /* hibiya_train_1.png */; };
-		490871661A17A2350058E72E /* hibiya_train_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908714B1A17A2350058E72E /* hibiya_train_2.png */; };
-		490871671A17A2350058E72E /* marunouchi_train.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908714C1A17A2350058E72E /* marunouchi_train.png */; };
-		490871681A17A2350058E72E /* marunouchi_train_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908714D1A17A2350058E72E /* marunouchi_train_1.png */; };
-		490871691A17A2350058E72E /* marunouchi_train_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908714E1A17A2350058E72E /* marunouchi_train_2.png */; };
-		4908716A1A17A2350058E72E /* nanboku_train.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908714F1A17A2350058E72E /* nanboku_train.png */; };
-		4908716B1A17A2350058E72E /* nanboku_train_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871501A17A2350058E72E /* nanboku_train_1.png */; };
-		4908716C1A17A2350058E72E /* nanboku_train_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871511A17A2350058E72E /* nanboku_train_2.png */; };
-		4908716D1A17A2350058E72E /* touzai_train.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871521A17A2350058E72E /* touzai_train.png */; };
-		4908716E1A17A2350058E72E /* touzai_train_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871531A17A2350058E72E /* touzai_train_1.png */; };
-		4908716F1A17A2350058E72E /* touzai_train_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871541A17A2350058E72E /* touzai_train_2.png */; };
-		490871701A17A2350058E72E /* yuurakuchou_train.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871551A17A2350058E72E /* yuurakuchou_train.png */; };
-		490871711A17A2350058E72E /* yuurakuchou_train_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871561A17A2350058E72E /* yuurakuchou_train_1.png */; };
-		490871721A17A2350058E72E /* yuurakuchou_train_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871571A17A2350058E72E /* yuurakuchou_train_2.png */; };
 		490871751A17BBBD0058E72E /* PassengerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 490871741A17BBBD0058E72E /* PassengerViewController.m */; };
 		490871781A17C23A0058E72E /* TrainInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 490871771A17C23A0058E72E /* TrainInfoManager.m */; };
 		4908717B1A18ABD50058E72E /* TrainButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4908717A1A18ABD50058E72E /* TrainButton.m */; };
+		4908719B1A18E2800058E72E /* chiyoda_train.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871801A18E2800058E72E /* chiyoda_train.png */; };
+		4908719C1A18E2800058E72E /* chiyoda_train_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871811A18E2800058E72E /* chiyoda_train_1.png */; };
+		4908719D1A18E2800058E72E /* chiyoda_train_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871821A18E2800058E72E /* chiyoda_train_2.png */; };
+		4908719E1A18E2800058E72E /* fukutoshin_train.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871831A18E2800058E72E /* fukutoshin_train.png */; };
+		4908719F1A18E2800058E72E /* fukutoshin_train_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871841A18E2800058E72E /* fukutoshin_train_1.png */; };
+		490871A01A18E2800058E72E /* fukutoshin_train_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871851A18E2800058E72E /* fukutoshin_train_2.png */; };
+		490871A11A18E2800058E72E /* ginza_train.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871861A18E2800058E72E /* ginza_train.png */; };
+		490871A21A18E2800058E72E /* ginza_train_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871871A18E2800058E72E /* ginza_train_1.png */; };
+		490871A31A18E2800058E72E /* ginza_train_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871881A18E2800058E72E /* ginza_train_2.png */; };
+		490871A41A18E2800058E72E /* hanzomon_train.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871891A18E2800058E72E /* hanzomon_train.png */; };
+		490871A51A18E2800058E72E /* hanzomon_train_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908718A1A18E2800058E72E /* hanzomon_train_1.png */; };
+		490871A61A18E2800058E72E /* hanzomon_train_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908718B1A18E2800058E72E /* hanzomon_train_2.png */; };
+		490871A71A18E2800058E72E /* hibiya_train.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908718C1A18E2800058E72E /* hibiya_train.png */; };
+		490871A81A18E2800058E72E /* hibiya_train_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908718D1A18E2800058E72E /* hibiya_train_1.png */; };
+		490871A91A18E2800058E72E /* hibiya_train_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908718E1A18E2800058E72E /* hibiya_train_2.png */; };
+		490871AA1A18E2800058E72E /* marunouchi_train.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908718F1A18E2800058E72E /* marunouchi_train.png */; };
+		490871AB1A18E2800058E72E /* marunouchi_train_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871901A18E2800058E72E /* marunouchi_train_1.png */; };
+		490871AC1A18E2800058E72E /* marunouchi_train_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871911A18E2800058E72E /* marunouchi_train_2.png */; };
+		490871AD1A18E2800058E72E /* namboku_train.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871921A18E2800058E72E /* namboku_train.png */; };
+		490871AE1A18E2800058E72E /* namboku_train_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871931A18E2800058E72E /* namboku_train_1.png */; };
+		490871AF1A18E2800058E72E /* namboku_train_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871941A18E2800058E72E /* namboku_train_2.png */; };
+		490871B01A18E2800058E72E /* tozai_train.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871951A18E2800058E72E /* tozai_train.png */; };
+		490871B11A18E2800058E72E /* tozai_train_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871961A18E2800058E72E /* tozai_train_1.png */; };
+		490871B21A18E2800058E72E /* tozai_train_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871971A18E2800058E72E /* tozai_train_2.png */; };
+		490871B31A18E2800058E72E /* yurakucho_train.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871981A18E2800058E72E /* yurakucho_train.png */; };
+		490871B41A18E2800058E72E /* yurakucho_train_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 490871991A18E2800058E72E /* yurakucho_train_1.png */; };
+		490871B51A18E2800058E72E /* yurakucho_train_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4908719A1A18E2800058E72E /* yurakucho_train_2.png */; };
+		490871B81A19150C0058E72E /* TopMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 490871B71A19150C0058E72E /* TopMenuViewController.m */; };
 		490EDC161A138C2A00F19C18 /* flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 490EDC141A138C2A00F19C18 /* flag.png */; };
 		490EDC171A138C2A00F19C18 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 490EDC151A138C2A00F19C18 /* pin.png */; };
 		490EDC191A15FED200F19C18 /* position_base.png in Resources */ = {isa = PBXBuildFile; fileRef = 490EDC181A15FED200F19C18 /* position_base.png */; };
@@ -244,8 +245,6 @@
 		492AAD5C1A114A37007A6777 /* Train.m in Sources */ = {isa = PBXBuildFile; fileRef = 492AAD5B1A114A37007A6777 /* Train.m */; };
 		492AAD9F1A11ECE7007A6777 /* TrainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 492AAD9E1A11ECE7007A6777 /* TrainView.m */; };
 		495A116F1A10DE9E008D40B9 /* LineButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 495A116E1A10DE9E008D40B9 /* LineButton.m */; };
-		495E06861A04C57300DDA0B2 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 495E06851A04C57300DDA0B2 /* UserManager.m */; };
-		49A4EC2F1A0B1BB80064165E /* Timetable.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A4EC2E1A0B1BB80064165E /* Timetable.m */; };
 		49A4EC321A0B1F2F0064165E /* Connection+Database.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A4EC311A0B1F2F0064165E /* Connection+Database.m */; };
 		49A4EC381A0B3A470064165E /* TrainSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A4EC371A0B3A470064165E /* TrainSelectViewController.m */; };
 		49A4EC611A0C810E0064165E /* RailwayMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A4EC601A0C810E0064165E /* RailwayMapView.m */; };
@@ -263,11 +262,6 @@
 		49C9860819FE7BA6006DCFE1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C985EA19FE7BA6006DCFE1 /* UIKit.framework */; };
 		49C9861019FE7BA6006DCFE1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49C9860E19FE7BA6006DCFE1 /* InfoPlist.strings */; };
 		49C9861219FE7BA6006DCFE1 /* TrainSeatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C9861119FE7BA6006DCFE1 /* TrainSeatTests.m */; };
-		49C9864119FF7F42006DCFE1 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C9863519FF7F42006DCFE1 /* BaseViewController.m */; };
-		49C9864219FF7F42006DCFE1 /* GetMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C9863719FF7F42006DCFE1 /* GetMenuViewController.m */; };
-		49C9864419FF7F42006DCFE1 /* TrainInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C9863B19FF7F42006DCFE1 /* TrainInfoViewController.m */; };
-		49C9864519FF7F42006DCFE1 /* TrainMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C9863D19FF7F42006DCFE1 /* TrainMapViewController.m */; };
-		49C9864619FF7F42006DCFE1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C9863F19FF7F42006DCFE1 /* ViewController.m */; };
 		49C9864919FF7F60006DCFE1 /* TrainMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C9864819FF7F60006DCFE1 /* TrainMapView.m */; };
 		49C9864C19FF7FA0006DCFE1 /* TrainInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C9864B19FF7FA0006DCFE1 /* TrainInfo.m */; };
 		49C9864F19FF7FD4006DCFE1 /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C9864E19FF7FD4006DCFE1 /* Connection.m */; };
@@ -276,7 +270,6 @@
 		49C9865B19FF9808006DCFE1 /* Define.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C9865A19FF9808006DCFE1 /* Define.m */; };
 		49C9865E19FF9ABC006DCFE1 /* Connection+TokyoMetroAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C9865D19FF9ABC006DCFE1 /* Connection+TokyoMetroAPI.m */; };
 		49C9866119FFA249006DCFE1 /* Railway.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C9866019FFA249006DCFE1 /* Railway.m */; };
-		49C9866419FFA9B1006DCFE1 /* TopMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C9866319FFA9B1006DCFE1 /* TopMenuViewController.m */; };
 		49C9866719FFC1DC006DCFE1 /* BaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C9866619FFC1DC006DCFE1 /* BaseNavigationViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -487,39 +480,41 @@
 		4908711D1A1765B00058E72E /* nanboku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanboku.png; sourceTree = "<group>"; };
 		4908711E1A1765B00058E72E /* touzai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = touzai.png; sourceTree = "<group>"; };
 		4908711F1A1765B00058E72E /* yurakucho.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yurakucho.png; sourceTree = "<group>"; };
-		4908713D1A17A2350058E72E /* chiyoda_train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chiyoda_train.png; sourceTree = "<group>"; };
-		4908713E1A17A2350058E72E /* chiyoda_train_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chiyoda_train_1.png; sourceTree = "<group>"; };
-		4908713F1A17A2350058E72E /* chiyoda_train_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chiyoda_train_2.png; sourceTree = "<group>"; };
-		490871401A17A2350058E72E /* fukutoshin_train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fukutoshin_train.png; sourceTree = "<group>"; };
-		490871411A17A2350058E72E /* fukutoshin_train_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fukutoshin_train_1.png; sourceTree = "<group>"; };
-		490871421A17A2350058E72E /* fukutoshin_train_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fukutoshin_train_2.png; sourceTree = "<group>"; };
-		490871431A17A2350058E72E /* ginza_train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ginza_train.png; sourceTree = "<group>"; };
-		490871441A17A2350058E72E /* ginza_train_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ginza_train_1.png; sourceTree = "<group>"; };
-		490871451A17A2350058E72E /* ginza_train_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ginza_train_2.png; sourceTree = "<group>"; };
-		490871461A17A2350058E72E /* hanzoumon_train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hanzoumon_train.png; sourceTree = "<group>"; };
-		490871471A17A2350058E72E /* hanzoumon_train_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hanzoumon_train_1.png; sourceTree = "<group>"; };
-		490871481A17A2350058E72E /* hanzoumon_train_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hanzoumon_train_2.png; sourceTree = "<group>"; };
-		490871491A17A2350058E72E /* hibiya_train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hibiya_train.png; sourceTree = "<group>"; };
-		4908714A1A17A2350058E72E /* hibiya_train_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hibiya_train_1.png; sourceTree = "<group>"; };
-		4908714B1A17A2350058E72E /* hibiya_train_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hibiya_train_2.png; sourceTree = "<group>"; };
-		4908714C1A17A2350058E72E /* marunouchi_train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marunouchi_train.png; sourceTree = "<group>"; };
-		4908714D1A17A2350058E72E /* marunouchi_train_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marunouchi_train_1.png; sourceTree = "<group>"; };
-		4908714E1A17A2350058E72E /* marunouchi_train_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marunouchi_train_2.png; sourceTree = "<group>"; };
-		4908714F1A17A2350058E72E /* nanboku_train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanboku_train.png; sourceTree = "<group>"; };
-		490871501A17A2350058E72E /* nanboku_train_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanboku_train_1.png; sourceTree = "<group>"; };
-		490871511A17A2350058E72E /* nanboku_train_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanboku_train_2.png; sourceTree = "<group>"; };
-		490871521A17A2350058E72E /* touzai_train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = touzai_train.png; sourceTree = "<group>"; };
-		490871531A17A2350058E72E /* touzai_train_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = touzai_train_1.png; sourceTree = "<group>"; };
-		490871541A17A2350058E72E /* touzai_train_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = touzai_train_2.png; sourceTree = "<group>"; };
-		490871551A17A2350058E72E /* yuurakuchou_train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yuurakuchou_train.png; sourceTree = "<group>"; };
-		490871561A17A2350058E72E /* yuurakuchou_train_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yuurakuchou_train_1.png; sourceTree = "<group>"; };
-		490871571A17A2350058E72E /* yuurakuchou_train_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yuurakuchou_train_2.png; sourceTree = "<group>"; };
 		490871731A17BBBD0058E72E /* PassengerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassengerViewController.h; sourceTree = "<group>"; };
 		490871741A17BBBD0058E72E /* PassengerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassengerViewController.m; sourceTree = "<group>"; };
 		490871761A17C23A0058E72E /* TrainInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainInfoManager.h; sourceTree = "<group>"; };
 		490871771A17C23A0058E72E /* TrainInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainInfoManager.m; sourceTree = "<group>"; };
 		490871791A18ABD50058E72E /* TrainButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainButton.h; sourceTree = "<group>"; };
 		4908717A1A18ABD50058E72E /* TrainButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainButton.m; sourceTree = "<group>"; };
+		490871801A18E2800058E72E /* chiyoda_train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chiyoda_train.png; sourceTree = "<group>"; };
+		490871811A18E2800058E72E /* chiyoda_train_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chiyoda_train_1.png; sourceTree = "<group>"; };
+		490871821A18E2800058E72E /* chiyoda_train_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chiyoda_train_2.png; sourceTree = "<group>"; };
+		490871831A18E2800058E72E /* fukutoshin_train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fukutoshin_train.png; sourceTree = "<group>"; };
+		490871841A18E2800058E72E /* fukutoshin_train_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fukutoshin_train_1.png; sourceTree = "<group>"; };
+		490871851A18E2800058E72E /* fukutoshin_train_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fukutoshin_train_2.png; sourceTree = "<group>"; };
+		490871861A18E2800058E72E /* ginza_train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ginza_train.png; sourceTree = "<group>"; };
+		490871871A18E2800058E72E /* ginza_train_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ginza_train_1.png; sourceTree = "<group>"; };
+		490871881A18E2800058E72E /* ginza_train_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ginza_train_2.png; sourceTree = "<group>"; };
+		490871891A18E2800058E72E /* hanzomon_train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hanzomon_train.png; sourceTree = "<group>"; };
+		4908718A1A18E2800058E72E /* hanzomon_train_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hanzomon_train_1.png; sourceTree = "<group>"; };
+		4908718B1A18E2800058E72E /* hanzomon_train_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hanzomon_train_2.png; sourceTree = "<group>"; };
+		4908718C1A18E2800058E72E /* hibiya_train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hibiya_train.png; sourceTree = "<group>"; };
+		4908718D1A18E2800058E72E /* hibiya_train_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hibiya_train_1.png; sourceTree = "<group>"; };
+		4908718E1A18E2800058E72E /* hibiya_train_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hibiya_train_2.png; sourceTree = "<group>"; };
+		4908718F1A18E2800058E72E /* marunouchi_train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marunouchi_train.png; sourceTree = "<group>"; };
+		490871901A18E2800058E72E /* marunouchi_train_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marunouchi_train_1.png; sourceTree = "<group>"; };
+		490871911A18E2800058E72E /* marunouchi_train_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marunouchi_train_2.png; sourceTree = "<group>"; };
+		490871921A18E2800058E72E /* namboku_train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = namboku_train.png; sourceTree = "<group>"; };
+		490871931A18E2800058E72E /* namboku_train_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = namboku_train_1.png; sourceTree = "<group>"; };
+		490871941A18E2800058E72E /* namboku_train_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = namboku_train_2.png; sourceTree = "<group>"; };
+		490871951A18E2800058E72E /* tozai_train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tozai_train.png; sourceTree = "<group>"; };
+		490871961A18E2800058E72E /* tozai_train_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tozai_train_1.png; sourceTree = "<group>"; };
+		490871971A18E2800058E72E /* tozai_train_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tozai_train_2.png; sourceTree = "<group>"; };
+		490871981A18E2800058E72E /* yurakucho_train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yurakucho_train.png; sourceTree = "<group>"; };
+		490871991A18E2800058E72E /* yurakucho_train_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yurakucho_train_1.png; sourceTree = "<group>"; };
+		4908719A1A18E2800058E72E /* yurakucho_train_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yurakucho_train_2.png; sourceTree = "<group>"; };
+		490871B61A19150C0058E72E /* TopMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopMenuViewController.h; sourceTree = "<group>"; };
+		490871B71A19150C0058E72E /* TopMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopMenuViewController.m; sourceTree = "<group>"; };
 		490EDC141A138C2A00F19C18 /* flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flag.png; sourceTree = "<group>"; };
 		490EDC151A138C2A00F19C18 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
 		490EDC181A15FED200F19C18 /* position_base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = position_base.png; sourceTree = "<group>"; };
@@ -539,10 +534,6 @@
 		492AAD9E1A11ECE7007A6777 /* TrainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainView.m; sourceTree = "<group>"; };
 		495A116D1A10DE9E008D40B9 /* LineButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LineButton.h; path = TrainSeat/Classes/View/LineButton.h; sourceTree = SOURCE_ROOT; };
 		495A116E1A10DE9E008D40B9 /* LineButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LineButton.m; path = TrainSeat/Classes/View/LineButton.m; sourceTree = SOURCE_ROOT; };
-		495E06841A04C57300DDA0B2 /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
-		495E06851A04C57300DDA0B2 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
-		49A4EC2D1A0B1BB80064165E /* Timetable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timetable.h; sourceTree = "<group>"; };
-		49A4EC2E1A0B1BB80064165E /* Timetable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timetable.m; sourceTree = "<group>"; };
 		49A4EC301A0B1F2F0064165E /* Connection+Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Connection+Database.h"; sourceTree = "<group>"; };
 		49A4EC311A0B1F2F0064165E /* Connection+Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Connection+Database.m"; sourceTree = "<group>"; };
 		49A4EC361A0B3A470064165E /* TrainSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainSelectViewController.h; sourceTree = "<group>"; };
@@ -567,16 +558,6 @@
 		49C9860D19FE7BA6006DCFE1 /* TrainSeatTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TrainSeatTests-Info.plist"; sourceTree = "<group>"; };
 		49C9860F19FE7BA6006DCFE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49C9861119FE7BA6006DCFE1 /* TrainSeatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainSeatTests.m; sourceTree = "<group>"; };
-		49C9863419FF7F42006DCFE1 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		49C9863519FF7F42006DCFE1 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		49C9863619FF7F42006DCFE1 /* GetMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetMenuViewController.h; sourceTree = "<group>"; };
-		49C9863719FF7F42006DCFE1 /* GetMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetMenuViewController.m; sourceTree = "<group>"; };
-		49C9863A19FF7F42006DCFE1 /* TrainInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainInfoViewController.h; sourceTree = "<group>"; };
-		49C9863B19FF7F42006DCFE1 /* TrainInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainInfoViewController.m; sourceTree = "<group>"; };
-		49C9863C19FF7F42006DCFE1 /* TrainMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainMapViewController.h; sourceTree = "<group>"; };
-		49C9863D19FF7F42006DCFE1 /* TrainMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainMapViewController.m; sourceTree = "<group>"; };
-		49C9863E19FF7F42006DCFE1 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		49C9863F19FF7F42006DCFE1 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		49C9864719FF7F60006DCFE1 /* TrainMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainMapView.h; sourceTree = "<group>"; };
 		49C9864819FF7F60006DCFE1 /* TrainMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainMapView.m; sourceTree = "<group>"; };
 		49C9864A19FF7FA0006DCFE1 /* TrainInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainInfo.h; sourceTree = "<group>"; };
@@ -593,8 +574,6 @@
 		49C9865D19FF9ABC006DCFE1 /* Connection+TokyoMetroAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Connection+TokyoMetroAPI.m"; sourceTree = "<group>"; };
 		49C9865F19FFA249006DCFE1 /* Railway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Railway.h; sourceTree = "<group>"; };
 		49C9866019FFA249006DCFE1 /* Railway.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Railway.m; sourceTree = "<group>"; };
-		49C9866219FFA9B1006DCFE1 /* TopMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopMenuViewController.h; sourceTree = "<group>"; };
-		49C9866319FFA9B1006DCFE1 /* TopMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopMenuViewController.m; sourceTree = "<group>"; };
 		49C9866519FFC1DC006DCFE1 /* BaseNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationViewController.h; sourceTree = "<group>"; };
 		49C9866619FFC1DC006DCFE1 /* BaseNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -911,36 +890,36 @@
 			path = line_logos;
 			sourceTree = "<group>";
 		};
-		4908713C1A17A2350058E72E /* TrainIcon */ = {
+		4908717F1A18E2800058E72E /* TrainIcon */ = {
 			isa = PBXGroup;
 			children = (
-				4908713D1A17A2350058E72E /* chiyoda_train.png */,
-				4908713E1A17A2350058E72E /* chiyoda_train_1.png */,
-				4908713F1A17A2350058E72E /* chiyoda_train_2.png */,
-				490871401A17A2350058E72E /* fukutoshin_train.png */,
-				490871411A17A2350058E72E /* fukutoshin_train_1.png */,
-				490871421A17A2350058E72E /* fukutoshin_train_2.png */,
-				490871431A17A2350058E72E /* ginza_train.png */,
-				490871441A17A2350058E72E /* ginza_train_1.png */,
-				490871451A17A2350058E72E /* ginza_train_2.png */,
-				490871461A17A2350058E72E /* hanzoumon_train.png */,
-				490871471A17A2350058E72E /* hanzoumon_train_1.png */,
-				490871481A17A2350058E72E /* hanzoumon_train_2.png */,
-				490871491A17A2350058E72E /* hibiya_train.png */,
-				4908714A1A17A2350058E72E /* hibiya_train_1.png */,
-				4908714B1A17A2350058E72E /* hibiya_train_2.png */,
-				4908714C1A17A2350058E72E /* marunouchi_train.png */,
-				4908714D1A17A2350058E72E /* marunouchi_train_1.png */,
-				4908714E1A17A2350058E72E /* marunouchi_train_2.png */,
-				4908714F1A17A2350058E72E /* nanboku_train.png */,
-				490871501A17A2350058E72E /* nanboku_train_1.png */,
-				490871511A17A2350058E72E /* nanboku_train_2.png */,
-				490871521A17A2350058E72E /* touzai_train.png */,
-				490871531A17A2350058E72E /* touzai_train_1.png */,
-				490871541A17A2350058E72E /* touzai_train_2.png */,
-				490871551A17A2350058E72E /* yuurakuchou_train.png */,
-				490871561A17A2350058E72E /* yuurakuchou_train_1.png */,
-				490871571A17A2350058E72E /* yuurakuchou_train_2.png */,
+				490871801A18E2800058E72E /* chiyoda_train.png */,
+				490871811A18E2800058E72E /* chiyoda_train_1.png */,
+				490871821A18E2800058E72E /* chiyoda_train_2.png */,
+				490871831A18E2800058E72E /* fukutoshin_train.png */,
+				490871841A18E2800058E72E /* fukutoshin_train_1.png */,
+				490871851A18E2800058E72E /* fukutoshin_train_2.png */,
+				490871861A18E2800058E72E /* ginza_train.png */,
+				490871871A18E2800058E72E /* ginza_train_1.png */,
+				490871881A18E2800058E72E /* ginza_train_2.png */,
+				490871891A18E2800058E72E /* hanzomon_train.png */,
+				4908718A1A18E2800058E72E /* hanzomon_train_1.png */,
+				4908718B1A18E2800058E72E /* hanzomon_train_2.png */,
+				4908718C1A18E2800058E72E /* hibiya_train.png */,
+				4908718D1A18E2800058E72E /* hibiya_train_1.png */,
+				4908718E1A18E2800058E72E /* hibiya_train_2.png */,
+				4908718F1A18E2800058E72E /* marunouchi_train.png */,
+				490871901A18E2800058E72E /* marunouchi_train_1.png */,
+				490871911A18E2800058E72E /* marunouchi_train_2.png */,
+				490871921A18E2800058E72E /* namboku_train.png */,
+				490871931A18E2800058E72E /* namboku_train_1.png */,
+				490871941A18E2800058E72E /* namboku_train_2.png */,
+				490871951A18E2800058E72E /* tozai_train.png */,
+				490871961A18E2800058E72E /* tozai_train_1.png */,
+				490871971A18E2800058E72E /* tozai_train_2.png */,
+				490871981A18E2800058E72E /* yurakucho_train.png */,
+				490871991A18E2800058E72E /* yurakucho_train_1.png */,
+				4908719A1A18E2800058E72E /* yurakucho_train_2.png */,
 			);
 			path = TrainIcon;
 			sourceTree = "<group>";
@@ -953,7 +932,7 @@
 				490EDC1A1A16011600F19C18 /* arrow_left.png */,
 				490EDC1B1A16011600F19C18 /* arrow_right.png */,
 				490EDC181A15FED200F19C18 /* position_base.png */,
-				4908713C1A17A2350058E72E /* TrainIcon */,
+				4908717F1A18E2800058E72E /* TrainIcon */,
 				490871161A1765B00058E72E /* line_logos */,
 				49086F9E1A1752EA0058E72E /* station_number_icon */,
 				49086F951A173EA90058E72E /* dict_station */,
@@ -964,12 +943,8 @@
 		495E06871A04C5E400DDA0B2 /* BaseViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				49C9863419FF7F42006DCFE1 /* BaseViewController.h */,
-				49C9863519FF7F42006DCFE1 /* BaseViewController.m */,
 				49C9866519FFC1DC006DCFE1 /* BaseNavigationViewController.h */,
 				49C9866619FFC1DC006DCFE1 /* BaseNavigationViewController.m */,
-				49C9863E19FF7F42006DCFE1 /* ViewController.h */,
-				49C9863F19FF7F42006DCFE1 /* ViewController.m */,
 			);
 			name = BaseViewControllers;
 			sourceTree = "<group>";
@@ -981,10 +956,6 @@
 				49A4EC371A0B3A470064165E /* TrainSelectViewController.m */,
 				4903ACCC1A04C10700A7612B /* CarInfoViewController.h */,
 				4903ACCD1A04C10700A7612B /* CarInfoViewController.m */,
-				49C9863A19FF7F42006DCFE1 /* TrainInfoViewController.h */,
-				49C9863B19FF7F42006DCFE1 /* TrainInfoViewController.m */,
-				49C9863C19FF7F42006DCFE1 /* TrainMapViewController.h */,
-				49C9863D19FF7F42006DCFE1 /* TrainMapViewController.m */,
 				490EDC1E1A1606B100F19C18 /* LineTableViewController.h */,
 				490EDC1F1A1606B100F19C18 /* LineTableViewController.m */,
 			);
@@ -1090,12 +1061,8 @@
 				492AAD5B1A114A37007A6777 /* Train.m */,
 				49C9864A19FF7FA0006DCFE1 /* TrainInfo.h */,
 				49C9864B19FF7FA0006DCFE1 /* TrainInfo.m */,
-				495E06841A04C57300DDA0B2 /* UserManager.h */,
-				495E06851A04C57300DDA0B2 /* UserManager.m */,
 				490871761A17C23A0058E72E /* TrainInfoManager.h */,
 				490871771A17C23A0058E72E /* TrainInfoManager.m */,
-				49A4EC2D1A0B1BB80064165E /* Timetable.h */,
-				49A4EC2E1A0B1BB80064165E /* Timetable.m */,
 				49C9865019FF8083006DCFE1 /* Station.h */,
 				49C9865119FF8083006DCFE1 /* Station.m */,
 				49C9864D19FF7FD3006DCFE1 /* Connection.h */,
@@ -1136,10 +1103,8 @@
 				495E06881A04C5F300DDA0B2 /* InputViewControllers */,
 				490871731A17BBBD0058E72E /* PassengerViewController.h */,
 				490871741A17BBBD0058E72E /* PassengerViewController.m */,
-				49C9863619FF7F42006DCFE1 /* GetMenuViewController.h */,
-				49C9863719FF7F42006DCFE1 /* GetMenuViewController.m */,
-				49C9866219FFA9B1006DCFE1 /* TopMenuViewController.h */,
-				49C9866319FFA9B1006DCFE1 /* TopMenuViewController.m */,
+				490871B61A19150C0058E72E /* TopMenuViewController.h */,
+				490871B71A19150C0058E72E /* TopMenuViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1225,22 +1190,25 @@
 				490870641A1752EA0058E72E /* C06.png in Resources */,
 				490871141A1752EA0058E72E /* Z13.png in Resources */,
 				490870631A1752EA0058E72E /* C05.png in Resources */,
+				490871A51A18E2800058E72E /* hanzomon_train_1.png in Resources */,
 				490871201A1765B00058E72E /* chiyoda.png in Resources */,
+				490871AB1A18E2800058E72E /* marunouchi_train_1.png in Resources */,
 				490871031A1752EA0058E72E /* Y20.png in Resources */,
-				490871681A17A2350058E72E /* marunouchi_train_1.png in Resources */,
 				4908710F1A1752EA0058E72E /* Z08.png in Resources */,
 				490870971A1752EA0058E72E /* H02.png in Resources */,
 				490870D21A1752EA0058E72E /* N14.png in Resources */,
+				490871AF1A18E2800058E72E /* namboku_train_2.png in Resources */,
 				490870E91A1752EA0058E72E /* T18.png in Resources */,
 				490870E31A1752EA0058E72E /* T12.png in Resources */,
 				490870771A1752EA0058E72E /* F05.png in Resources */,
-				4908715C1A17A2350058E72E /* fukutoshin_train_1.png in Resources */,
+				4908719F1A18E2800058E72E /* fukutoshin_train_1.png in Resources */,
 				490870BE1A1752EA0058E72E /* M19.png in Resources */,
 				4908709D1A1752EA0058E72E /* H08.png in Resources */,
 				490870C51A1752EA0058E72E /* N01.png in Resources */,
 				490870991A1752EA0058E72E /* H04.png in Resources */,
 				490871071A1752EA0058E72E /* Y24.png in Resources */,
 				490EDC1D1A16011600F19C18 /* arrow_right.png in Resources */,
+				490871B31A18E2800058E72E /* yurakucho_train.png in Resources */,
 				490870D11A1752EA0058E72E /* N13.png in Resources */,
 				490870621A1752EA0058E72E /* C04.png in Resources */,
 				490871041A1752EA0058E72E /* Y21.png in Resources */,
@@ -1254,27 +1222,28 @@
 				490870C81A1752EA0058E72E /* N04.png in Resources */,
 				490870661A1752EA0058E72E /* C08.png in Resources */,
 				490870A81A1752EA0058E72E /* H19.png in Resources */,
-				4908716A1A17A2350058E72E /* nanboku_train.png in Resources */,
 				490870951A1752EA0058E72E /* G19.png in Resources */,
 				4908709E1A1752EA0058E72E /* H09.png in Resources */,
 				4908706F1A1752EA0058E72E /* C17.png in Resources */,
+				490871A41A18E2800058E72E /* hanzomon_train.png in Resources */,
 				490870C61A1752EA0058E72E /* N02.png in Resources */,
 				490870921A1752EA0058E72E /* G16.png in Resources */,
 				490870A71A1752EA0058E72E /* H18.png in Resources */,
-				4908715B1A17A2350058E72E /* fukutoshin_train.png in Resources */,
+				4908719E1A18E2800058E72E /* fukutoshin_train.png in Resources */,
 				490870CD1A1752EA0058E72E /* N09.png in Resources */,
 				4908708B1A1752EA0058E72E /* G09.png in Resources */,
 				4908706B1A1752EA0058E72E /* C13.png in Resources */,
 				490870F51A1752EA0058E72E /* Y06.png in Resources */,
 				490871101A1752EA0058E72E /* Z09.png in Resources */,
 				490870EF1A1752EA0058E72E /* Tky.png in Resources */,
+				490871A81A18E2800058E72E /* hibiya_train_1.png in Resources */,
 				490870AB1A1752EA0058E72E /* M-0.png in Resources */,
 				490870AA1A1752EA0058E72E /* H21.png in Resources */,
-				490871651A17A2350058E72E /* hibiya_train_1.png in Resources */,
 				490EDC191A15FED200F19C18 /* position_base.png in Resources */,
+				490871AD1A18E2800058E72E /* namboku_train.png in Resources */,
+				490871AE1A18E2800058E72E /* namboku_train_1.png in Resources */,
 				490870681A1752EA0058E72E /* C10.png in Resources */,
-				4908716B1A17A2350058E72E /* nanboku_train_1.png in Resources */,
-				4908715E1A17A2350058E72E /* ginza_train.png in Resources */,
+				490871A11A18E2800058E72E /* ginza_train.png in Resources */,
 				4908707B1A1752EA0058E72E /* F09.png in Resources */,
 				490EDC1C1A16011600F19C18 /* arrow_left.png in Resources */,
 				490870E51A1752EA0058E72E /* T14.png in Resources */,
@@ -1288,8 +1257,8 @@
 				490871131A1752EA0058E72E /* Z12.png in Resources */,
 				490870C21A1752EA0058E72E /* M23.png in Resources */,
 				490870E71A1752EA0058E72E /* T16.png in Resources */,
+				490871B51A18E2800058E72E /* yurakucho_train_2.png in Resources */,
 				49086F9C1A173EA90058E72E /* other_stationDict.json in Resources */,
-				490871701A17A2350058E72E /* yuurakuchou_train.png in Resources */,
 				4908710C1A1752EA0058E72E /* Z05.png in Resources */,
 				490870F21A1752EA0058E72E /* Y03.png in Resources */,
 				490870961A1752EA0058E72E /* H01.png in Resources */,
@@ -1297,27 +1266,25 @@
 				490870EB1A1752EA0058E72E /* T20.png in Resources */,
 				490871021A1752EA0058E72E /* Y19.png in Resources */,
 				4908707C1A1752EA0058E72E /* F10.png in Resources */,
-				4908715D1A17A2350058E72E /* fukutoshin_train_2.png in Resources */,
+				490871A01A18E2800058E72E /* fukutoshin_train_2.png in Resources */,
 				490870D41A1752EA0058E72E /* N16.png in Resources */,
+				490871AA1A18E2800058E72E /* marunouchi_train.png in Resources */,
 				490870DC1A1752EA0058E72E /* T05.png in Resources */,
 				490870691A1752EA0058E72E /* C11.png in Resources */,
-				490871671A17A2350058E72E /* marunouchi_train.png in Resources */,
 				490870E21A1752EA0058E72E /* T11.png in Resources */,
 				490870C31A1752EA0058E72E /* M24.png in Resources */,
 				490870CC1A1752EA0058E72E /* N08.png in Resources */,
 				490871151A1752EA0058E72E /* Z14.png in Resources */,
 				490870B21A1752EA0058E72E /* M07.png in Resources */,
+				490871AC1A18E2800058E72E /* marunouchi_train_2.png in Resources */,
 				490870A01A1752EA0058E72E /* H11.png in Resources */,
 				490870B71A1752EA0058E72E /* M12.png in Resources */,
-				490871691A17A2350058E72E /* marunouchi_train_2.png in Resources */,
 				490870B91A1752EA0058E72E /* M14.png in Resources */,
 				490EDC171A138C2A00F19C18 /* pin.png in Resources */,
-				490871711A17A2350058E72E /* yuurakuchou_train_1.png in Resources */,
 				490870D61A1752EA0058E72E /* N18.png in Resources */,
 				490870F61A1752EA0058E72E /* Y07.png in Resources */,
 				4908706C1A1752EA0058E72E /* C14.png in Resources */,
 				490870A61A1752EA0058E72E /* H17.png in Resources */,
-				490871631A17A2350058E72E /* hanzoumon_train_2.png in Resources */,
 				490870A31A1752EA0058E72E /* H14.png in Resources */,
 				490870FA1A1752EA0058E72E /* Y11.png in Resources */,
 				490870C01A1752EA0058E72E /* M21.png in Resources */,
@@ -1327,13 +1294,11 @@
 				490871211A1765B00058E72E /* fukutoshin.png in Resources */,
 				490870EE1A1752EA0058E72E /* T23.png in Resources */,
 				4908710E1A1752EA0058E72E /* Z07.png in Resources */,
-				4908716F1A17A2350058E72E /* touzai_train_2.png in Resources */,
 				490870721A1752EA0058E72E /* C20.png in Resources */,
 				490870851A1752EA0058E72E /* G03.png in Resources */,
 				490870761A1752EA0058E72E /* F04.png in Resources */,
 				490870701A1752EA0058E72E /* C18.png in Resources */,
 				490870811A1752EA0058E72E /* F15.png in Resources */,
-				4908716C1A17A2350058E72E /* nanboku_train_2.png in Resources */,
 				4908708E1A1752EA0058E72E /* G12.png in Resources */,
 				4908706D1A1752EA0058E72E /* C15.png in Resources */,
 				490870981A1752EA0058E72E /* H03.png in Resources */,
@@ -1342,23 +1307,22 @@
 				490871281A1765B00058E72E /* yurakucho.png in Resources */,
 				4908710A1A1752EA0058E72E /* Z03.png in Resources */,
 				490870931A1752EA0058E72E /* G17.png in Resources */,
-				4908716E1A17A2350058E72E /* touzai_train_1.png in Resources */,
 				490870611A1752EA0058E72E /* C03.png in Resources */,
+				490871A71A18E2800058E72E /* hibiya_train.png in Resources */,
 				490870871A1752EA0058E72E /* G05.png in Resources */,
-				490871641A17A2350058E72E /* hibiya_train.png in Resources */,
 				490870D51A1752EA0058E72E /* N17.png in Resources */,
 				490871081A1752EA0058E72E /* Z01.png in Resources */,
-				4908716D1A17A2350058E72E /* touzai_train.png in Resources */,
 				4908708D1A1752EA0058E72E /* G11.png in Resources */,
 				490870D31A1752EA0058E72E /* N15.png in Resources */,
 				490870E01A1752EA0058E72E /* T09.png in Resources */,
 				490870A11A1752EA0058E72E /* H12.png in Resources */,
 				490870A21A1752EA0058E72E /* H13.png in Resources */,
+				490871B11A18E2800058E72E /* tozai_train_1.png in Resources */,
 				490870FF1A1752EA0058E72E /* Y16.png in Resources */,
 				490870F31A1752EA0058E72E /* Y04.png in Resources */,
 				490870A51A1752EA0058E72E /* H16.png in Resources */,
 				490870FC1A1752EA0058E72E /* Y13.png in Resources */,
-				490871601A17A2350058E72E /* ginza_train_2.png in Resources */,
+				490871A31A18E2800058E72E /* ginza_train_2.png in Resources */,
 				490870901A1752EA0058E72E /* G14.png in Resources */,
 				490870841A1752EA0058E72E /* G02.png in Resources */,
 				4908708F1A1752EA0058E72E /* G13.png in Resources */,
@@ -1378,17 +1342,18 @@
 				490870AE1A1752EA0058E72E /* M03.png in Resources */,
 				49C985F119FE7BA6006DCFE1 /* InfoPlist.strings in Resources */,
 				490870791A1752EA0058E72E /* F07.png in Resources */,
+				490871B41A18E2800058E72E /* yurakucho_train_1.png in Resources */,
+				490871B21A18E2800058E72E /* tozai_train_2.png in Resources */,
 				490870FD1A1752EA0058E72E /* Y14.png in Resources */,
 				4908708C1A1752EA0058E72E /* G10.png in Resources */,
 				490870AD1A1752EA0058E72E /* M02.png in Resources */,
-				490871581A17A2350058E72E /* chiyoda_train.png in Resources */,
+				4908719B1A18E2800058E72E /* chiyoda_train.png in Resources */,
 				490870861A1752EA0058E72E /* G04.png in Resources */,
 				490871261A1765B00058E72E /* nanboku.png in Resources */,
 				490870A41A1752EA0058E72E /* H15.png in Resources */,
 				490870F01A1752EA0058E72E /* Y01.png in Resources */,
 				490870751A1752EA0058E72E /* F03.png in Resources */,
 				490870DA1A1752EA0058E72E /* T03.png in Resources */,
-				490871721A17A2350058E72E /* yuurakuchou_train_2.png in Resources */,
 				4908705F1A1752EA0058E72E /* C01.png in Resources */,
 				490870741A1752EA0058E72E /* F02.png in Resources */,
 				490870671A1752EA0058E72E /* C09.png in Resources */,
@@ -1397,12 +1362,11 @@
 				4908707D1A1752EA0058E72E /* F11.png in Resources */,
 				490870BC1A1752EA0058E72E /* M17.png in Resources */,
 				490870C41A1752EA0058E72E /* M25.png in Resources */,
-				490871621A17A2350058E72E /* hanzoumon_train_1.png in Resources */,
 				490870891A1752EA0058E72E /* G07.png in Resources */,
 				490870B11A1752EA0058E72E /* M06.png in Resources */,
 				490870DE1A1752EA0058E72E /* T07.png in Resources */,
-				4908715F1A17A2350058E72E /* ginza_train_1.png in Resources */,
-				490871591A17A2350058E72E /* chiyoda_train_1.png in Resources */,
+				490871A21A18E2800058E72E /* ginza_train_1.png in Resources */,
+				4908719C1A18E2800058E72E /* chiyoda_train_1.png in Resources */,
 				490870801A1752EA0058E72E /* F14.png in Resources */,
 				490870E11A1752EA0058E72E /* T10.png in Resources */,
 				49086F9A1A173EA90058E72E /* metro_stationDict.json in Resources */,
@@ -1422,15 +1386,15 @@
 				490870711A1752EA0058E72E /* C19.png in Resources */,
 				490870CF1A1752EA0058E72E /* N11.png in Resources */,
 				490871091A1752EA0058E72E /* Z02.png in Resources */,
-				490871611A17A2350058E72E /* hanzoumon_train.png in Resources */,
 				490870F81A1752EA0058E72E /* Y09.png in Resources */,
 				490870FE1A1752EA0058E72E /* Y15.png in Resources */,
+				490871B01A18E2800058E72E /* tozai_train.png in Resources */,
 				490870881A1752EA0058E72E /* G06.png in Resources */,
 				490870651A1752EA0058E72E /* C07.png in Resources */,
-				490871661A17A2350058E72E /* hibiya_train_2.png in Resources */,
 				490870B01A1752EA0058E72E /* M05.png in Resources */,
+				490871A91A18E2800058E72E /* hibiya_train_2.png in Resources */,
 				490871251A1765B00058E72E /* marunouchi.png in Resources */,
-				4908715A1A17A2350058E72E /* chiyoda_train_2.png in Resources */,
+				4908719D1A18E2800058E72E /* chiyoda_train_2.png in Resources */,
 				490870D91A1752EA0058E72E /* T02.png in Resources */,
 				4908707F1A1752EA0058E72E /* F13.png in Resources */,
 				490870CE1A1752EA0058E72E /* N10.png in Resources */,
@@ -1449,6 +1413,7 @@
 				49C985FA19FE7BA6006DCFE1 /* Main.storyboard in Resources */,
 				490EDC161A138C2A00F19C18 /* flag.png in Resources */,
 				490870CA1A1752EA0058E72E /* N06.png in Resources */,
+				490871A61A18E2800058E72E /* hanzomon_train_2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1472,32 +1437,25 @@
 				49A4EC611A0C810E0064165E /* RailwayMapView.m in Sources */,
 				492AAD561A112539007A6777 /* StationButton.m in Sources */,
 				49C985F719FE7BA6006DCFE1 /* AppDelegate.m in Sources */,
-				495E06861A04C57300DDA0B2 /* UserManager.m in Sources */,
 				4908717B1A18ABD50058E72E /* TrainButton.m in Sources */,
 				49C9865219FF8083006DCFE1 /* Station.m in Sources */,
 				490EDC231A1606CF00F19C18 /* LineTableViewCell.m in Sources */,
 				49C9864F19FF7FD4006DCFE1 /* Connection.m in Sources */,
 				49C9866119FFA249006DCFE1 /* Railway.m in Sources */,
-				49C9864119FF7F42006DCFE1 /* BaseViewController.m in Sources */,
 				492AAD5C1A114A37007A6777 /* Train.m in Sources */,
 				49C9865819FF977A006DCFE1 /* RailwayManager.m in Sources */,
 				492AAD9F1A11ECE7007A6777 /* TrainView.m in Sources */,
 				49C9866719FFC1DC006DCFE1 /* BaseNavigationViewController.m in Sources */,
-				49C9864619FF7F42006DCFE1 /* ViewController.m in Sources */,
 				492AAD591A113D40007A6777 /* LocationManager.m in Sources */,
 				495A116F1A10DE9E008D40B9 /* LineButton.m in Sources */,
 				490871781A17C23A0058E72E /* TrainInfoManager.m in Sources */,
 				49A4EC321A0B1F2F0064165E /* Connection+Database.m in Sources */,
 				49C9865E19FF9ABC006DCFE1 /* Connection+TokyoMetroAPI.m in Sources */,
-				49C9864219FF7F42006DCFE1 /* GetMenuViewController.m in Sources */,
 				4903ACCE1A04C10700A7612B /* CarInfoViewController.m in Sources */,
-				49A4EC2F1A0B1BB80064165E /* Timetable.m in Sources */,
 				49A4EC381A0B3A470064165E /* TrainSelectViewController.m in Sources */,
+				490871B81A19150C0058E72E /* TopMenuViewController.m in Sources */,
 				49C9864919FF7F60006DCFE1 /* TrainMapView.m in Sources */,
 				49C985F319FE7BA6006DCFE1 /* main.m in Sources */,
-				49C9864519FF7F42006DCFE1 /* TrainMapViewController.m in Sources */,
-				49C9864419FF7F42006DCFE1 /* TrainInfoViewController.m in Sources */,
-				49C9866419FFA9B1006DCFE1 /* TopMenuViewController.m in Sources */,
 				490871751A17BBBD0058E72E /* PassengerViewController.m in Sources */,
 				49C9865B19FF9808006DCFE1 /* Define.m in Sources */,
 			);

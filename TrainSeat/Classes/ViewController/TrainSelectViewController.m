@@ -58,7 +58,7 @@ double selectedAlpha = 1.0;
     // 路線図
     //--------------------------------------------------------------------------------
     
-    trainmap = [[TrainMapView alloc]initWithFrame:CGRectMake(0,0, self.scrollView.frame.size.width * 4 ,self.scrollView.frame.size.height* 1.5) ];
+    trainmap = [[TrainMapView alloc]initWithFrame:CGRectMake(0,0, self.scrollView.frame.size.width * 6 ,self.scrollView.frame.size.height* 2) ];
     self.scrollView.contentSize = trainmap.bounds.size;
 
     // TODO: Fix Hard Cording
@@ -124,6 +124,7 @@ double selectedAlpha = 1.0;
     [trainmap.flagView removeFromSuperview];
     trainmap.flagView = nil;;
     
+    
 }
 
 - (IBAction)didChangeDirection:(id)sender {
@@ -162,4 +163,8 @@ double selectedAlpha = 1.0;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+
+- (void)didStartUpdateing {
+    
+}
 @end

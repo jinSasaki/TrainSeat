@@ -25,9 +25,17 @@
 @property (nonatomic) NSArray *trainInfos;
 @property (nonatomic) NSDictionary *trainInfoForView;
 
+@property NSTimer *timer;
+
+
 + (instancetype)defaultTrainInfoManager;
 
 - (void)requestToGET;
 - (void)requestToSET;
+
+
+- (void)startConnectionWtihTimeInterval:(NSTimeInterval)timeInterval;
+- (void)stopConnection;
+
 
 @end

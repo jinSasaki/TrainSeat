@@ -57,13 +57,12 @@
     NSString *rgbParam = lineColorDict[title];
     return [self createUIColorWithRGBParameter:rgbParam];
     
-    
 }
 
 - (UIColor *)createUIColorWithRGBParameter:(NSString *)parameter {
     NSArray *param = [parameter componentsSeparatedByString:@","];
     return [UIColor colorWithRed:[param[0] doubleValue]/256 green:[param[1] doubleValue]/256 blue:[param[2] doubleValue]/256 alpha:1.0];
-    
 }
+
 
 @end

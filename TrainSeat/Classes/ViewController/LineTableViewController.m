@@ -232,9 +232,6 @@
             default:
                 break;
         }
-        
-        
-        LOG_PRINTF(@"\n");
    
     }
     
@@ -243,8 +240,6 @@
     self.downTrains = __downTrains;
 
 
-    // test
-    [self.locationManager stopConnection];
     
     [self.tableView reloadData];
     
@@ -286,12 +281,18 @@
 - (void)presentNextViewWithValidation {
     if (self.selectedTrainCode && self.selectedStation) {
         TrainInfoManager *trainInfoManager = [TrainInfoManager defaultTrainInfoManager];
-        TrainInfo *info = trainInfoManager.userTrainInfo;
+        TrainInfo *info = [TrainInfo new];
         info.trainCode = self.selectedTrainCode;
         info.destination = self.selectedStation.stationName;
+        trainInfoManager.userTrainInfo = info;
         LOG(@"save train info");
         
         UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"CarInfo"];
+        
+        self.railwayManager.userRailway = self.currentRailway;
+
+        [self.locationManager stopConnection];
+        
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

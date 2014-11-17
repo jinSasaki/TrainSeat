@@ -10,7 +10,6 @@
 #import "Connection+TokyoMetroAPI.h"
 #import "RailwayManager.h"
 #import "CarInfoViewController.h"
-#import "Timetable.h"
 
 @interface TrainInfoViewController : UIViewController
 <UIPickerViewDataSource ,UIPickerViewDelegate>

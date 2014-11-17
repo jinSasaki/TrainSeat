@@ -9,6 +9,8 @@
 #import "TrainInfoManager.h"
 
 @implementation TrainInfoManager
+
+
 // singleton
 static TrainInfoManager *shareInstance = nil;
 + (instancetype)defaultTrainInfoManager {
@@ -50,38 +52,47 @@ static TrainInfoManager *shareInstance = nil;
     
 }
 
+- (void)startConnectionWtihTimeInterval:(NSTimeInterval)timeInterval {
+   self.timer = [NSTimer scheduledTimerWithTimeInterval:timeInterval target:self selector:@selector(requestToGET) userInfo:nil repeats:YES];
+}
+- (void)stopConnection {
+    [self.timer invalidate];
+}
+
+
 - (void)createDictionaryForView {
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
 
     for (TrainInfo *trainInfo in self.trainInfos) {
         NSMutableDictionary *cars;
-        NSMutableArray *positions;
+        NSMutableArray *positions = [NSMutableArray array];;
         
         // 駅が登録されてたら
         if ([dict objectForKey:trainInfo.destination]) {
-            cars = [dict objectForKey:trainInfo.destination];
+            cars = (NSMutableDictionary *)[dict objectForKey:trainInfo.destination];
 
             // 車両が登録されてたら
-            if ([cars objectForKey:@(trainInfo.carNumber)]) {
-                positions = [cars objectForKey:@(trainInfo.carNumber)];
+            if ([cars objectForKey:stringFromInteger(trainInfo.carNumber)]) {
+                positions = [NSMutableArray arrayWithArray:[cars objectForKey:stringFromInteger(trainInfo.carNumber)]];
 
                 // ポジション追加
-                [positions addObject:@(trainInfo.position)];
+                [positions addObject:stringFromInteger(trainInfo.position)];
             }
 
             // 車両が登録されてなかったら車両をキーにポジション配列を追加
             else {
-                [cars setObject:@[@(trainInfo.position)] forKey:@(trainInfo.carNumber)];
+                [cars setObject:stringFromInteger(trainInfo.position) forKey:stringFromInteger(trainInfo.carNumber)];
             }
         }
 
         // 駅が登録されてなかったら、駅をキーに、車両がキーのポジション配列を追加した辞書を追加
         else {
-            [dict setObject:@{@(trainInfo.carNumber): @[@(trainInfo.position)]} forKey:trainInfo.destination];
+            [dict setObject:@{stringFromInteger(trainInfo.carNumber): @[stringFromInteger(trainInfo.position)]} forKey:trainInfo.destination];
         }
     }
     self.trainInfoForView = dict;
 }
+
 
 #pragma mark - connection delegate
 

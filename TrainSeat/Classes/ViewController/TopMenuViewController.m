@@ -9,9 +9,6 @@
 #import "TopMenuViewController.h"
 
 @interface TopMenuViewController ()
-{
-    RailwayManager *manager;
-}
 @end
 
 @implementation TopMenuViewController
@@ -20,11 +17,21 @@
 {
     [super viewDidLoad];
 }
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.railwayManager = [RailwayManager defaultManager];
+    self.trainInfoManager = [TrainInfoManager defaultTrainInfoManager];
+    if (!self.trainInfoManager.userTrainInfo) {
+        // disable get button
+        self.trainInfoButton.enabled = NO;
+    }else {
+        self.trainInfoButton.enabled = YES;
+    }
+    
+}
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    manager = [RailwayManager defaultManager];
-    
 }
 
 @end

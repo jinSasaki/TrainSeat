@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "RailwayManager.h"
+#import "TrainInfoViewController.h"
 
 @interface TopMenuViewController : UIViewController
-
+@property (nonatomic) TrainInfoManager *trainInfoManager;
+@property (nonatomic) RailwayManager *railwayManager;
+@property (nonatomic,weak) IBOutlet UIButton *tableButton;
+@property (nonatomic,weak) IBOutlet UIButton *trainInfoButton;
 @end

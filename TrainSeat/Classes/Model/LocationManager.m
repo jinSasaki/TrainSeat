@@ -45,6 +45,8 @@ static NSMutableDictionary *__railwayDirections;
     [timer invalidate];
     LOG(@"connection stopped");
 }
+
+
 - (Train *)trainWithUCode:(NSString *)ucode {
     for (Train *train in self.trainArray) {
         if ([train.ucode compare:ucode] == NSOrderedSame) {

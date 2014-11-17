@@ -25,10 +25,15 @@
 
 // 全路線情報
 @property (nonatomic, copy) NSArray *allRailway;
+
+//
 @property (nonatomic, copy) NSDictionary *allRailwayDict;
 
 // 全駅情報
 @property (nonatomic, copy) NSDictionary *allStations;
+
+// ユーザの選択中の路線
+@property (nonatomic) Railway *userRailway;
 
 @property (nonatomic, weak) id <RailwayManagerDelegate> delegate;
 

@@ -13,6 +13,7 @@
 
 
 @property (nonatomic) NSString *trainCode;
+// station Name ex) Ogikubo
 @property (nonatomic) NSString *destination;
 @property (nonatomic) int carNumber;
 @property (nonatomic) BOOL isSittng;
