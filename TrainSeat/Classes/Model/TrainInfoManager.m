@@ -54,7 +54,7 @@ static TrainInfoManager *shareInstance = nil;
 
 - (void)startConnectionWtihTimeInterval:(NSTimeInterval)timeInterval {
     [self requestToGET];
-   self.timer = [NSTimer scheduledTimerWithTimeInterval:timeInterval target:self selector:@selector(requestToGET) userInfo:nil repeats:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:timeInterval target:self selector:@selector(requestToGET) userInfo:nil repeats:YES];
 }
 - (void)stopConnection {
     [self.timer invalidate];
@@ -63,7 +63,7 @@ static TrainInfoManager *shareInstance = nil;
 
 - (void)createDictionaryForView {
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-
+    
     for (TrainInfo *trainInfo in self.trainInfos) {
         NSMutableDictionary *cars;
         NSMutableArray *positions = [NSMutableArray array];;
@@ -71,35 +71,37 @@ static TrainInfoManager *shareInstance = nil;
         
         // 駅が登録されてたら
         if ([dict objectForKey:trainInfo.destination]) {
-            cars = (NSMutableDictionary *)[dict objectForKey:trainInfo.destination];
-
+            cars = [NSMutableDictionary dictionaryWithDictionary:[dict objectForKey:trainInfo.destination]];
+            
             // 車両が登録されてたら
             if ([cars objectForKey:stringFromInteger(trainInfo.carNumber)]) {
                 positions = [NSMutableArray arrayWithArray:[cars objectForKey:stringFromInteger(trainInfo.carNumber)]];
-
+                
                 // 座ってたらポジション追加
                 if (trainInfo.isSittng){
                     [positions addObject:stringFromInteger(trainInfo.position)];
                 }
                 offPeople++;
+                [cars setObject:positions forKey:stringFromInteger(trainInfo.carNumber)];
             }
-
+            
             // 車両が登録されてなかったら車両をキーにポジション配列を追加
             else {
-                [cars setObject:stringFromInteger(trainInfo.position) forKey:stringFromInteger(trainInfo.carNumber)];
+                [cars setObject:@[stringFromInteger(trainInfo.position)] forKey:stringFromInteger(trainInfo.carNumber)];
             }
+            [dict setObject:cars forKey:trainInfo.destination];
         }
-
+        
         // 駅が登録されてなかったら、駅をキーに、車両がキーのポジション配列を追加した辞書を追加
         else {
-            NSArray *positions;
+            NSArray *positions = @[];
             // 座ってたらポジション追加
             if (trainInfo.isSittng){
                 positions = @[stringFromInteger(trainInfo.position)];
             }
             [dict setObject:@{stringFromInteger(trainInfo.carNumber): positions} forKey:trainInfo.destination];
             offPeople++;
-
+            
         }
     }
     

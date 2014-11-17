@@ -115,19 +115,29 @@
 
 
     }
+    
+#warning Test!!!!!!!!!
+    [self test];
+    
+    
+//    Train *train = [self.locationManager trainWithUCode:self.trainInfoManager.userTrainInfo.trainCode];
+//    self.railwayLabel.text = [NSString stringWithFormat:@"%@線",railway.title];
+//    if ( ConvertToJapaneseFromDirectionCode(train.railDirection)) {
+//        self.directionLabel.text = [NSString stringWithFormat:@"%@方面",ConvertToJapaneseFromDirectionCode(train.railDirection)];
+//    }
     Train *train = [self.locationManager trainWithUCode:self.trainInfoManager.userTrainInfo.trainCode];
-    self.railwayLabel.text = [NSString stringWithFormat:@"%@線",railway.title];
-    if ( ConvertToJapaneseFromDirectionCode(train.railDirection)) {
-        self.directionLabel.text = [NSString stringWithFormat:@"%@方面",ConvertToJapaneseFromDirectionCode(train.railDirection)];
-    }
+    self.railwayLabel.text = [NSString stringWithFormat:@"銀座線"];
+    self.directionLabel.text = [NSString stringWithFormat:@"浅草方面"];
     
 
     [self.trainInfoManager startConnectionWtihTimeInterval:10];
-    
-    // 次に到着する駅の情報を初期で表示
 
-    // 上下で異なる
-    Station *station = railway.stationDict[train.fromStationTrimed];
+    // demo
+    [self.trainInfoManager stopConnection];
+
+    // demo
+    Station *station = railway.stationDict[@"Shibuya"];
+//    Station *station = railway.stationDict[train.fromStationTrimed];
     self.index = station.order-1;
     
     self.stationScrollView.contentOffset = CGPointMake(self.index * 320, 0);
@@ -181,7 +191,12 @@
 }
 
 - (void)test {
-    NSDictionary *dict = @{@"train_code": @"XXXXXX"};
+    TrainInfo *trainInfo = self.trainInfoManager.userTrainInfo;
+    NSDictionary *dict = @{@"train_code": @"XXXXXX",
+                           @"destination":trainInfo.destination,
+                           @"car_number": @(trainInfo.carNumber),
+                           @"position":@(trainInfo.position),
+                           @"status":@(trainInfo.status)};
     TrainInfo *testCase = [[TrainInfo alloc]initWithDict:dict];
     self.trainInfoManager.userTrainInfo = testCase;
 }
