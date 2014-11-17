@@ -245,6 +245,10 @@
 		492AAD5C1A114A37007A6777 /* Train.m in Sources */ = {isa = PBXBuildFile; fileRef = 492AAD5B1A114A37007A6777 /* Train.m */; };
 		492AAD9F1A11ECE7007A6777 /* TrainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 492AAD9E1A11ECE7007A6777 /* TrainView.m */; };
 		495A116F1A10DE9E008D40B9 /* LineButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 495A116E1A10DE9E008D40B9 /* LineButton.m */; };
+		49A0E9FC1A19A13000E51521 /* mapIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A0E9FB1A19A13000E51521 /* mapIcon.png */; };
+		49A0E9FF1A19A87500E51521 /* train23_with_people.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A0E9FD1A19A87500E51521 /* train23_with_people.png */; };
+		49A0EA001A19A87500E51521 /* walking3_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A0E9FE1A19A87500E51521 /* walking3_blue.png */; };
+		49A0EA021A19B23300E51521 /* seatInfoIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A0EA011A19B23300E51521 /* seatInfoIcon.png */; };
 		49A4EC321A0B1F2F0064165E /* Connection+Database.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A4EC311A0B1F2F0064165E /* Connection+Database.m */; };
 		49A4EC381A0B3A470064165E /* TrainSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A4EC371A0B3A470064165E /* TrainSelectViewController.m */; };
 		49A4EC611A0C810E0064165E /* RailwayMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A4EC601A0C810E0064165E /* RailwayMapView.m */; };
@@ -534,6 +538,10 @@
 		492AAD9E1A11ECE7007A6777 /* TrainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainView.m; sourceTree = "<group>"; };
 		495A116D1A10DE9E008D40B9 /* LineButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LineButton.h; path = TrainSeat/Classes/View/LineButton.h; sourceTree = SOURCE_ROOT; };
 		495A116E1A10DE9E008D40B9 /* LineButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LineButton.m; path = TrainSeat/Classes/View/LineButton.m; sourceTree = SOURCE_ROOT; };
+		49A0E9FB1A19A13000E51521 /* mapIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapIcon.png; sourceTree = "<group>"; };
+		49A0E9FD1A19A87500E51521 /* train23_with_people.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = train23_with_people.png; sourceTree = "<group>"; };
+		49A0E9FE1A19A87500E51521 /* walking3_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walking3_blue.png; sourceTree = "<group>"; };
+		49A0EA011A19B23300E51521 /* seatInfoIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seatInfoIcon.png; sourceTree = "<group>"; };
 		49A4EC301A0B1F2F0064165E /* Connection+Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Connection+Database.h"; sourceTree = "<group>"; };
 		49A4EC311A0B1F2F0064165E /* Connection+Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Connection+Database.m"; sourceTree = "<group>"; };
 		49A4EC361A0B3A470064165E /* TrainSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainSelectViewController.h; sourceTree = "<group>"; };
@@ -931,6 +939,10 @@
 				490EDC151A138C2A00F19C18 /* pin.png */,
 				490EDC1A1A16011600F19C18 /* arrow_left.png */,
 				490EDC1B1A16011600F19C18 /* arrow_right.png */,
+				49A0EA011A19B23300E51521 /* seatInfoIcon.png */,
+				49A0E9FB1A19A13000E51521 /* mapIcon.png */,
+				49A0E9FD1A19A87500E51521 /* train23_with_people.png */,
+				49A0E9FE1A19A87500E51521 /* walking3_blue.png */,
 				490EDC181A15FED200F19C18 /* position_base.png */,
 				4908717F1A18E2800058E72E /* TrainIcon */,
 				490871161A1765B00058E72E /* line_logos */,
@@ -1208,9 +1220,11 @@
 				490870991A1752EA0058E72E /* H04.png in Resources */,
 				490871071A1752EA0058E72E /* Y24.png in Resources */,
 				490EDC1D1A16011600F19C18 /* arrow_right.png in Resources */,
+				49A0E9FF1A19A87500E51521 /* train23_with_people.png in Resources */,
 				490871B31A18E2800058E72E /* yurakucho_train.png in Resources */,
 				490870D11A1752EA0058E72E /* N13.png in Resources */,
 				490870621A1752EA0058E72E /* C04.png in Resources */,
+				49A0EA001A19A87500E51521 /* walking3_blue.png in Resources */,
 				490871041A1752EA0058E72E /* Y21.png in Resources */,
 				490870C71A1752EA0058E72E /* N03.png in Resources */,
 				4908709C1A1752EA0058E72E /* H07.png in Resources */,
@@ -1320,6 +1334,7 @@
 				490871B11A18E2800058E72E /* tozai_train_1.png in Resources */,
 				490870FF1A1752EA0058E72E /* Y16.png in Resources */,
 				490870F31A1752EA0058E72E /* Y04.png in Resources */,
+				49A0E9FC1A19A13000E51521 /* mapIcon.png in Resources */,
 				490870A51A1752EA0058E72E /* H16.png in Resources */,
 				490870FC1A1752EA0058E72E /* Y13.png in Resources */,
 				490871A31A18E2800058E72E /* ginza_train_2.png in Resources */,
@@ -1345,6 +1360,7 @@
 				490871B41A18E2800058E72E /* yurakucho_train_1.png in Resources */,
 				490871B21A18E2800058E72E /* tozai_train_2.png in Resources */,
 				490870FD1A1752EA0058E72E /* Y14.png in Resources */,
+				49A0EA021A19B23300E51521 /* seatInfoIcon.png in Resources */,
 				4908708C1A1752EA0058E72E /* G10.png in Resources */,
 				490870AD1A1752EA0058E72E /* M02.png in Resources */,
 				4908719B1A18E2800058E72E /* chiyoda_train.png in Resources */,

@@ -12,10 +12,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bJ3-W5-XU0">
-                                <rect key="frame" x="207" y="247" width="31" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" id="bJ3-W5-XU0">
+                                <rect key="frame" x="20" y="368" width="280" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="map">
+                                <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="25"/>
+                                <state key="normal" title="路線図" backgroundImage="mapIcon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -23,33 +24,34 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1RI-6A-seT">
-                                <rect key="frame" x="20" y="114" width="280" height="93"/>
+                                <rect key="frame" x="20" y="167" width="280" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="電車一覧">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" backgroundImage="seatInfoIcon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="Iog-94-kCa" kind="push" id="Dnb-lb-eX9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BtG-kh-hpl">
-                                <rect key="frame" x="20" y="347" width="280" height="120"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tky.png" id="oyQ-OG-0Uc">
+                                <rect key="frame" x="20" y="81" width="61" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.86804331940000001" green="0.92307131080000004" blue="0.93022560590000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="車内状況を確認する">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="4C0-cw-UVl" kind="push" id="CyB-ZR-GKx"/>
-                                </connections>
-                            </button>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metro Seats" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eMr-UD-MnT">
+                                <rect key="frame" x="89" y="81" width="211" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="30"/>
+                                <color key="textColor" red="0.1019607931" green="0.59607845540000004" blue="0.83529418710000003" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.84313732389999996" green="0.94117653369999998" blue="0.92549026010000002" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="hpi-cV-qtS"/>
                     <connections>
+                        <outlet property="mapButton" destination="bJ3-W5-XU0" id="Fj6-Ac-rk8"/>
                         <outlet property="tableButton" destination="1RI-6A-seT" id="GtW-hj-Vub"/>
-                        <outlet property="trainInfoButton" destination="BtG-kh-hpl" id="IaA-Wi-dlg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -172,6 +174,9 @@
                     <navigationItem key="navigationItem" title="到着駅を選択してください" id="PuZ-Po-h9h">
                         <barButtonItem key="backBarButtonItem" title="　" id="Irn-Vx-oEL"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="GrK-cD-wfR" kind="push" id="wAY-Dz-81I"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3s1-Ge-5GG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -423,10 +428,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="5UW-Mo-Xcc">
                         <barButtonItem key="backBarButtonItem" title=" " id="Daw-CZ-S1B"/>
-                        <barButtonItem key="rightBarButtonItem" title="決定" id="7wB-Wc-xkd">
+                        <barButtonItem key="rightBarButtonItem" title="完了" id="7wB-Wc-xkd">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="decideButtonDidPush:" destination="GrK-cD-wfR" id="ERM-kY-Lpi"/>
+                                <segue destination="4C0-cw-UVl" kind="push" id="Qwg-T6-Qf5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -449,7 +455,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eIr-cv-TdI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1285" y="-91"/>
+            <point key="canvasLocation" x="1167" y="19"/>
         </scene>
         <!--Passenger View Controller-->
         <scene sceneID="xGo-he-BD8">
@@ -682,14 +688,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fzr-0n-3jq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="796" y="620"/>
+            <point key="canvasLocation" x="824" y="465"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Tky.png" width="380" height="380"/>
         <image name="arrow_left.png" width="547" height="47"/>
+        <image name="mapIcon.png" width="640" height="421"/>
         <image name="position_base.png" width="621" height="132"/>
+        <image name="seatInfoIcon.png" width="600" height="417"/>
     </resources>
-    <color key="tintColor" red="0.10196079313755035" green="0.59607845544815063" blue="0.83529418706893921" alpha="1" colorSpace="deviceRGB"/>
+    <color key="tintColor" red="0.0" green="0.62745098039215685" blue="0.87450980392156863" alpha="1" colorSpace="deviceRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -28,6 +28,8 @@
     [ud setObject:metroStationNameDict forKey:@"stationName"];    
     [ud synchronize];
     
+    [[UILabel appearance] setFont:[UIFont fontWithName:@"Hiragino Kaku Gothic ProN" size:18.0f]];
+    
     return YES;
     
 }

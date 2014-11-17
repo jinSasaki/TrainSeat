@@ -148,6 +148,7 @@ double selectedAlpha = 1.0;
     
 }
 - (IBAction)didPushNext:(id)sender {
+    
     if (!trainmap.pinView) {
         LOG(@"input pin");
         return;

@@ -14,5 +14,5 @@
 @property (nonatomic) TrainInfoManager *trainInfoManager;
 @property (nonatomic) RailwayManager *railwayManager;
 @property (nonatomic,weak) IBOutlet UIButton *tableButton;
-@property (nonatomic,weak) IBOutlet UIButton *trainInfoButton;
+@property (nonatomic,weak) IBOutlet UIButton *mapButton;
 @end

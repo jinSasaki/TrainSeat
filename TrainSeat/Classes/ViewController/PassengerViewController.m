@@ -116,7 +116,6 @@
 
     }
     Train *train = [self.locationManager trainWithUCode:self.trainInfoManager.userTrainInfo.trainCode];
-    train.railDirection =@"odpt.RailDirection:TokyoMetro.Shinkiba";
     self.railwayLabel.text = [NSString stringWithFormat:@"%@線",railway.title];
     self.directionLabel.text = [NSString stringWithFormat:@"%@方面",ConvertToJapaneseFromDirectionCode(train.railDirection)];
     
