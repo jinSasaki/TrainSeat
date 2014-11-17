@@ -119,18 +119,11 @@ double selectedAlpha = 1.0;
         [self.directionSegment reloadInputViews];
 
     }
-    [trainmap.pinView removeFromSuperview];
-    trainmap.pinView = nil;
-    [trainmap.flagView removeFromSuperview];
-    trainmap.flagView = nil;;
     
     
 }
 
 - (IBAction)didChangeDirection:(id)sender {
-
-    [trainmap.pinView removeFromSuperview];
-    trainmap.pinView = nil;
 
     // update train map view
     [trainmap updateTrainMapViewWithRailDirection:directionArray[self.directionSegment.selectedSegmentIndex]];
@@ -146,22 +139,6 @@ double selectedAlpha = 1.0;
     // update train map view
     [trainmap updateTrainMapViewWithRailDirection:directionArray[self.directionSegment.selectedSegmentIndex]];
     
-}
-- (IBAction)didPushNext:(id)sender {
-    
-    if (!trainmap.pinView) {
-        LOG(@"input pin");
-        return;
-    }
-    if (!trainmap.flagView) {
-        LOG(@"input flag");
-        return;
-    }
-    
-    TrainInfoViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"TrainInfo"];
-    vc.trainInfo.ridingTrain = [[LocationManager defaultManager]trainWithUCode:trainmap.selectedTrainUCode];
-    vc.trainInfo.dstStation = trainmap.selectedStationButton.station;
-    [self.navigationController pushViewController:vc animated:YES];
 }
 
 

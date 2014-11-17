@@ -140,10 +140,6 @@ static NSMutableDictionary *__stationDict;
         }else {
             trainView.hidden = YES;
         }        
-        if ([trainView.train.ucode compare:self.selectedTrainUCode] == NSOrderedSame) {
-            trainView.isSelected = YES;
-            self.pinView.center = trainView.center;
-        }
     }
 }
 
@@ -196,36 +192,12 @@ static NSMutableDictionary *__stationDict;
 
 - (void)stationBtnDidPush:(id)sender
 {
-    LOG_METHOD;
-    StationButton *button = sender;
-    if (!self.flagView) {
-        self.flagView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 20, 40)];
-        self.flagView.image = [UIImage imageNamed:@"flag.png"];
-        self.flagView.contentMode = UIViewContentModeScaleAspectFit;
-        [self addSubview:self.flagView];
-    }
-    if ([button.station.railwayCode compare:self.currentRailway.code] == NSOrderedSame) {
-        self.flagView.center = CGPointMake(button.center.x, button.center.y - 10);
-    }
+
 }
 
 - (void)trainIconDidPush:(id)sender
 {
-    LOG_METHOD;
-    UIButton *trainIcon = sender;
-    TrainView *superView = (TrainView *)trainIcon.superview;
-    self.selectedTrainUCode = superView.train.ucode;
-    LOG(@"%@",superView.train.toStation);
-    LOG(@"%@",superView.train.fromStation);
-    LOG(@"%@",superView.train.railDirectionOnlyName);
 
-    if (!self.pinView) {
-        self.pinView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 20, 40)];
-        self.pinView.image = [UIImage imageNamed:@"pin.png"];
-        self.pinView.contentMode = UIViewContentModeScaleAspectFit;
-        [self addSubview:self.pinView];
-    }
-    self.pinView.center = CGPointMake(superView.center.x, superView.center.y - 10);
 }
 
 //--------------------------------------------------------------------------------

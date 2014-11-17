@@ -31,8 +31,6 @@
 @property (nonatomic) NSString *selectedTrainUCode;
 @property (nonatomic) StationButton *selectedStationButton;
 
-@property (nonatomic) UIImageView *pinView;
-@property (nonatomic) UIImageView *flagView;
 
 - (NSDictionary *)matchList;
 

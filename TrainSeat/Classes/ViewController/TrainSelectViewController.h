@@ -22,6 +22,5 @@
 @property (nonatomic) IBOutlet UISegmentedControl *directionSegment;
 
 - (IBAction)didChangeDirection:(id)sender;
-- (IBAction)didPushNext:(id)sender;
 
 @end
