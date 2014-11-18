@@ -16,17 +16,18 @@
 
 @protocol RailwayManagerDelegate <NSObject>
 
-- (void)didUpdateRailwayInformation;
+
+- (void)didStartGettingRailwayData;
+- (void)didEndGettingRailwayData;
 
 @end
 
 
-@interface RailwayManager : NSObject <ConnectionDelegate>
+@interface RailwayManager : NSObject
 
 // 全路線情報
 @property (nonatomic, copy) NSArray *allRailway;
 
-//
 @property (nonatomic, copy) NSDictionary *allRailwayDict;
 
 // 全駅情報
@@ -40,10 +41,5 @@
 // シングルトンを返す
 + (instancetype)defaultManager;
 
-// 路線情報の更新
-- (void)updateRailwayInfomation;
-
-// 時刻表の読み込み（通信）
-- (NSArray *)loadTimeTableOfStation:(Station *)station;
 
 @end

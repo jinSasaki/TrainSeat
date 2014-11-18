@@ -35,8 +35,6 @@
 #define LOG_POINT(p) NSLog(@"%f, %f", p.x, p.y)
 #define LOG_SIZE(p) NSLog(@"%f, %f", p.width, p.height)
 #define LOG_RECT(p) NSLog(@"%f, %f - %f, %f", p.origin.x, p.origin.y, p.size.width, p.size.height)
-#define RGB(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
-#define RGBA(r, g, b, a)    [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
 #else
 #define LOG_POINT(p)
 #define LOG_SIZE(p)

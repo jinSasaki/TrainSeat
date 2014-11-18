@@ -9,15 +9,19 @@
 #import <UIKit/UIKit.h>
 #import "RailwayManager.h"
 #import "LocationManager.h"
+#import "TrainInfoManager.h"
+
 #import "LineTableViewCell.h"
 #import "LineButton.h"
-#import "TrainInfoManager.h"
 
 @interface LineTableViewController : UITableViewController
 <LocationManagerDelegate>
+
 @property LocationManager *locationManager;
 @property RailwayManager *railwayManager;
 @property Railway *currentRailway;
+
+
 @property (nonatomic) UIScrollView *lineScrollView;
 
 @property Station *selectedStation;

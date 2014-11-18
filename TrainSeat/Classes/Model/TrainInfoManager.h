@@ -16,6 +16,9 @@
 
 - (void)trainInfoManager:(TrainInfoManager *)manager didRecievedTrainInfos:(NSArray *)trainInfos;
 
+@optional
+- (void)trainInfoManager:(TrainInfoManager *)manager didRecievedError:(NSError *)error;
+
 @end
 
 @interface TrainInfoManager : NSObject <ConnectionDelegate>

@@ -265,7 +265,6 @@
     }
     Station *station = self.currentRailway.stationArray[indexPath.row / 2];
     self.selectedStation = station;
-    LOG(@"[%ld] %@", indexPath.row,self.selectedStation.title);
     
     [self presentNextViewWithValidation];
 }

@@ -59,7 +59,9 @@ static NSMutableDictionary *__railwayDirections;
 
 #pragma mark - connection delegate
 - (void)connection:(Connection *)connection didConnectionError:(NSError *)error {
-    
+    if ([self.delegate respondsToSelector:@selector(didError:)]) {
+        [self.delegate didError:error];
+    }
 }
 -(void)connection:(Connection *)connection didRecieve:(NSData *)recievedData {
     RailwayManager *manager = [RailwayManager defaultManager];
@@ -99,10 +101,14 @@ static NSMutableDictionary *__railwayDirections;
     [self.delegate didRecieve];
 }
 -(void)connection:(Connection *)connection didResponseError:(NSError *)error {
-    
+    if ([self.delegate respondsToSelector:@selector(didError:)]) {
+        [self.delegate didError:error];
+    }
 }
 -(void)connection:(Connection *)connection didSend:(NSError *)error {
-    
+    if ([self.delegate respondsToSelector:@selector(didError:)]) {
+        [self.delegate didError:error];
+    }
 }
 
 @end

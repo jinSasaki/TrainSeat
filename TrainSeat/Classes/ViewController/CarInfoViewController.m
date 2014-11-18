@@ -26,7 +26,8 @@
 }
 
 - (void)alertWithMessage:(NSString *)message {
-    
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Error" message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
 }
 
 - (IBAction)decideButtonDidPush:(id)sender {
@@ -36,12 +37,15 @@
     
     if (!self.carSegument.selectedSegmentIndex) {
         [self alertWithMessage:@"車両が入力されていません"];
+        return;
     }
     if (!self.sittingStatusSegment.selectedSegmentIndex) {
         [self alertWithMessage:@"乗車状態が入力されていません"];
+        return;
     }
     if (!self.selectedPositionNum) {
         [self alertWithMessage:@"乗車位置が入力されていません"];
+        return;
     }
     
     self.trainInfo.carNumber = (int)self.carSegument.selectedSegmentIndex;
@@ -50,11 +54,10 @@
     TrainInfoManager *trainInfoManager = [TrainInfoManager defaultTrainInfoManager];
     trainInfoManager.userTrainInfo.carNumber = (int)self.carSegument.selectedSegmentIndex;
     trainInfoManager.userTrainInfo.position = self.selectedPositionNum;
-    trainInfoManager.userTrainInfo.isSittng = (BOOL) self.sittingStatusSegment.selectedSegmentIndex;
+    trainInfoManager.userTrainInfo.status = self.sittingStatusSegment.selectedSegmentIndex;
     
     // 完了のアラート
     [self alertWithMessage:@"登録しました"];
-    LOG(@"save train info");
     
     // 送信
     [trainInfoManager requestToSET];

@@ -19,6 +19,10 @@
 - (void)didStartUpdateing;
 - (void)didRecieve;
 
+@optional
+
+- (void)didError:(NSError *)error;
+
 @end
 
 @interface LocationManager : NSObject <ConnectionDelegate>

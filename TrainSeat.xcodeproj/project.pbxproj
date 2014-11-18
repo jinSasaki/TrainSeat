@@ -250,7 +250,6 @@
 		49A0EA081A19E14A00E51521 /* icon3_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A0EA071A19E14A00E51521 /* icon3_120.png */; };
 		49A0EA0B1A19E1D400E51521 /* icon3_58.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A0EA091A19E1D400E51521 /* icon3_58.png */; };
 		49A0EA0C1A19E1D400E51521 /* icon3_80.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A0EA0A1A19E1D400E51521 /* icon3_80.png */; };
-		49A4EC321A0B1F2F0064165E /* Connection+Database.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A4EC311A0B1F2F0064165E /* Connection+Database.m */; };
 		49A4EC381A0B3A470064165E /* TrainSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A4EC371A0B3A470064165E /* TrainSelectViewController.m */; };
 		49A4EC611A0C810E0064165E /* RailwayMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A4EC601A0C810E0064165E /* RailwayMapView.m */; };
 		49A4EC631A0C92AA0064165E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A4EC621A0C92AA0064165E /* CoreLocation.framework */; };
@@ -544,8 +543,6 @@
 		49A0EA071A19E14A00E51521 /* icon3_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon3_120.png; sourceTree = "<group>"; };
 		49A0EA091A19E1D400E51521 /* icon3_58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon3_58.png; sourceTree = "<group>"; };
 		49A0EA0A1A19E1D400E51521 /* icon3_80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon3_80.png; sourceTree = "<group>"; };
-		49A4EC301A0B1F2F0064165E /* Connection+Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Connection+Database.h"; sourceTree = "<group>"; };
-		49A4EC311A0B1F2F0064165E /* Connection+Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Connection+Database.m"; sourceTree = "<group>"; };
 		49A4EC361A0B3A470064165E /* TrainSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainSelectViewController.h; sourceTree = "<group>"; };
 		49A4EC371A0B3A470064165E /* TrainSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainSelectViewController.m; sourceTree = "<group>"; };
 		49A4EC5F1A0C810E0064165E /* RailwayMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RailwayMapView.h; sourceTree = "<group>"; };
@@ -1084,8 +1081,6 @@
 				49C9864E19FF7FD4006DCFE1 /* Connection.m */,
 				49C9865C19FF9ABC006DCFE1 /* Connection+TokyoMetroAPI.h */,
 				49C9865D19FF9ABC006DCFE1 /* Connection+TokyoMetroAPI.m */,
-				49A4EC301A0B1F2F0064165E /* Connection+Database.h */,
-				49A4EC311A0B1F2F0064165E /* Connection+Database.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1472,7 +1467,6 @@
 				492AAD591A113D40007A6777 /* LocationManager.m in Sources */,
 				495A116F1A10DE9E008D40B9 /* LineButton.m in Sources */,
 				490871781A17C23A0058E72E /* TrainInfoManager.m in Sources */,
-				49A4EC321A0B1F2F0064165E /* Connection+Database.m in Sources */,
 				49C9865E19FF9ABC006DCFE1 /* Connection+TokyoMetroAPI.m in Sources */,
 				4903ACCE1A04C10700A7612B /* CarInfoViewController.m in Sources */,
 				49A4EC381A0B3A470064165E /* TrainSelectViewController.m in Sources */,

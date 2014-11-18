@@ -125,3 +125,9 @@ NSString *stringFromNSInteger(NSInteger nsNumber) {
     return [NSString stringWithFormat:@"%ld",nsNumber];
     
 }
+UIColor *RGBA(double r ,double g, double b, double a) {
+    return [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)];
+}
+UIColor *RGB(double r ,double g, double b) {
+    return [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(1.0)];
+}

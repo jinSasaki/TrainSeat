@@ -11,7 +11,6 @@
 #import "RailwayManager.h"
 #import "LineButton.h"
 #import "LocationManager.h"
-#import "TrainInfoViewController.h"
 
 @interface TrainSelectViewController : UIViewController
 <UIScrollViewDelegate ,LocationManagerDelegate>

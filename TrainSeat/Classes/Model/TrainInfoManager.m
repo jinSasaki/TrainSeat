@@ -40,7 +40,7 @@ static TrainInfoManager *shareInstance = nil;
     NSDictionary *paramDict = @{@"train_code": self.userTrainInfo.trainCode,
                                 @"destination":self.userTrainInfo.destination,
                                 @"car_number":[NSString stringWithFormat:@"%d",self.userTrainInfo.carNumber],
-                                @"status":[NSString stringWithFormat:@"%ld",self.userTrainInfo.status],
+                                @"status":[NSString stringWithFormat:@"%d",self.userTrainInfo.status],
                                 @"position":[NSString stringWithFormat:@"%d",self.userTrainInfo.position]};
     NSString *paramQuery = [Connection createURLStringWithQuery:paramDict];
     NSString * urlStr = [API_IP_ADDRESS stringByAppendingString:@"api/set?"];
@@ -78,7 +78,7 @@ static TrainInfoManager *shareInstance = nil;
                 positions = [NSMutableArray arrayWithArray:[cars objectForKey:stringFromInteger(trainInfo.carNumber)]];
                 
                 // 座ってたらポジション追加
-                if (trainInfo.isSittng){
+                if (trainInfo.status){
                     [positions addObject:stringFromInteger(trainInfo.position)];
                 }
                 offPeople++;
@@ -96,7 +96,7 @@ static TrainInfoManager *shareInstance = nil;
         else {
             NSArray *positions = @[];
             // 座ってたらポジション追加
-            if (trainInfo.isSittng){
+            if (trainInfo.status){
                 positions = @[stringFromInteger(trainInfo.position)];
             }
             [dict setObject:@{stringFromInteger(trainInfo.carNumber): positions} forKey:trainInfo.destination];
@@ -113,8 +113,9 @@ static TrainInfoManager *shareInstance = nil;
 #pragma mark - connection delegate
 
 - (void)connection:(Connection *)connection didConnectionError:(NSError *)error {
-    LOG_METHOD;
-    LOG_PRINTF(@"%@",error);
+    if ([self.delegate respondsToSelector:@selector(trainInfoManager:didRecievedError:)]) {
+        [self.delegate trainInfoManager:self didRecievedError:error];
+    }
 }
 
 - (void)connection:(Connection *)connection didRecieve:(NSData *)recievedData {
@@ -147,14 +148,15 @@ static TrainInfoManager *shareInstance = nil;
 }
 
 - (void)connection:(Connection *)connection didResponseError:(NSError *)error {
-    LOG_METHOD;
-    LOG_PRINTF(@"%@",error);
-    
+    if ([self.delegate respondsToSelector:@selector(trainInfoManager:didRecievedError:)]) {
+        [self.delegate trainInfoManager:self didRecievedError:error];
+    }
 }
 
 - (void)connection:(Connection *)connection didSend:(NSError *)error {
-    LOG_METHOD;
-    LOG_PRINTF(@"%@",error);
+    if ([self.delegate respondsToSelector:@selector(trainInfoManager:didRecievedError:)]) {
+        [self.delegate trainInfoManager:self didRecievedError:error];
+    }
     
 }
 

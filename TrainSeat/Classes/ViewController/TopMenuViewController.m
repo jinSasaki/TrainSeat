@@ -17,6 +17,8 @@
 {
     [super viewDidLoad];
     self.mapButton.layer.cornerRadius = 10.0;
+    RailwayManager *manager;
+    manager = [RailwayManager defaultManager];
 }
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];

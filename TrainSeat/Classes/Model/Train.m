@@ -17,10 +17,6 @@
         self.ucode = [dict objectForKey:@"@id"];
         self.trainType = [dict objectForKey:@"odpt:trainType"];
         self.delay = [[dict objectForKey:@"odpt:delay"] intValue];
-//        self.fromStation = [self trimString:[dict objectForKey:@"odpt:fromStation"]];
-//        self.toStation = [self trimString:[dict objectForKey:@"odpt:toStation"]];
-//        self.startingStation = [self trimString:[dict objectForKey:@"odpt:startingStation"]];
-//        self.terminalStation = [self trimString:[dict objectForKey:@"odpt:terminalStation"]];
         self.fromStation = [dict objectForKey:@"odpt:fromStation"];
         self.toStation = [dict objectForKey:@"odpt:toStation"];
 

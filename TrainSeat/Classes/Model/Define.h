@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 #define ACCESS_TOKEN @"3b81939a6c9d1b5ba703e05e0855e670053ecd49172013ed7ecb61e3dea28a71"
 
 #define ORIGIN @"https://api.tokyometroapp.jp/api/v2/"
@@ -83,3 +83,9 @@ typedef NS_ENUM(NSInteger, TrainButtonDirection) {
     TrainButtonDirectionUp = 0,
     TrainButtonDirectionDown,
 };
+
+UIColor *RGBA(double r ,double g, double b, double a);
+UIColor *RGB(double r ,double g, double b);
+
+
+

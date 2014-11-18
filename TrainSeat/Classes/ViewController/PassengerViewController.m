@@ -116,28 +116,17 @@
 
     }
     
-#warning Test!!!!!!!!!
-    [self test];
     
-    
-//    Train *train = [self.locationManager trainWithUCode:self.trainInfoManager.userTrainInfo.trainCode];
-//    self.railwayLabel.text = [NSString stringWithFormat:@"%@線",railway.title];
-//    if ( ConvertToJapaneseFromDirectionCode(train.railDirection)) {
-//        self.directionLabel.text = [NSString stringWithFormat:@"%@方面",ConvertToJapaneseFromDirectionCode(train.railDirection)];
-//    }
     Train *train = [self.locationManager trainWithUCode:self.trainInfoManager.userTrainInfo.trainCode];
-    self.railwayLabel.text = [NSString stringWithFormat:@"銀座線"];
-    self.directionLabel.text = [NSString stringWithFormat:@"浅草方面"];
-    
+    self.railwayLabel.text = [NSString stringWithFormat:@"%@線",railway.title];
+    if ( ConvertToJapaneseFromDirectionCode(train.railDirection)) {
+        self.directionLabel.text = [NSString stringWithFormat:@"%@方面",ConvertToJapaneseFromDirectionCode(train.railDirection)];
+    }
 
     [self.trainInfoManager startConnectionWtihTimeInterval:10];
 
-    // demo
-    [self.trainInfoManager stopConnection];
 
-    // demo
-    Station *station = railway.stationDict[@"Shibuya"];
-//    Station *station = railway.stationDict[train.fromStationTrimed];
+    Station *station = railway.stationDict[train.fromStationTrimed];
     self.index = station.order-1;
     
     self.stationScrollView.contentOffset = CGPointMake(self.index * 320, 0);
@@ -170,7 +159,7 @@
     }
 
     // message update
-    self.carLabel.text = [NSString stringWithFormat:@"%ld 両目は", self.carSegement.selectedSegmentIndex + 1];
+    self.carLabel.text = [NSString stringWithFormat:@"%d 両目は", self.carSegement.selectedSegmentIndex + 1];
     self.dropNumLabel.text = stringFromNSInteger(carNumDict.count);
     self.openSeatNumLabel.text = stringFromNSInteger([carNumDict[stringFromNSInteger(self.carSegement.selectedSegmentIndex)] count]);
     
@@ -188,17 +177,6 @@
     
     [super viewDidAppear:animated];
 
-}
-
-- (void)test {
-    TrainInfo *trainInfo = self.trainInfoManager.userTrainInfo;
-    NSDictionary *dict = @{@"train_code": @"XXXXXX",
-                           @"destination":trainInfo.destination,
-                           @"car_number": @(trainInfo.carNumber),
-                           @"position":@(trainInfo.position),
-                           @"status":@(trainInfo.status)};
-    TrainInfo *testCase = [[TrainInfo alloc]initWithDict:dict];
-    self.trainInfoManager.userTrainInfo = testCase;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
